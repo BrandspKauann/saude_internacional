@@ -1,0 +1,2122 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=4" />
+    <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg?v=4" />
+
+    <title>Saúde Internacional | Consultoria em Seguros Internacionais</title>
+    <meta
+      name="description"
+      content="Consultoria especializada em seguros internacionais de saúde para estrangeiros, expatriados, estudantes, famílias e empresas que buscam cobertura premium no Brasil e no mundo."
+    />
+    <meta
+      name="keywords"
+      content="saúde internacional, seguro saúde internacional, plano de saúde para estrangeiros, seguro para expatriados, consultoria em seguro saúde, Hirayama Corretora"
+    />
+    <meta name="author" content="Hirayama Corretora de Seguros" />
+    <meta name="theme-color" content="#06243f" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Saúde Internacional | Proteção médica premium no Brasil e no mundo" />
+    <meta
+      property="og:description"
+      content="Acesso a hospitais de referência e consultoria clara para escolher seguros internacionais com segurança."
+    />
+    <meta property="og:site_name" content="Saúde Internacional" />
+    <meta property="og:image" content="/assets/saude-internacional-hero.png" />
+    <meta property="og:image:alt" content="Consultoria premium em saúde internacional" />
+
+    <style>
+      :root {
+        --navy: #06243f;
+        --navy-2: #0b385f;
+        --teal: #0aa6a6;
+        --teal-dark: #087f83;
+        --gold: #d8a94a;
+        --coral: #e86f56;
+        --green: #36b37e;
+        --ink: #162332;
+        --muted: #607080;
+        --line: #dbe6ef;
+        --paper: #f7fbfd;
+        --white: #ffffff;
+        --shadow: 0 24px 70px rgba(6, 36, 63, 0.14);
+        --soft-shadow: 0 14px 36px rgba(6, 36, 63, 0.1);
+        --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        letter-spacing: 0;
+        overflow-x: hidden;
+      }
+
+      body.menu-open {
+        overflow: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .shell {
+        width: min(1160px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: fixed;
+        inset: 0 0 auto 0;
+        z-index: 100;
+        background: rgba(255, 255, 255, 0.78);
+        border-bottom: 1px solid rgba(219, 230, 239, 0.82);
+        backdrop-filter: blur(18px);
+        transition:
+          box-shadow 260ms ease,
+          background 260ms ease;
+      }
+
+      .topbar.is-scrolled {
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 10px 30px rgba(6, 36, 63, 0.08);
+      }
+
+      .nav {
+        min-height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        min-width: 210px;
+      }
+
+      .brand strong {
+        display: block;
+        color: var(--navy);
+        font-size: 1rem;
+        line-height: 1.05;
+      }
+
+      .brand span {
+        display: block;
+        margin-top: 2px;
+        color: var(--muted);
+        font-size: 0.78rem;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+      }
+
+      .nav-links a {
+        position: relative;
+        padding: 10px 13px;
+        color: #304252;
+        border-radius: 8px;
+        font-size: 0.94rem;
+        font-weight: 650;
+        transition:
+          color 220ms ease,
+          background 220ms ease,
+          transform 220ms ease;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus-visible {
+        color: var(--teal-dark);
+        background: rgba(10, 166, 166, 0.1);
+        transform: translateY(-1px);
+        outline: none;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+      }
+
+      .icon-btn,
+      .menu-btn {
+        display: inline-grid;
+        place-items: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        color: var(--navy);
+        cursor: pointer;
+        transition:
+          transform 220ms ease,
+          box-shadow 220ms ease,
+          border-color 220ms ease;
+      }
+
+      .icon-btn {
+        width: 44px;
+        height: 44px;
+      }
+
+      .menu-btn {
+        display: none;
+        width: 46px;
+        height: 46px;
+      }
+
+      .icon-btn:hover,
+      .menu-btn:hover {
+        border-color: rgba(10, 166, 166, 0.45);
+        box-shadow: var(--soft-shadow);
+        transform: translateY(-1px);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 48px;
+        padding: 0 19px;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 760;
+        line-height: 1.1;
+        transition:
+          transform 220ms ease,
+          box-shadow 220ms ease,
+          background 220ms ease,
+          border-color 220ms ease;
+      }
+
+      .btn svg {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 auto;
+      }
+
+      .btn:hover,
+      .btn:focus-visible {
+        transform: translateY(-2px);
+        outline: none;
+      }
+
+      .btn-primary {
+        color: var(--white);
+        background: linear-gradient(135deg, var(--teal), var(--navy-2));
+        box-shadow: 0 16px 34px rgba(10, 166, 166, 0.24);
+      }
+
+      .btn-primary:hover,
+      .btn-primary:focus-visible {
+        box-shadow: 0 18px 42px rgba(10, 166, 166, 0.34);
+      }
+
+      .btn-gold {
+        color: #1f2b35;
+        background: linear-gradient(135deg, #f2cd73, var(--gold));
+        box-shadow: 0 16px 34px rgba(216, 169, 74, 0.26);
+      }
+
+      .btn-ghost {
+        color: var(--white);
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.35);
+      }
+
+      .mobile-panel {
+        position: fixed;
+        top: 76px;
+        left: 0;
+        right: 0;
+        z-index: 95;
+        padding: 18px 20px 22px;
+        background: rgba(255, 255, 255, 0.97);
+        border-bottom: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        transform: translateY(-18px);
+        opacity: 0;
+        pointer-events: none;
+        transition:
+          opacity 220ms ease,
+          transform 220ms ease;
+      }
+
+      .mobile-panel.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .mobile-panel a,
+      .mobile-panel .btn {
+        width: 100%;
+      }
+
+      .mobile-panel a {
+        display: block;
+        padding: 14px 6px;
+        color: var(--navy);
+        font-weight: 760;
+        border-bottom: 1px solid rgba(219, 230, 239, 0.75);
+      }
+
+      main {
+        overflow: hidden;
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: grid;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        padding: 116px 0 56px;
+        color: var(--white);
+        background: #05223c;
+      }
+
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+      }
+
+      .hero-bg span {
+        position: absolute;
+        inset: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        opacity: 0;
+        transform: scale(1.04);
+        animation: heroFade 28s infinite;
+      }
+
+      .hero-bg span:nth-child(1) {
+        background-image: url("/assets/saude-internacional-hero.png");
+      }
+
+      .hero-bg span:nth-child(2) {
+        background-image: url("/assets/saude-internacional-consulta.png");
+        animation-delay: 7s;
+      }
+
+      .hero-bg span:nth-child(3) {
+        background-image: url("/assets/saude-internacional-assistencia.png");
+        animation-delay: 14s;
+      }
+
+      .hero-bg span:nth-child(4) {
+        background-image: url("/assets/saude-internacional-viajantes.png");
+        animation-delay: 21s;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size: 72px 72px;
+        mask-image: linear-gradient(90deg, #000, transparent 72%);
+        animation: gridDrift 18s linear infinite;
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background:
+          linear-gradient(90deg, rgba(5, 27, 47, 0.96) 0%, rgba(5, 27, 47, 0.82) 34%, rgba(5, 27, 47, 0.42) 58%, rgba(5, 27, 47, 0.1) 100%),
+          linear-gradient(180deg, rgba(5, 27, 47, 0.1), rgba(5, 27, 47, 0.78));
+        pointer-events: none;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        max-width: 690px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 34px;
+        padding: 0 12px;
+        color: #dff9f7;
+        background: rgba(10, 166, 166, 0.16);
+        border: 1px solid rgba(141, 234, 229, 0.38);
+        border-radius: 8px;
+        font-size: 0.84rem;
+        font-weight: 750;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: var(--green);
+        border-radius: 50%;
+        box-shadow: 0 0 0 6px rgba(54, 179, 126, 0.16);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 680px;
+        margin: 24px 0 18px;
+        color: var(--white);
+        font-size: clamp(2.08rem, 5.4vw, 4.35rem);
+        line-height: 1.05;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .hero-lead {
+        max-width: 650px;
+        margin-bottom: 24px;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: clamp(0.94rem, 1.55vw, 1.1rem);
+        font-weight: 760;
+        line-height: 1.58;
+        text-transform: uppercase;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+        margin: 26px 0 14px;
+      }
+
+      .response-note {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.95rem;
+        line-height: 1.45;
+      }
+
+      .response-note span {
+        width: 9px;
+        height: 9px;
+        background: var(--gold);
+        border-radius: 50%;
+        animation: pulse 1.6s ease-in-out infinite;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        width: min(640px, 100%);
+        margin-top: 34px;
+      }
+
+      .stat {
+        padding: 17px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.09);
+        backdrop-filter: blur(12px);
+      }
+
+      .stat strong {
+        display: block;
+        color: #f7d98d;
+        font-size: clamp(1.3rem, 3vw, 2rem);
+        line-height: 1;
+      }
+
+      .stat span {
+        display: block;
+        margin-top: 8px;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.82rem;
+        line-height: 1.35;
+      }
+
+      .hero-card {
+        position: absolute;
+        right: max(24px, calc((100vw - 1160px) / 2));
+        bottom: 36px;
+        z-index: 4;
+        width: min(390px, calc(100% - 40px));
+        padding: 18px;
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid rgba(255, 255, 255, 0.72);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        animation: floatSoft 5.8s ease-in-out infinite;
+      }
+
+      .hero-card header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+
+      .hero-card strong {
+        color: var(--navy);
+      }
+
+      .hero-card small {
+        display: inline-flex;
+        align-items: center;
+        min-height: 28px;
+        padding: 0 9px;
+        color: var(--teal-dark);
+        background: rgba(10, 166, 166, 0.11);
+        border-radius: 8px;
+        font-weight: 800;
+      }
+
+      .coverage-line {
+        position: relative;
+        height: 8px;
+        margin-bottom: 13px;
+        overflow: hidden;
+        background: #e6eef5;
+        border-radius: 99px;
+      }
+
+      .coverage-line i {
+        display: block;
+        width: 78%;
+        height: 100%;
+        background: linear-gradient(90deg, var(--teal), var(--gold));
+        border-radius: inherit;
+        transform-origin: left;
+        animation: fillLine 3s var(--ease) infinite;
+      }
+
+      .hero-card ul {
+        display: grid;
+        gap: 9px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .hero-card li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #3a4b5b;
+        font-size: 0.92rem;
+      }
+
+      .check {
+        display: inline-grid;
+        place-items: center;
+        width: 22px;
+        height: 22px;
+        flex: 0 0 auto;
+        color: var(--white);
+        background: var(--green);
+        border-radius: 50%;
+        font-size: 0.75rem;
+        font-weight: 900;
+      }
+
+      .check::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        background: currentColor;
+        border-radius: 50%;
+      }
+
+      .section {
+        padding: 86px 0;
+        position: relative;
+      }
+
+      .section.white {
+        background: var(--white);
+      }
+
+      .section.dark {
+        color: var(--white);
+        background:
+          linear-gradient(135deg, rgba(6, 36, 63, 0.98), rgba(9, 73, 95, 0.96)),
+          var(--navy);
+      }
+
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 28px;
+        margin-bottom: 34px;
+      }
+
+      .kicker {
+        margin-bottom: 12px;
+        color: var(--teal-dark);
+        font-size: 0.84rem;
+        font-weight: 860;
+        text-transform: uppercase;
+      }
+
+      .dark .kicker {
+        color: #80ece5;
+      }
+
+      h2 {
+        max-width: 770px;
+        margin-bottom: 0;
+        color: var(--navy);
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .dark h2,
+      .dark h3 {
+        color: var(--white);
+      }
+
+      .section-copy {
+        max-width: 520px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+
+      .dark .section-copy,
+      .dark p {
+        color: rgba(255, 255, 255, 0.78);
+      }
+
+      .hospital-strip {
+        padding: 28px 0;
+        overflow: hidden;
+        background: var(--white);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .strip-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 20px;
+        color: var(--navy);
+        font-size: 0.95rem;
+        font-weight: 860;
+        text-align: center;
+      }
+
+      .strip-title::before,
+      .strip-title::after {
+        content: "";
+        width: min(120px, 18vw);
+        height: 1px;
+        background: var(--line);
+      }
+
+      .marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 32s linear infinite;
+      }
+
+      .marquee:hover {
+        animation-play-state: paused;
+      }
+
+      .marquee-group {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-right: 12px;
+      }
+
+      .hospital {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        color: #223647;
+        background: #f7fbfd;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        font-weight: 760;
+        white-space: nowrap;
+      }
+
+      .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .quote-card {
+        min-height: 146px;
+        padding: 24px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: var(--soft-shadow);
+        transition:
+          transform 260ms ease,
+          box-shadow 260ms ease,
+          border-color 260ms ease;
+      }
+
+      .quote-card:hover {
+        border-color: rgba(10, 166, 166, 0.38);
+        box-shadow: var(--shadow);
+        transform: translateY(-5px);
+      }
+
+      .quote-card p {
+        margin: 0;
+        color: var(--navy);
+        font-size: 1.08rem;
+        font-weight: 820;
+        line-height: 1.5;
+      }
+
+      .quote-card span {
+        display: block;
+        margin-bottom: 16px;
+        color: var(--gold);
+        font-size: 1.7rem;
+        line-height: 1;
+      }
+
+      .consult-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .service-card {
+        overflow: hidden;
+        padding: 24px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: var(--soft-shadow);
+        transition:
+          transform 260ms ease,
+          box-shadow 260ms ease,
+          border-color 260ms ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(10, 166, 166, 0.38);
+        box-shadow: var(--shadow);
+      }
+
+      .service-photo {
+        height: 174px;
+        margin: -24px -24px 20px;
+        overflow: hidden;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .service-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 600ms var(--ease);
+      }
+
+      .service-card:hover .service-photo img {
+        transform: scale(1.05);
+      }
+
+      .service-card h3 {
+        margin-bottom: 10px;
+        color: var(--navy);
+        font-size: 1.22rem;
+      }
+
+      .service-card p {
+        margin-bottom: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .service-card small {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--teal-dark);
+        font-size: 0.8rem;
+        font-weight: 860;
+        text-transform: uppercase;
+      }
+
+      .cta-band {
+        margin-top: 34px;
+        padding: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        color: var(--white);
+        background:
+          linear-gradient(120deg, rgba(232, 111, 86, 0.92), rgba(216, 169, 74, 0.94)),
+          var(--gold);
+        border-radius: 8px;
+        box-shadow: 0 18px 50px rgba(216, 169, 74, 0.24);
+      }
+
+      .cta-band h3 {
+        margin: 0 0 7px;
+        color: var(--white);
+        font-size: clamp(1.35rem, 2.5vw, 2rem);
+      }
+
+      .cta-band p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .insurers {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        align-items: stretch;
+      }
+
+      .insurer-board {
+        position: relative;
+        min-height: 440px;
+      }
+
+      .world-card {
+        position: relative;
+        min-height: 100%;
+        height: 100%;
+        padding: 28px;
+        overflow: hidden;
+        color: var(--white);
+        background:
+          linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
+          radial-gradient(circle at 78% 20%, rgba(216, 169, 74, 0.28), transparent 34%),
+          rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 8px;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
+      }
+
+      .insurer-copy-card {
+        min-height: 440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: clamp(28px, 4vw, 46px);
+        background:
+          linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.05)),
+          rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 8px;
+      }
+
+      .insurer-copy-card h2 {
+        margin-bottom: 16px;
+      }
+
+      .world-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(6, 36, 63, 0.92), rgba(6, 36, 63, 0.56)),
+          linear-gradient(180deg, rgba(6, 36, 63, 0.05), rgba(6, 36, 63, 0.78));
+        z-index: 1;
+      }
+
+      .world-photo {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+
+      .map-lines {
+        position: absolute;
+        inset: 20px;
+        opacity: 0.72;
+        z-index: 2;
+      }
+
+      .pin {
+        position: absolute;
+        z-index: 3;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #8deae5;
+        box-shadow: 0 0 0 8px rgba(141, 234, 229, 0.14);
+        animation: pingPin 2.7s ease-in-out infinite;
+      }
+
+      .pin.one {
+        left: 32%;
+        top: 38%;
+      }
+
+      .pin.two {
+        left: 58%;
+        top: 33%;
+        animation-delay: 0.6s;
+        background: var(--gold);
+      }
+
+      .pin.three {
+        left: 71%;
+        top: 58%;
+        animation-delay: 1.1s;
+      }
+
+      .world-card h3 {
+        position: relative;
+        z-index: 2;
+        width: min(340px, 100%);
+        margin: 0;
+        color: var(--white);
+        font-size: 1.8rem;
+        line-height: 1.15;
+      }
+
+      .world-card p {
+        position: relative;
+        z-index: 2;
+        width: min(320px, 100%);
+        margin-top: 16px;
+      }
+
+      .plan-list {
+        display: grid;
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .plan-item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 14px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 8px;
+      }
+
+      .plan-item .check {
+        margin-top: 2px;
+      }
+
+      .plan-item h3 {
+        margin: 0 0 6px;
+        font-size: 1.1rem;
+      }
+
+      .plan-item p {
+        margin: 0;
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 0.82fr;
+        gap: 36px;
+        align-items: center;
+      }
+
+      .about-copy {
+        display: grid;
+        gap: 18px;
+      }
+
+      .about-copy p {
+        margin: 0;
+        color: #425566;
+        line-height: 1.78;
+      }
+
+      .story-image-card {
+        position: relative;
+        overflow: hidden;
+        min-height: 520px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        box-shadow: var(--shadow);
+      }
+
+      .story-image-card img {
+        width: 100%;
+        height: 100%;
+        min-height: 520px;
+        object-fit: cover;
+      }
+
+      .story-image-card::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0;
+        height: 52%;
+        background: linear-gradient(180deg, transparent, rgba(6, 36, 63, 0.86));
+        pointer-events: none;
+      }
+
+      .story-badge {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        z-index: 2;
+        padding: 18px;
+        color: var(--white);
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 8px;
+        backdrop-filter: blur(16px);
+      }
+
+      .story-badge strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 1.08rem;
+      }
+
+      .story-badge span {
+        color: rgba(255, 255, 255, 0.82);
+        line-height: 1.5;
+      }
+
+      .profile-card {
+        padding: 26px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .profile-head {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .avatar {
+        width: 68px;
+        height: 68px;
+        display: grid;
+        place-items: center;
+        color: var(--white);
+        background: linear-gradient(135deg, var(--teal), var(--navy));
+        border-radius: 8px;
+        font-size: 1.2rem;
+        font-weight: 860;
+      }
+
+      .profile-head h3 {
+        margin: 0 0 4px;
+        color: var(--navy);
+      }
+
+      .profile-head p {
+        margin: 0;
+        color: var(--teal-dark);
+        font-weight: 760;
+      }
+
+      .profile-card ul {
+        display: grid;
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .profile-card li {
+        display: flex;
+        align-items: start;
+        gap: 9px;
+        color: #3c5061;
+        line-height: 1.55;
+      }
+
+      .appointment {
+        margin-top: 22px;
+        padding: 20px;
+        background: #f3faf9;
+        border: 1px solid #c9efec;
+        border-radius: 8px;
+      }
+
+      .appointment strong {
+        display: block;
+        color: var(--navy);
+      }
+
+      .appointment span {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+      }
+
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .blog-card {
+        min-height: 245px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 24px;
+        overflow: hidden;
+        position: relative;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: var(--soft-shadow);
+        transition:
+          transform 260ms ease,
+          box-shadow 260ms ease,
+          border-color 260ms ease;
+      }
+
+      .blog-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 5px;
+        background: linear-gradient(90deg, var(--teal), var(--gold), var(--coral));
+      }
+
+      .blog-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(10, 166, 166, 0.34);
+        box-shadow: var(--shadow);
+      }
+
+      .blog-card span {
+        color: var(--teal-dark);
+        font-size: 0.82rem;
+        font-weight: 860;
+        text-transform: uppercase;
+      }
+
+      .blog-card h3 {
+        margin: 16px 0 18px;
+        color: var(--navy);
+        font-size: 1.22rem;
+        line-height: 1.32;
+      }
+
+      .blog-card a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--navy);
+        font-weight: 820;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 0.9fr;
+        gap: 28px;
+        align-items: stretch;
+      }
+
+      .contact-panel,
+      .legal-panel {
+        padding: 28px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 8px;
+      }
+
+      .contact-panel h2 {
+        margin-bottom: 18px;
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 14px;
+        margin: 26px 0 0;
+      }
+
+      .contact-row {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 13px;
+        align-items: center;
+      }
+
+      .contact-row i {
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        color: var(--white);
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        font-style: normal;
+      }
+
+      .contact-row strong {
+        display: block;
+        color: var(--white);
+      }
+
+      .contact-row span,
+      .contact-row a {
+        color: rgba(255, 255, 255, 0.74);
+      }
+
+      .legal-panel h3 {
+        margin: 0 0 16px;
+        color: var(--white);
+      }
+
+      .legal-panel p {
+        margin-bottom: 14px;
+        font-size: 0.93rem;
+        line-height: 1.72;
+      }
+
+      .footer {
+        padding: 56px 0 28px;
+        color: rgba(255, 255, 255, 0.68);
+        background: #04192c;
+      }
+
+      .footer .shell {
+        display: block;
+      }
+
+      .footer a {
+        color: #8deae5;
+        font-weight: 760;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 32px;
+        align-items: start;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+      }
+
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .footer-brand strong {
+        display: block;
+        color: var(--white);
+        font-size: 1.24rem;
+      }
+
+      .footer-brand div span {
+        display: block;
+        margin-top: 4px;
+        color: rgba(255, 255, 255, 0.62);
+      }
+
+      .footer-title {
+        margin: 0 0 16px;
+        color: #f2cd73;
+        font-size: 0.9rem;
+        font-weight: 860;
+        letter-spacing: 0;
+      }
+
+      .footer-lines {
+        display: grid;
+        gap: 11px;
+        color: rgba(255, 255, 255, 0.82);
+        line-height: 1.55;
+      }
+
+      .footer-lines p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.82);
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding-top: 22px;
+        font-size: 0.92rem;
+      }
+
+      .floating-socials {
+        position: fixed;
+        right: 22px;
+        bottom: 22px;
+        z-index: 110;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .float-btn {
+        position: relative;
+        width: 54px;
+        height: 54px;
+        display: grid;
+        place-items: center;
+        color: var(--white);
+        border-radius: 50%;
+        box-shadow: 0 16px 32px rgba(6, 36, 63, 0.24);
+        transition:
+          transform 220ms ease,
+          box-shadow 220ms ease;
+      }
+
+      .float-btn svg {
+        width: 27px;
+        height: 27px;
+      }
+
+      .float-btn.whatsapp {
+        background: #22c55e;
+        box-shadow: 0 18px 34px rgba(34, 197, 94, 0.34);
+      }
+
+      .float-btn.linkedin {
+        background: #0a66c2;
+      }
+
+      .float-btn.instagram {
+        background: radial-gradient(circle at 30% 108%, #fdf497 0 12%, #fd5949 34%, #d6249f 58%, #285aeb 100%);
+      }
+
+      .float-btn.youtube {
+        background: #ff0000;
+      }
+
+      .float-btn.tiktok {
+        background: #050505;
+      }
+
+      .float-btn.whatsapp::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        border: 1px solid rgba(34, 197, 94, 0.55);
+        animation: ring 1.8s ease-out infinite;
+      }
+
+      .float-btn:hover,
+      .float-btn:focus-visible {
+        transform: translateY(-3px) scale(1.04);
+        box-shadow: 0 22px 42px rgba(6, 36, 63, 0.28);
+        outline: none;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 700ms var(--ease),
+          transform 700ms var(--ease);
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .delay-1 {
+        transition-delay: 90ms;
+      }
+
+      .delay-2 {
+        transition-delay: 180ms;
+      }
+
+      .delay-3 {
+        transition-delay: 270ms;
+      }
+
+      @keyframes gridDrift {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: 72px 72px;
+        }
+      }
+
+      @keyframes heroFade {
+        0%,
+        100% {
+          opacity: 0;
+        }
+        4%,
+        24% {
+          opacity: 1;
+        }
+        30% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.75;
+        }
+        50% {
+          transform: scale(1.45);
+          opacity: 1;
+        }
+      }
+
+      @keyframes floatSoft {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-12px);
+        }
+      }
+
+      @keyframes fillLine {
+        0% {
+          transform: scaleX(0.35);
+        }
+        65%,
+        100% {
+          transform: scaleX(1);
+        }
+      }
+
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      @keyframes pingPin {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.85;
+        }
+        50% {
+          transform: scale(1.32);
+          opacity: 1;
+        }
+      }
+
+      @keyframes ring {
+        from {
+          transform: scale(1);
+          opacity: 0.65;
+        }
+        to {
+          transform: scale(1.45);
+          opacity: 0;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 1ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+          transition-duration: 1ms !important;
+        }
+      }
+
+      @media (max-width: 1020px) {
+        .shell {
+          width: min(100% - 30px, 920px);
+        }
+
+        .nav-links,
+        .nav-actions .btn {
+          display: none;
+        }
+
+        .menu-btn {
+          display: inline-grid;
+        }
+
+        .hero {
+          min-height: auto;
+          padding: 118px 0 360px;
+        }
+
+        .hero-card {
+          left: 15px;
+          right: 15px;
+          bottom: 24px;
+          width: auto;
+        }
+
+        .section-head,
+        .cta-band,
+        .footer-bottom {
+          align-items: start;
+          flex-direction: column;
+        }
+
+        .trust-grid,
+        .consult-grid,
+        .blog-grid,
+        .insurers,
+        .about-grid,
+        .contact-grid,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .insurer-board {
+          min-height: 360px;
+        }
+
+        .insurer-copy-card {
+          min-height: auto;
+          justify-content: flex-start;
+        }
+
+        .plan-list {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .shell {
+          width: calc(100% - 26px);
+        }
+
+        .nav {
+          min-height: 70px;
+        }
+
+        .brand {
+          flex: 1 1 auto;
+          min-width: 0;
+        }
+
+        .nav-actions .icon-btn {
+          display: none;
+        }
+
+        .nav-actions {
+          flex: 0 0 auto;
+        }
+
+        .mobile-panel {
+          top: 70px;
+        }
+
+        .hero {
+          padding: 104px 0 345px;
+        }
+
+        .hero-bg span {
+          background-attachment: scroll;
+          background-position: 62% bottom;
+        }
+
+        .hero::after {
+          background:
+            linear-gradient(180deg, rgba(5, 27, 47, 0.96) 0%, rgba(5, 27, 47, 0.8) 52%, rgba(5, 27, 47, 0.34) 100%);
+        }
+
+        h1 {
+          font-size: clamp(2.05rem, 11vw, 3rem);
+        }
+
+        .eyebrow {
+          max-width: 100%;
+          min-height: 0;
+          padding: 8px 10px;
+          line-height: 1.25;
+        }
+
+        .hero-content,
+        .hero-lead {
+          max-width: 100%;
+        }
+
+        .hero-lead {
+          overflow-wrap: break-word;
+        }
+
+        .response-note {
+          width: 100%;
+          align-items: flex-start;
+        }
+
+        .hero-actions,
+        .cta-band {
+          align-items: stretch;
+        }
+
+        .hero-actions .btn,
+        .cta-band .btn {
+          width: 100%;
+        }
+
+        .hero-stats {
+          grid-template-columns: 1fr;
+        }
+
+        .section {
+          padding: 64px 0;
+        }
+
+        .hospital {
+          min-height: 42px;
+          padding: 0 14px;
+          font-size: 0.88rem;
+        }
+
+        .contact-panel,
+        .legal-panel,
+        .cta-band,
+        .service-card,
+        .quote-card,
+        .blog-card,
+        .profile-card {
+          padding: 20px;
+        }
+
+        .service-photo {
+          height: 190px;
+          margin: -20px -20px 18px;
+        }
+
+        .story-image-card,
+        .story-image-card img {
+          min-height: 420px;
+        }
+
+        .floating-socials {
+          right: 15px;
+          bottom: 15px;
+          gap: 8px;
+        }
+
+        .float-btn {
+          width: 56px;
+          height: 56px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar" data-header>
+      <div class="shell nav">
+        <a class="brand" href="#home" aria-label="Saúde Internacional">
+          <span>
+            <strong>Saúde Internacional</strong>
+            <span>by hirayama</span>
+          </span>
+        </a>
+
+        <nav class="nav-links" aria-label="Navegacao principal">
+          <a href="#home">Home</a>
+          <a href="#sobre">Sobre nós</a>
+          <a href="#contato">Contato</a>
+          <a href="/blog/">Blog</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="icon-btn" href="mailto:contato@hirayamacorretora.com.br" aria-label="Enviar e-mail">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
+              <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.8" />
+              <path d="M4.8 7l7.2 6 7.2-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+          </a>
+          <a class="btn btn-primary" href="https://wa.link/3gwhbl" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7.5 10.2c1.4 2.8 3.5 4.8 6.3 6.3l2.1-2.1c.3-.3.8-.4 1.2-.2 1 .3 2 .5 3.1.5.6 0 1 .4 1 1V19c0 .6-.4 1-1 1C10.8 20 4 13.2 4 4.8c0-.6.4-1 1-1h3.3c.6 0 1 .4 1 1 0 1.1.2 2.2.5 3.1.1.4 0 .8-.2 1.1l-2.1 2.2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+            </svg>
+            Diagnóstico agora
+          </a>
+          <button class="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-button>
+            <svg class="menu-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-panel" data-mobile-panel>
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#contato">Contato</a>
+        <a href="/blog/">Blog</a>
+        <a class="btn btn-primary" href="https://wa.link/3gwhbl" target="_blank" rel="noopener">Diagnóstico agora</a>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-label="Proteção médica premium">
+        <div class="hero-bg" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="shell">
+          <div class="hero-content">
+            <span class="eyebrow reveal visible">Consultoria especializada em seguros internacionais</span>
+            <h1 class="reveal visible delay-1">Proteção médica premium no Brasil e no mundo.</h1>
+            <p class="hero-lead reveal visible delay-2">
+              Acesso a hospitais de referência como Einstein, Sírio-Libanês e centros internacionais de excelência, mesmo se você precisar viajar.
+            </p>
+            <div class="hero-actions reveal visible delay-3">
+              <a class="btn btn-gold" href="https://wa.link/3gwhbl" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 21a9 9 0 1 0-7.2-3.6L3.8 21l3.9-1a9 9 0 0 0 4.3 1z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                  <path d="M8.8 9.5c.7 2.4 2.2 4 4.7 4.7l1.4-1.4 2.1.5v2.1c0 .5-.4.9-.9.9A8.1 8.1 0 0 1 7.7 7.9c0-.5.4-.9.9-.9h2.1l.5 2.1-1.4 1.4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+                Quero meu diagnóstico agora
+              </a>
+              <a class="btn btn-ghost" href="#consultoria">Ver diferenciais</a>
+            </div>
+            <div class="response-note reveal visible delay-3"><span></span>Resposta em até 5 minutos / Atendimento sem compromisso</div>
+
+            <div class="hero-stats reveal visible delay-3" aria-label="Destaques">
+              <div class="stat">
+                <strong>24/7</strong>
+                <span>Assistência médica em emergências internacionais</span>
+              </div>
+              <div class="stat">
+                <strong>Global</strong>
+                <span>Comparação de coberturas, exclusões e benefícios</span>
+              </div>
+              <div class="stat">
+                <strong>Premium</strong>
+                <span>Orientação para famílias, estrangeiros e empresas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Resumo da consultoria">
+          <header>
+            <strong>Diagnóstico personalizado</strong>
+            <small>Confidencial</small>
+          </header>
+          <div class="coverage-line" aria-hidden="true"><i></i></div>
+          <ul>
+            <li><span class="check" aria-hidden="true"></span>Seguro internacional sob medida para seu perfil</li>
+            <li><span class="check" aria-hidden="true"></span>Contratação com corretora parceira habilitada</li>
+            <li><span class="check" aria-hidden="true"></span>Resposta ainda hoje, sem compromisso</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="hospital-strip" aria-label="Hospitais de referência">
+        <div class="strip-title">Acesso aos principais hospitais do Brasil e do mundo</div>
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-group">
+            <span class="hospital">Albert Einstein</span>
+            <span class="hospital">Sírio-Libanês</span>
+            <span class="hospital">Copa Star</span>
+            <span class="hospital">Mayo Clinic</span>
+            <span class="hospital">UHN</span>
+            <span class="hospital">Karolinska</span>
+            <span class="hospital">Cleveland Clinic</span>
+            <span class="hospital">Universitätsspital Zürich</span>
+            <span class="hospital">Hôpital Pitié-Salpêtrière</span>
+          </div>
+          <div class="marquee-group">
+            <span class="hospital">Albert Einstein</span>
+            <span class="hospital">Sírio-Libanês</span>
+            <span class="hospital">Copa Star</span>
+            <span class="hospital">Mayo Clinic</span>
+            <span class="hospital">UHN</span>
+            <span class="hospital">Karolinska</span>
+            <span class="hospital">Cleveland Clinic</span>
+            <span class="hospital">Universitätsspital Zürich</span>
+            <span class="hospital">Hôpital Pitié-Salpêtrière</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section white" aria-label="Credibilidade">
+        <div class="shell">
+          <div class="trust-grid">
+            <article class="quote-card reveal">
+              <span>01</span>
+              <p>Planos escolhidos por médicos, advogados e empresários exigentes.</p>
+            </article>
+            <article class="quote-card reveal delay-1">
+              <span>02</span>
+              <p>Cobertura global com atendimento local e internacional.</p>
+            </article>
+            <article class="quote-card reveal delay-2">
+              <span>03</span>
+              <p>Check-up anual incluído em planos selecionados.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="consultoria">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <div class="kicker">Consultoria premium</div>
+              <h2>Por que contar com uma consultoria especializada faz toda a diferença</h2>
+            </div>
+          </div>
+
+          <div class="consult-grid">
+            <article class="service-card reveal">
+              <figure class="service-photo">
+                <img src="/assets/saude-internacional-consulta.png" alt="Família estrangeira em consulta sobre seguro saúde internacional" loading="lazy" />
+              </figure>
+              <small>Planos de saúde personalizados</small>
+              <h3>Seguro alinhado ao seu perfil</h3>
+              <p>
+                Identificamos o seguro saúde internacional que melhor se adapta às suas necessidades, com comparação de cobertura, exclusões e benefícios.
+              </p>
+            </article>
+
+            <article class="service-card reveal delay-1">
+              <figure class="service-photo">
+                <img src="/assets/saude-internacional-assistencia.png" alt="Equipe de assistência médica internacional acompanhando atendimentos 24 horas" loading="lazy" />
+              </figure>
+              <small>Assistência 24 horas</small>
+              <h3>Suporte médico 24/7</h3>
+              <p>
+                As seguradoras parceiras oferecem suporte médico todos os dias da semana, com orientação e acompanhamento em emergências onde quer que você esteja.
+              </p>
+            </article>
+
+            <article class="service-card reveal delay-2">
+              <figure class="service-photo">
+                <img src="/assets/saude-internacional-viajantes.png" alt="Casal internacional avaliando cobertura médica em viagem" loading="lazy" />
+              </figure>
+              <small>Aconselhamento especializado</small>
+              <h3>Atendimento personalizado</h3>
+              <p>
+                Explicamos como funcionam os seguros internacionais e quais critérios considerar para tomar decisões conscientes, independentes e transparentes.
+              </p>
+            </article>
+          </div>
+
+          <div class="cta-band reveal">
+            <div>
+              <h3>Receba agora sua simulação gratuita</h3>
+              <p>Descubra o plano ideal para o seu perfil e receba seu diagnóstico ainda hoje.</p>
+            </div>
+            <a class="btn btn-primary" href="https://wa.link/3gwhbl" target="_blank" rel="noopener">Receber minha simulação gratuita</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark" aria-label="Seguradoras internacionais">
+        <div class="shell insurers">
+          <div class="insurer-board reveal">
+            <div class="world-card">
+              <img class="world-photo" src="/assets/saude-internacional-assistencia.png" alt="Central de assistência internacional para seguro saúde" loading="lazy" />
+              <svg class="map-lines" viewBox="0 0 520 360" fill="none" aria-hidden="true">
+                <path d="M60 210C140 110 215 122 284 180C349 235 423 220 484 96" stroke="rgba(141,234,229,.48)" stroke-width="2" />
+                <path d="M82 88C174 142 242 70 312 116C389 166 416 265 482 286" stroke="rgba(216,169,74,.48)" stroke-width="2" />
+                <path d="M98 278C172 218 238 232 300 272C352 304 411 297 463 250" stroke="rgba(255,255,255,.25)" stroke-width="2" />
+              </svg>
+              <span class="pin one"></span>
+              <span class="pin two"></span>
+              <span class="pin three"></span>
+              <h3>Conectamos você às melhores seguradoras internacionais do mundo.</h3>
+              <p>Cobertura global, atendimento local e orientação consultiva para contratar com segurança.</p>
+            </div>
+          </div>
+
+          <div class="insurer-copy-card reveal delay-1">
+            <div class="kicker">Cobertura global</div>
+            <h2>Segurança para estrangeiros, expatriados, estudantes e famílias internacionais</h2>
+            <p class="section-copy">
+              Organizamos informações técnicas em uma jornada simples, ajudando você a comparar alternativas e entender limites, rede, reembolso, urgências e cobertura em viagens.
+            </p>
+          </div>
+
+          <div class="plan-list">
+            <article class="plan-item reveal">
+              <span class="check" aria-hidden="true"></span>
+              <div>
+                <h3>Brasil como base, mundo como rede</h3>
+                <p>Apoio para quem mora no Brasil, viaja com frequência ou precisa de proteção médica em diferentes países.</p>
+              </div>
+            </article>
+            <article class="plan-item reveal delay-1">
+              <span class="check" aria-hidden="true"></span>
+              <div>
+                <h3>Informação clara antes de contratar</h3>
+                <p>Comparamos benefícios, exclusões, carências e critérios de elegibilidade antes da decisão.</p>
+              </div>
+            </article>
+            <article class="plan-item reveal delay-2">
+              <span class="check" aria-hidden="true"></span>
+              <div>
+                <h3>Parceira legalmente habilitada</h3>
+                <p>A contratação de seguros internacionais é realizada pela FDS Seguros, corretora parceira responsável pela intermediação.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section white" id="sobre">
+        <div class="shell about-grid">
+          <div>
+            <div class="kicker">Hirayama Corretora de Seguros</div>
+            <h2>Sua saúde e tranquilidade nas mãos de um consultor premium</h2>
+            <div class="about-copy" style="margin-top: 24px;">
+              <p>
+                A Hirayama Corretora de Seguros atua há mais de 10 anos oferecendo consultoria especializada em benefícios empresariais e orientação em seguros de saúde, com foco em soluções que entregam tranquilidade, proteção e informação de qualidade.
+              </p>
+              <p>
+                Somos referência no apoio consultivo para empresas e famílias que buscam entender melhor as opções disponíveis de cobertura no Brasil e no exterior, com clareza e responsabilidade.
+              </p>
+              <p>
+                Para os seguros saúde internacionais, atuamos exclusivamente como consultoria educativa, sem realizar venda direta. A contratação é sempre feita com a FDS Seguros, nossa corretora parceira legalmente habilitada e responsável pela intermediação com seguradoras internacionais.
+              </p>
+              <p>
+                Acreditamos que proteger a saúde começa com informações de verdade, e é isso que entregamos a cada atendimento.
+              </p>
+            </div>
+          </div>
+
+          <figure class="story-image-card reveal">
+            <img src="/assets/saude-internacional-viajantes.png" alt="Clientes internacionais analisando seguro saúde antes de viajar" loading="lazy" />
+            <figcaption class="story-badge">
+              <strong>Proteção para quem vive entre países</strong>
+              <span>Orientação clara para famílias, estrangeiros, expatriados e empresas que precisam de cobertura médica internacional.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="blog">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <div class="kicker">Blog</div>
+              <h2>Dúvidas comuns sobre saúde internacional?</h2>
+            </div>
+            <p class="section-copy">Artigos consultivos sobre seguro saúde internacional, estudantes, expatriados, reembolso, maternidade e seguradoras globais.</p>
+          </div>
+          <div class="blog-grid">
+            <article class="blog-card reveal">
+              <div>
+                <span>Estudantes</span>
+                <h3>Seguro para estudantes e intercambistas: o que os pais precisam saber</h3>
+              </div>
+              <a href="/blog/seguro-internacional-para-estudantes-e-intercambistas/">Clique aqui <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="blog-card reveal delay-1">
+              <div>
+                <span>Planejamento</span>
+                <h3>Seguro internacional e Imposto de Renda: posso deduzir no IRPF ou na empresa?</h3>
+              </div>
+              <a href="/blog/seguro-internacional-e-imposto-de-renda-posso-deduzir-no-irpf-ou-na-empresa/">Clique aqui <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="blog-card reveal delay-2">
+              <div>
+                <span>Saúde mental</span>
+                <h3>Saúde mental no seguro internacional: tem cobertura para psicólogo e psiquiatra?</h3>
+              </div>
+              <a href="/blog/saude-mental-seguro-internacional-cobertura-psicologo-psiquiatra/">Clique aqui <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+          <div style="margin-top: 28px">
+            <a class="btn btn-secondary" href="/blog/">Ver todos os artigos <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer" id="contato">
+      <div class="shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div>
+              <strong>Saúde Internacional</strong>
+              <span>by hirayama</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="footer-title">ENTRE EM CONTATO</h3>
+            <div class="footer-lines">
+              <p>Matriz : Biritiba Mirim / Centro / SP</p>
+              <p>Filial : São Paulo / Bela Vista / SP</p>
+              <p><a href="mailto:contato@hirayamacorretora.com.br">contato@hirayamacorretora.com.br</a></p>
+              <p><a href="tel:+551146922643">(11) 4692-2643</a> / <a href="tel:+5511938020789">(11) 9-3802-0789</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2024 Hirayama. Site idealizado por Ewerton Hirayama | Consultor de Benefícios.</span>
+          <a href="#home">Voltar ao topo</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="floating-socials" aria-label="Redes sociais">
+      <a class="float-btn whatsapp" href="https://wa.link/3gwhbl" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 21a9 9 0 1 0-7.2-3.6L3.8 21l3.9-1a9 9 0 0 0 4.3 1z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+          <path d="M8.8 9.5c.7 2.4 2.2 4 4.7 4.7l1.4-1.4 2.1.5v2.1c0 .5-.4.9-.9.9A8.1 8.1 0 0 1 7.7 7.9c0-.5.4-.9.9-.9h2.1l.5 2.1-1.4 1.4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <a class="float-btn linkedin" href="https://www.linkedin.com/in/ewertonhirayama/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#ffffff" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45z" />
+        </svg>
+      </a>
+      <a class="float-btn instagram" href="https://www.instagram.com/hirayamaseguros" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="4" y="4" width="16" height="16" rx="4.5" stroke="#ffffff" stroke-width="2" />
+          <circle cx="12" cy="12" r="3.4" stroke="#ffffff" stroke-width="2" />
+          <circle cx="17.2" cy="6.8" r="1.1" fill="#ffffff" />
+        </svg>
+      </a>
+      <a class="float-btn youtube" href="https://www.youtube.com/@HirayamaCorretora" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#ffffff" d="M21.58 7.19a2.74 2.74 0 0 0-1.93-1.94C17.95 4.8 12 4.8 12 4.8s-5.95 0-7.65.45a2.74 2.74 0 0 0-1.93 1.94A28.6 28.6 0 0 0 2 12a28.6 28.6 0 0 0 .42 4.81 2.74 2.74 0 0 0 1.93 1.94c1.7.45 7.65.45 7.65.45s5.95 0 7.65-.45a2.74 2.74 0 0 0 1.93-1.94A28.6 28.6 0 0 0 22 12a28.6 28.6 0 0 0-.42-4.81zM10 15.2V8.8l5.5 3.2-5.5 3.2z" />
+        </svg>
+      </a>
+      <a class="float-btn tiktok" href="https://www.tiktok.com/@ewertonhirayama" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#25f4ee" d="M16.1 4.3c.7 1.9 1.9 3.2 3.8 3.5v3.1c-1.5.1-2.8-.4-3.9-1.1v5.7c0 3.1-2.2 5.3-5.4 5.3-2.9 0-5.1-2-5.1-4.8 0-3 2.4-5.1 5.6-4.8v3.2c-1.4-.2-2.4.5-2.4 1.7 0 1 .8 1.7 1.8 1.7 1.2 0 2-.7 2-2.1V4.3h3.6z" />
+          <path fill="#fe2c55" d="M17.1 4.3c.7 1.9 1.9 3.2 3.8 3.5v3.1c-1.5.1-2.8-.4-3.9-1.1v5.7c0 3.1-2.2 5.3-5.4 5.3-1.4 0-2.7-.5-3.6-1.3.9.5 1.9.8 3 .8 3.2 0 5.4-2.2 5.4-5.3V9.4c1.1.7 2.4 1.2 3.9 1.1V8.2c-1.9-.3-3.1-1.6-3.8-3.5h.6z" />
+          <path fill="#ffffff" d="M15 4.3c.7 1.9 1.9 3.2 3.8 3.5v3.1c-1.5.1-2.8-.4-3.9-1.1v5.7c0 3.1-2.2 5.3-5.4 5.3-2.9 0-5.1-2-5.1-4.8 0-3 2.4-5.1 5.6-4.8v3.2c-1.4-.2-2.4.5-2.4 1.7 0 1 .8 1.7 1.8 1.7 1.2 0 2-.7 2-2.1V4.3H15z" />
+        </svg>
+      </a>
+    </div>
+
+    <script>
+      const header = document.querySelector("[data-header]");
+      const menuButton = document.querySelector("[data-menu-button]");
+      const mobilePanel = document.querySelector("[data-mobile-panel]");
+      const menuIcon = document.querySelector(".menu-icon path");
+
+      const setMenu = (open) => {
+        mobilePanel.classList.toggle("open", open);
+        document.body.classList.toggle("menu-open", open);
+        menuButton.setAttribute("aria-expanded", String(open));
+        menuButton.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+        menuIcon.setAttribute("d", open ? "M6 6l12 12M18 6L6 18" : "M4 7h16M4 12h16M4 17h16");
+      };
+
+      menuButton.addEventListener("click", () => {
+        setMenu(!mobilePanel.classList.contains("open"));
+      });
+
+      mobilePanel.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => setMenu(false));
+      });
+
+      const onScroll = () => {
+        header.classList.toggle("is-scrolled", window.scrollY > 16);
+      };
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            entry.target.classList.toggle("visible", entry.isIntersecting);
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+      );
+
+      document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+    </script>
+  </body>
+</html>
