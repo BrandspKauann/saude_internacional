@@ -662,6 +662,10 @@ img {
   line-height: 1.65;
 }
 
+.footer-cta .btn-gold {
+  color: var(--navy);
+}
+
 .footer-grid {
   display: grid;
   grid-template-columns: 1.18fr 1fr 0.74fr 0.9fr;
