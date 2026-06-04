@@ -6,27 +6,27 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=4" />
     <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg?v=4" />
 
-    <title>Saúde Internacional | Inteligência em saúde internacional</title>
+    <title>Saúde Internacional | Consultoria em Seguros Internacionais</title>
     <meta
       name="description"
-      content="Centro consultivo de inteligência em saúde internacional para quem precisa entender cobertura, continuidade, liberdade médica e decisão patrimonial antes de contratar."
+      content="Consultoria especializada em seguros internacionais de saúde para estrangeiros, expatriados, estudantes, famílias e empresas que buscam cobertura premium no Brasil e no mundo."
     />
     <meta
       name="keywords"
-      content="saúde internacional, seguro saúde internacional, inteligência em saúde, planejamento de saúde, continuidade familiar, franquia, pré-existência, reembolso internacional"
+      content="saúde internacional, seguro saúde internacional, plano de saúde para estrangeiros, seguro para expatriados, consultoria em seguro saúde, Hirayama Corretora"
     />
     <meta name="author" content="Hirayama Corretora de Seguros" />
     <meta name="theme-color" content="#06243f" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Saúde Internacional | Decisões importantes sobre saúde sem achismo" />
+    <meta property="og:title" content="Saúde Internacional | Proteção médica premium no Brasil e no mundo" />
     <meta
       property="og:description"
-      content="Entenda se saúde internacional faz sentido para sua realidade, família, patrimônio e continuidade antes de contratar."
+      content="Acesso a hospitais de referência e consultoria clara para escolher seguros internacionais com segurança."
     />
     <meta property="og:site_name" content="Saúde Internacional" />
     <meta property="og:image" content="/assets/saude-internacional-hero.png" />
-    <meta property="og:image:alt" content="Centro consultivo de inteligência em saúde internacional" />
+    <meta property="og:image:alt" content="Consultoria premium em saúde internacional" />
 
     <style>
       :root {
@@ -1384,129 +1384,71 @@
         font-size: 0.9rem;
       }
 
-      .consultive-hero .hero-lead {
-        max-width: 720px;
-        text-transform: none;
-        font-size: clamp(1rem, 1.45vw, 1.18rem);
-        font-weight: 620;
-      }
-
-      .consultive-card small {
-        text-transform: uppercase;
-      }
-
-      .editorial-grid,
-      .themes-layout,
-      .mapping-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1.06fr) minmax(320px, 0.94fr);
-        gap: 34px;
+      .floating-socials {
+        position: fixed;
+        right: 22px;
+        bottom: 22px;
+        z-index: 110;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-      }
-
-      .insight-panel {
-        padding: 34px;
-        background:
-          linear-gradient(135deg, rgba(6, 36, 63, 0.94), rgba(11, 56, 95, 0.9));
-        border: 1px solid rgba(216, 169, 74, 0.24);
-        border-radius: 8px;
-        box-shadow: var(--shadow);
-      }
-
-      .insight-panel p {
-        margin: 0 0 14px;
-        color: var(--white);
-        font-size: clamp(1.4rem, 2.6vw, 2.05rem);
-        font-weight: 760;
-        line-height: 1.22;
-      }
-
-      .insight-panel span {
-        color: rgba(255, 255, 255, 0.72);
-        line-height: 1.65;
-      }
-
-      .intelligence-grid .service-card {
-        min-height: 315px;
-      }
-
-      .intelligence-grid .service-card a {
-        margin-top: auto;
-        color: var(--teal-dark);
-        font-weight: 820;
-      }
-
-      .theme-intro h2,
-      .mapping-copy h2 {
-        color: var(--white);
-      }
-
-      .theme-intro p,
-      .mapping-copy p {
-        color: rgba(255, 255, 255, 0.76);
-        font-size: 1.02rem;
-        line-height: 1.75;
-      }
-
-      .consultive-list {
-        margin-top: 0;
-      }
-
-      .mapping-section {
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-      }
-
-      .mapping-form {
-        display: grid;
-        gap: 14px;
-        padding: 28px;
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        border-radius: 8px;
-      }
-
-      .mapping-form label {
-        display: grid;
-        gap: 7px;
-        color: rgba(255, 255, 255, 0.82);
-        font-size: 0.9rem;
-        font-weight: 760;
-      }
-
-      .mapping-form input,
-      .mapping-form select {
-        min-height: 46px;
-        width: 100%;
-        padding: 0 13px;
-        color: var(--ink);
-        background: rgba(255, 255, 255, 0.95);
-        border: 1px solid rgba(255, 255, 255, 0.22);
-        border-radius: 8px;
-        outline: none;
-      }
-
-      .check-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
       }
 
-      .check-grid label {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px;
-        background: rgba(255, 255, 255, 0.08);
-        border-radius: 8px;
+      .float-btn {
+        position: relative;
+        width: 54px;
+        height: 54px;
+        display: grid;
+        place-items: center;
+        color: var(--white);
+        border-radius: 50%;
+        box-shadow: 0 16px 32px rgba(6, 36, 63, 0.24);
+        transition:
+          transform 220ms ease,
+          box-shadow 220ms ease;
       }
 
-      .check-grid input {
-        min-height: auto;
-        width: auto;
+      .float-btn svg {
+        width: 27px;
+        height: 27px;
       }
 
-      .legal-mini {
-        font-size: 0.88rem;
+      .float-btn.whatsapp {
+        background: #22c55e;
+        box-shadow: 0 18px 34px rgba(34, 197, 94, 0.34);
+      }
+
+      .float-btn.linkedin {
+        background: #0a66c2;
+      }
+
+      .float-btn.instagram {
+        background: radial-gradient(circle at 30% 108%, #fdf497 0 12%, #fd5949 34%, #d6249f 58%, #285aeb 100%);
+      }
+
+      .float-btn.youtube {
+        background: #ff0000;
+      }
+
+      .float-btn.tiktok {
+        background: #050505;
+      }
+
+      .float-btn.whatsapp::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        border: 1px solid rgba(34, 197, 94, 0.55);
+        animation: ring 1.8s ease-out infinite;
+      }
+
+      .float-btn:hover,
+      .float-btn:focus-visible {
+        transform: translateY(-3px) scale(1.04);
+        box-shadow: 0 22px 42px rgba(6, 36, 63, 0.28);
+        outline: none;
       }
 
       .reveal {
@@ -1666,12 +1608,6 @@
           flex-direction: column;
         }
 
-        .editorial-grid,
-        .themes-layout,
-        .mapping-grid {
-          grid-template-columns: 1fr;
-        }
-
         .footer-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -1774,10 +1710,6 @@
           width: 100%;
         }
 
-        .check-grid {
-          grid-template-columns: 1fr;
-        }
-
         .hero-stats {
           grid-template-columns: 1fr;
         }
@@ -1816,6 +1748,16 @@
           min-height: 420px;
         }
 
+        .floating-socials {
+          right: 15px;
+          bottom: 15px;
+          gap: 8px;
+        }
+
+        .float-btn {
+          width: 56px;
+          height: 56px;
+        }
       }
     </style>
   </head>
@@ -1830,11 +1772,10 @@
         </a>
 
         <nav class="nav-links" aria-label="Navegacao principal">
-          <a href="#home">Início</a>
-          <a href="#inteligencia">Inteligência</a>
-          <a href="#temas">Temas</a>
+          <a href="#home">Home</a>
+          <a href="#sobre">Sobre nós</a>
+          <a href="#contato">Contato</a>
           <a href="/blog/">Blog</a>
-          <a href="#mapeamento">Mapeamento</a>
         </nav>
 
         <div class="nav-actions">
@@ -1844,7 +1785,12 @@
               <path d="M4.8 7l7.2 6 7.2-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
             </svg>
           </a>
-          <a class="btn btn-primary" href="#mapeamento">Entenda seu cenário</a>
+          <a class="btn btn-primary" href="https://wa.link/3gwhbl" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7.5 10.2c1.4 2.8 3.5 4.8 6.3 6.3l2.1-2.1c.3-.3.8-.4 1.2-.2 1 .3 2 .5 3.1.5.6 0 1 .4 1 1V19c0 .6-.4 1-1 1C10.8 20 4 13.2 4 4.8c0-.6.4-1 1-1h3.3c.6 0 1 .4 1 1 0 1.1.2 2.2.5 3.1.1.4 0 .8-.2 1.1l-2.1 2.2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+            </svg>
+            Diagnóstico agora
+          </a>
           <button class="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-button>
             <svg class="menu-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true">
               <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -1854,47 +1800,387 @@
       </div>
 
       <div class="mobile-panel" data-mobile-panel>
-        <a href="#home">Início</a>
-        <a href="#inteligencia">Inteligência</a>
-        <a href="#temas">Temas</a>
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#contato">Contato</a>
         <a href="/blog/">Blog</a>
-        <a href="#mapeamento">Mapeamento</a>
-        <a class="btn btn-primary" href="#mapeamento">Entenda seu cenário</a>
+        <a class="btn btn-primary" href="https://wa.link/3gwhbl" target="_blank" rel="noopener">Diagnóstico agora</a>
       </div>
     </header>
 
     <main id="home">
-      <section class="hero consultive-hero" aria-label="Centro consultivo de inteligência em saúde internacional">
-        <div class="hero-bg" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-        <div class="shell"><div class="hero-content">
-          <span class="eyebrow reveal visible">Centro consultivo de inteligência em saúde internacional</span>
-          <h1 class="reveal visible delay-1">Decisões importantes sobre saúde não deveriam ser tomadas no escuro.</h1>
-          <p class="hero-lead reveal visible delay-2">Antes de contratar qualquer coisa, entenda se saúde internacional faz sentido para sua realidade, família, patrimônio e continuidade.</p>
-          <div class="hero-actions reveal visible delay-3"><a class="btn btn-gold" href="#mapeamento">Entenda se faz sentido para você</a><a class="btn btn-ghost" href="#guia-inicial">Ler o guia inicial</a></div>
-          <div class="response-note reveal visible delay-3"><span></span>Sem pressão comercial. Primeiro entendimento, depois decisão.</div>
-          <div class="hero-stats reveal visible delay-3" aria-label="Destaques consultivos"><div class="stat"><strong>Clareza</strong><span>Tradução de conceitos como franquia, reembolso, pré-existência e elegibilidade.</span></div><div class="stat"><strong>Estratégia</strong><span>Leitura do impacto para família, patrimônio, viagens e continuidade.</span></div><div class="stat"><strong>Critério</strong><span>Nem todo perfil se beneficia do seguro saúde internacional.</span></div></div>
-        </div></div>
-        <aside class="hero-card consultive-card" aria-label="Perguntas iniciais"><header><strong>Antes de comparar produtos</strong><small>compare modelos</small></header><div class="coverage-line" aria-hidden="true"><i></i></div><ul><li><span class="check" aria-hidden="true"></span>Qual modelo protege melhor sua realidade?</li><li><span class="check" aria-hidden="true"></span>O que muda com idade, dependentes e histórico médico?</li><li><span class="check" aria-hidden="true"></span>Onde estão os riscos invisíveis do contrato?</li></ul></aside>
+      <section class="hero" aria-label="Proteção médica premium">
+        <div class="hero-bg" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="shell">
+          <div class="hero-content">
+            <span class="eyebrow reveal visible">Consultoria especializada em seguros internacionais</span>
+            <h1 class="reveal visible delay-1">Proteção médica premium no Brasil e no mundo.</h1>
+            <p class="hero-lead reveal visible delay-2">
+              Acesso a hospitais de referência como Einstein, Sírio-Libanês e centros internacionais de excelência, mesmo se você precisar viajar.
+            </p>
+            <div class="hero-actions reveal visible delay-3">
+              <a class="btn btn-gold" href="https://wa.link/3gwhbl" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 21a9 9 0 1 0-7.2-3.6L3.8 21l3.9-1a9 9 0 0 0 4.3 1z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                  <path d="M8.8 9.5c.7 2.4 2.2 4 4.7 4.7l1.4-1.4 2.1.5v2.1c0 .5-.4.9-.9.9A8.1 8.1 0 0 1 7.7 7.9c0-.5.4-.9.9-.9h2.1l.5 2.1-1.4 1.4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+                Quero meu diagnóstico agora
+              </a>
+              <a class="btn btn-ghost" href="#consultoria">Ver diferenciais</a>
+            </div>
+            <div class="response-note reveal visible delay-3"><span></span>Resposta em até 5 minutos / Atendimento sem compromisso</div>
+
+            <div class="hero-stats reveal visible delay-3" aria-label="Destaques">
+              <div class="stat">
+                <strong>24/7</strong>
+                <span>Assistência médica em emergências internacionais</span>
+              </div>
+              <div class="stat">
+                <strong>Global</strong>
+                <span>Comparação de coberturas, exclusões e benefícios</span>
+              </div>
+              <div class="stat">
+                <strong>Premium</strong>
+                <span>Orientação para famílias, estrangeiros e empresas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Resumo da consultoria">
+          <header>
+            <strong>Diagnóstico personalizado</strong>
+            <small>Confidencial</small>
+          </header>
+          <div class="coverage-line" aria-hidden="true"><i></i></div>
+          <ul>
+            <li><span class="check" aria-hidden="true"></span>Seguro internacional sob medida para seu perfil</li>
+            <li><span class="check" aria-hidden="true"></span>Contratação com corretora parceira habilitada</li>
+            <li><span class="check" aria-hidden="true"></span>Resposta ainda hoje, sem compromisso</li>
+          </ul>
+        </aside>
       </section>
 
-      <section class="section white" id="guia-inicial"><div class="shell editorial-grid"><div><div class="kicker">Guia inicial</div><h2>O que é saúde internacional, sem confusão</h2><p class="section-copy">Saúde internacional não é seguro viagem, não é um plano nacional com outro nome e não deve ser analisada apenas por hospital ou preço. É um modelo de proteção médica que pode envolver rede parceira, reembolso, pagamento direto, análise de aceitação, franquia anual e regras próprias de continuidade.</p></div><div class="insight-panel reveal"><p>Saúde internacional não é apenas cobertura. É uma decisão de longo prazo.</p><span>O ponto de partida não é perguntar qual produto é melhor. É entender qual modelo faz sentido para a sua vida.</span></div></div></section>
+      <section class="hospital-strip" aria-label="Hospitais de referência">
+        <div class="strip-title">Acesso aos principais hospitais do Brasil e do mundo</div>
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-group">
+            <span class="hospital">Albert Einstein</span>
+            <span class="hospital">Sírio-Libanês</span>
+            <span class="hospital">Copa Star</span>
+            <span class="hospital">Mayo Clinic</span>
+            <span class="hospital">UHN</span>
+            <span class="hospital">Karolinska</span>
+            <span class="hospital">Cleveland Clinic</span>
+            <span class="hospital">Universitätsspital Zürich</span>
+            <span class="hospital">Hôpital Pitié-Salpêtrière</span>
+          </div>
+          <div class="marquee-group">
+            <span class="hospital">Albert Einstein</span>
+            <span class="hospital">Sírio-Libanês</span>
+            <span class="hospital">Copa Star</span>
+            <span class="hospital">Mayo Clinic</span>
+            <span class="hospital">UHN</span>
+            <span class="hospital">Karolinska</span>
+            <span class="hospital">Cleveland Clinic</span>
+            <span class="hospital">Universitätsspital Zürich</span>
+            <span class="hospital">Hôpital Pitié-Salpêtrière</span>
+          </div>
+        </div>
+      </section>
 
-      <section class="section" id="inteligencia"><div class="shell"><div class="section-head"><div><div class="kicker">O que quase ninguém explica</div><h2>As perguntas que mudam a decisão</h2></div><p class="section-copy">A maioria das pessoas compara rede, preço e hospital. A decisão real costuma passar por continuidade, liberdade médica, reembolso, pré-existência, elegibilidade e estrutura familiar.</p></div><div class="consult-grid intelligence-grid"><article class="service-card reveal"><small>Continuidade</small><h3>Sua proteção depende de um CNPJ?</h3><p>Empresários e famílias patrimoniais precisam entender o que acontece quando estruturas societárias, grupos ou titularidades mudam.</p><a href="/inteligencia/estrategia-saude-depende-de-cnpj/">Ler reflexão</a></article><article class="service-card reveal delay-1"><small>Franquia anual</small><h3>Franquia não é necessariamente um problema</h3><p>Ela pode ser uma ferramenta de construção de custo, desde que o impacto prático seja compreendido antes da decisão.</p><a href="/inteligencia/franquia-seguro-saude-internacional/">Entender conceito</a></article><article class="service-card reveal delay-2"><small>Pré-existência</small><h3>Transparência protege o cliente</h3><p>A análise de aceitação existe para dimensionar risco. Omissões podem gerar problemas maiores do que a própria condição informada.</p><a href="/inteligencia/pre-existencias-seguro-saude-internacional/">Ver cuidados</a></article></div></div></section>
+      <section class="section white" aria-label="Credibilidade">
+        <div class="shell">
+          <div class="trust-grid">
+            <article class="quote-card reveal">
+              <span>01</span>
+              <p>Planos escolhidos por médicos, advogados e empresários exigentes.</p>
+            </article>
+            <article class="quote-card reveal delay-1">
+              <span>02</span>
+              <p>Cobertura global com atendimento local e internacional.</p>
+            </article>
+            <article class="quote-card reveal delay-2">
+              <span>03</span>
+              <p>Check-up anual incluído em planos selecionados.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-      <section class="section dark" id="temas"><div class="shell themes-layout"><div class="theme-intro reveal"><div class="kicker">Quando faz sentido</div><h2>Nem toda decisão inteligente leva ao mesmo caminho.</h2><p>Em alguns perfis, saúde internacional amplia possibilidades. Em outros, um plano nacional, seguro viagem ou benefício empresarial pode continuar sendo a melhor resposta. O valor está em comparar modelos sem achismo.</p></div><div class="plan-list consultive-list"><article class="plan-item reveal"><span class="check" aria-hidden="true"></span><div><h3>Pode fazer sentido</h3><p>Para quem valoriza liberdade médica, previsibilidade global, uso frequente de reembolso, vida internacional ou continuidade familiar.</p></div></article><article class="plan-item reveal delay-1"><span class="check" aria-hidden="true"></span><div><h3>Pode não fazer sentido</h3><p>Quando a utilização é local, o plano nacional atende bem, o orçamento não comporta franquias ou a elegibilidade não favorece o cenário.</p></div></article><article class="plan-item reveal delay-2"><span class="check" aria-hidden="true"></span><div><h3>Precisa ser analisado</h3><p>Histórico médico, idade, dependentes, residência, viagens, holding familiar e expectativas de acesso mudam a leitura.</p></div></article></div></div></section>
+      <section class="section" id="consultoria">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <div class="kicker">Consultoria premium</div>
+              <h2>Por que contar com uma consultoria especializada faz toda a diferença</h2>
+            </div>
+          </div>
 
-      <section class="section white" aria-label="Perfis atendidos"><div class="shell"><div class="section-head"><div><div class="kicker">Para quem pesquisa com critério</div><h2>O tema muda conforme o contexto de vida</h2></div></div><div class="profile-grid"><article class="profile-card reveal"><span>01</span><h3>Executivos e empresários</h3><p>Previsibilidade, proteção patrimonial, continuidade familiar e análise racional de risco.</p></article><article class="profile-card reveal delay-1"><span>02</span><h3>Médicos</h3><p>Autonomia, qualidade assistencial, acesso e liberdade de escolha com precisão contratual.</p></article><article class="profile-card reveal delay-2"><span>03</span><h3>Famílias 55+/70+</h3><p>Elegibilidade, reajustes, estabilidade contratual, dependentes e planejamento de continuidade.</p></article><article class="profile-card reveal"><span>04</span><h3>Vida internacional</h3><p>Brasileiros com rotina entre países precisam entender uso global, rede, reembolso e emergências.</p></article><article class="profile-card reveal delay-1"><span>05</span><h3>RH e C-Level</h3><p>Benefícios executivos, retenção de liderança e estruturas que não dependem apenas de preço.</p></article><article class="profile-card reveal delay-2"><span>06</span><h3>Famílias patrimoniais</h3><p>Holding, sucessão, titularidade e acesso médico como parte da estratégia familiar.</p></article></div></div></section>
+          <div class="consult-grid">
+            <article class="service-card reveal">
+              <figure class="service-photo">
+                <img src="/assets/saude-internacional-consulta.png" alt="Família estrangeira em consulta sobre seguro saúde internacional" loading="lazy" />
+              </figure>
+              <small>Planos de saúde personalizados</small>
+              <h3>Seguro alinhado ao seu perfil</h3>
+              <p>
+                Identificamos o seguro saúde internacional que melhor se adapta às suas necessidades, com comparação de cobertura, exclusões e benefícios.
+              </p>
+            </article>
 
-      <section class="section" aria-label="Páginas de inteligência"><div class="shell"><div class="section-head"><div><div class="kicker">Páginas provocativas</div><h2>Conteúdos para pensar antes de decidir</h2></div><p class="section-copy">Essas páginas não vendem produto. Elas ajudam a enxergar riscos, oportunidades e perguntas que quase nunca entram em comparações superficiais.</p></div><div class="blog-grid intelligence-links"><article class="blog-card reveal"><div><span>Continuidade</span><h3>Sua estratégia de saúde depende da sobrevivência de um CNPJ?</h3></div><a href="/inteligencia/estrategia-saude-depende-de-cnpj/">Ler análise <span aria-hidden="true">→</span></a></article><article class="blog-card reveal delay-1"><div><span>Patrimônio</span><h3>A saúde da sua família faz parte do seu planejamento patrimonial?</h3></div><a href="/inteligencia/holding-familiar-e-saude/">Ler análise <span aria-hidden="true">→</span></a></article><article class="blog-card reveal delay-2"><div><span>Elegibilidade</span><h3>O que acontece se o titular falecer?</h3></div><a href="/inteligencia/titular-falece-continuidade-familiar/">Ler análise <span aria-hidden="true">→</span></a></article></div></div></section>
+            <article class="service-card reveal delay-1">
+              <figure class="service-photo">
+                <img src="/assets/saude-internacional-assistencia.png" alt="Equipe de assistência médica internacional acompanhando atendimentos 24 horas" loading="lazy" />
+              </figure>
+              <small>Assistência 24 horas</small>
+              <h3>Suporte médico 24/7</h3>
+              <p>
+                As seguradoras parceiras oferecem suporte médico todos os dias da semana, com orientação e acompanhamento em emergências onde quer que você esteja.
+              </p>
+            </article>
 
-      <section class="section white" id="sobre"><div class="shell about-grid"><div><div class="kicker">Especialista que traduz complexidade</div><h2>Conhecimento antes de qualquer recomendação</h2><div class="about-copy" style="margin-top: 24px;"><p>Após anos atuando com benefícios e saúde suplementar, a Hirayama passou a organizar informações sobre saúde internacional para pessoas e empresas que não querem decidir apenas por propaganda, indicação superficial ou comparação de preço.</p><p>O papel deste site é educativo e consultivo: explicar modelos, critérios, riscos e possibilidades para que cada pessoa entenda se o tema realmente faz sentido para seu cenário.</p><p>Quando houver contratação de seguros internacionais, a intermediação é realizada pela FDS Seguros, corretora parceira legalmente habilitada. A Hirayama atua como consultoria especializada em benefícios e saúde.</p></div></div><figure class="story-image-card reveal"><img src="/assets/ewerton-hirayama-consultor.jpg" alt="Ewerton Hirayama, consultor em saúde internacional" loading="lazy" /><figcaption class="story-badge"><strong>Ewerton Hirayama</strong><span>Consultoria executiva para traduzir um mercado complexo em decisões mais conscientes.</span></figcaption></figure></div></section>
+            <article class="service-card reveal delay-2">
+              <figure class="service-photo">
+                <img src="/assets/saude-internacional-viajantes.png" alt="Casal internacional avaliando cobertura médica em viagem" loading="lazy" />
+              </figure>
+              <small>Aconselhamento especializado</small>
+              <h3>Atendimento personalizado</h3>
+              <p>
+                Explicamos como funcionam os seguros internacionais e quais critérios considerar para tomar decisões conscientes, independentes e transparentes.
+              </p>
+            </article>
+          </div>
 
-      <section class="section" id="blog"><div class="shell"><div class="section-head"><div><div class="kicker">Centro de inteligência</div><h2>Leia antes de comparar qualquer proposta</h2></div><p class="section-copy">O blog existe para gerar entendimento: conceitos essenciais, riscos invisíveis, vida real, planejamento familiar e tendências globais de saúde.</p></div><div class="blog-grid"><article class="blog-card reveal"><div><span>Começando do zero</span><h3>Seguro viagem, cartão de crédito e saúde internacional: por que tanta gente confunde?</h3></div><a href="/blog/seguro-cartao-vs-saude-internacional/">Continuar lendo <span aria-hidden="true">→</span></a></article><article class="blog-card reveal delay-1"><div><span>Custos do modelo</span><h3>Franquia, coparticipação, limites e dedutíveis: como entender os custos do seu plano</h3></div><a href="/blog/franquia-reembolso-seguro-saude-internacional/">Continuar lendo <span aria-hidden="true">→</span></a></article><article class="blog-card reveal delay-2"><div><span>Planejamento</span><h3>Seguro internacional e Imposto de Renda: posso deduzir no IRPF ou na empresa?</h3></div><a href="/blog/seguro-internacional-e-imposto-de-renda-posso-deduzir-no-irpf-ou-na-empresa/">Continuar lendo <span aria-hidden="true">→</span></a></article></div><div style="margin-top: 28px"><a class="btn btn-secondary" href="/blog/">Acessar biblioteca completa <span aria-hidden="true">→</span></a></div></div></section>
+          <div class="cta-band reveal">
+            <div>
+              <h3>Receba agora sua simulação gratuita</h3>
+              <p>Descubra o plano ideal para o seu perfil e receba seu diagnóstico ainda hoje.</p>
+            </div>
+            <a class="btn btn-primary" href="https://wa.link/3gwhbl" target="_blank" rel="noopener">Receber minha simulação gratuita</a>
+          </div>
+        </div>
+      </section>
 
-      <section class="section dark mapping-section" id="mapeamento"><div class="shell mapping-grid"><div class="mapping-copy reveal"><div class="kicker">Mapeamento consultivo inicial</div><h2>Converse sobre o seu cenário.</h2><p>O objetivo não é pedir uma proposta imediata. É entender contexto: plano atual, histórico, dependentes, viagens, objetivos e riscos que merecem atenção antes de qualquer decisão.</p><p class="legal-mini">Este formulário não armazena dados no site. Ele organiza as respostas e abre uma mensagem estruturada no WhatsApp.</p></div><form class="mapping-form reveal delay-1" data-mapping-form><label>Nome<input name="nome" type="text" required /></label><label>E-mail<input name="email" type="email" required /></label><label>WhatsApp<input name="whatsapp" type="tel" required /></label><label>Cidade<input name="cidade" type="text" /></label><label>Idade<input name="idade" type="number" min="0" max="110" /></label><label>Possui plano atualmente?<select name="plano"><option>Sim</option><option>Não</option><option>Estou avaliando para familiar/empresa</option></select></label><label>Qual operadora?<input name="operadora" type="text" placeholder="Bradesco, SulAmérica, Omint, outra..." /></label><label>Utiliza reembolso?<select name="reembolso"><option>Não sei avaliar</option><option>Sim, com frequência</option><option>Às vezes</option><option>Não utilizo</option></select></label><label>O que mais valoriza?<select name="objetivo"><option>Liberdade médica</option><option>Previsibilidade</option><option>Acesso internacional</option><option>Proteção familiar</option><option>Continuidade</option><option>Custo</option></select></label><label>Perfil<select name="perfil"><option>Executivo</option><option>Empresário</option><option>Médico</option><option>Profissional liberal</option><option>Aposentado</option><option>Família</option><option>RH/C-Level</option></select></label><div class="check-grid" aria-label="Contexto"><label><input name="dependentes" type="checkbox" /> Possui dependentes</label><label><input name="pais_idosos" type="checkbox" /> Pais idosos</label><label><input name="holding" type="checkbox" /> Holding familiar</label><label><input name="viagens" type="checkbox" /> Viaja frequentemente</label><label><input name="exterior" type="checkbox" /> Residência fora do Brasil</label></div><button class="btn btn-gold" type="submit">Enviar meu cenário para análise</button></form></div></section>
+      <section class="section dark" aria-label="Seguradoras internacionais">
+        <div class="shell insurers">
+          <div class="insurer-board reveal">
+            <div class="world-card">
+              <img class="world-photo" src="/assets/saude-internacional-assistencia.png" alt="Central de assistência internacional para seguro saúde" loading="lazy" />
+              <svg class="map-lines" viewBox="0 0 520 360" fill="none" aria-hidden="true">
+                <path d="M60 210C140 110 215 122 284 180C349 235 423 220 484 96" stroke="rgba(141,234,229,.48)" stroke-width="2" />
+                <path d="M82 88C174 142 242 70 312 116C389 166 416 265 482 286" stroke="rgba(216,169,74,.48)" stroke-width="2" />
+                <path d="M98 278C172 218 238 232 300 272C352 304 411 297 463 250" stroke="rgba(255,255,255,.25)" stroke-width="2" />
+              </svg>
+              <span class="pin one"></span>
+              <span class="pin two"></span>
+              <span class="pin three"></span>
+              <h3>Conectamos você às melhores seguradoras internacionais do mundo.</h3>
+              <p>Cobertura global, atendimento local e orientação consultiva para contratar com segurança.</p>
+            </div>
+          </div>
+
+          <div class="insurer-copy-card reveal delay-1">
+            <div class="kicker">Cobertura global</div>
+            <h2>Segurança para estrangeiros, expatriados, estudantes e famílias internacionais</h2>
+            <p class="section-copy">
+              Organizamos informações técnicas em uma jornada simples, ajudando você a comparar alternativas e entender limites, rede, reembolso, urgências e cobertura em viagens.
+            </p>
+          </div>
+
+          <div class="plan-list">
+            <article class="plan-item reveal">
+              <span class="check" aria-hidden="true"></span>
+              <div>
+                <h3>Brasil como base, mundo como rede</h3>
+                <p>Apoio para quem mora no Brasil, viaja com frequência ou precisa de proteção médica em diferentes países.</p>
+              </div>
+            </article>
+            <article class="plan-item reveal delay-1">
+              <span class="check" aria-hidden="true"></span>
+              <div>
+                <h3>Informação clara antes de contratar</h3>
+                <p>Comparamos benefícios, exclusões, carências e critérios de elegibilidade antes da decisão.</p>
+              </div>
+            </article>
+            <article class="plan-item reveal delay-2">
+              <span class="check" aria-hidden="true"></span>
+              <div>
+                <h3>Parceira legalmente habilitada</h3>
+                <p>A contratação de seguros internacionais é realizada pela FDS Seguros, corretora parceira responsável pela intermediação.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section white" id="sobre">
+        <div class="shell about-grid">
+          <div>
+            <div class="kicker">Hirayama Corretora de Seguros</div>
+            <h2>Sua saúde e tranquilidade nas mãos de um consultor premium</h2>
+            <div class="about-copy" style="margin-top: 24px;">
+              <p>
+                A Hirayama Corretora de Seguros atua há mais de 10 anos oferecendo consultoria especializada em benefícios empresariais e orientação em seguros de saúde, com foco em soluções que entregam tranquilidade, proteção e informação de qualidade.
+              </p>
+              <p>
+                Somos referência no apoio consultivo para empresas e famílias que buscam entender melhor as opções disponíveis de cobertura no Brasil e no exterior, com clareza e responsabilidade.
+              </p>
+              <p>
+                Para os seguros saúde internacionais, atuamos exclusivamente como consultoria educativa, sem realizar venda direta. A contratação é sempre feita com a FDS Seguros, nossa corretora parceira legalmente habilitada e responsável pela intermediação com seguradoras internacionais.
+              </p>
+              <p>
+                Acreditamos que proteger a saúde começa com informações de verdade, e é isso que entregamos a cada atendimento.
+              </p>
+            </div>
+          </div>
+
+          <figure class="story-image-card reveal">
+            <img src="/assets/saude-internacional-viajantes.png" alt="Clientes internacionais analisando seguro saúde antes de viajar" loading="lazy" />
+            <figcaption class="story-badge">
+              <strong>Proteção para quem vive entre países</strong>
+              <span>Orientação clara para famílias, estrangeiros, expatriados e empresas que precisam de cobertura médica internacional.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="blog">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <div class="kicker">Blog</div>
+              <h2>Dúvidas comuns sobre saúde internacional?</h2>
+            </div>
+            <p class="section-copy">Artigos consultivos sobre seguro saúde internacional, estudantes, expatriados, reembolso, maternidade e seguradoras globais.</p>
+          </div>
+          <div class="blog-grid">
+            <article class="blog-card reveal">
+              <div>
+                <span>Estudantes</span>
+                <h3>Seguro para estudantes e intercambistas: o que os pais precisam saber</h3>
+              </div>
+              <a href="/blog/seguro-internacional-para-estudantes-e-intercambistas/">Clique aqui <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="blog-card reveal delay-1">
+              <div>
+                <span>Planejamento</span>
+                <h3>Seguro internacional e Imposto de Renda: posso deduzir no IRPF ou na empresa?</h3>
+              </div>
+              <a href="/blog/seguro-internacional-e-imposto-de-renda-posso-deduzir-no-irpf-ou-na-empresa/">Clique aqui <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="blog-card reveal delay-2">
+              <div>
+                <span>Saúde mental</span>
+                <h3>Saúde mental no seguro internacional: tem cobertura para psicólogo e psiquiatra?</h3>
+              </div>
+              <a href="/blog/saude-mental-seguro-internacional-cobertura-psicologo-psiquiatra/">Clique aqui <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+          <div style="margin-top: 28px">
+            <a class="btn btn-secondary" href="/blog/">Ver todos os artigos <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
     </main>
 
-    <footer class="footer" id="contato"><div class="shell"><div class="footer-cta"><div><span class="footer-eyebrow">Saúde Internacional</span><h2>Entenda antes de contratar.</h2><p>Uma conversa consultiva deve começar pelo cenário, não pela tabela. Quando fizer sentido, a contratação é conduzida por corretora parceira legalmente habilitada.</p></div><a class="btn btn-gold" href="#mapeamento">Converse sobre o seu cenário</a></div><div class="footer-grid"><div class="footer-brand"><div><strong>Saúde Internacional</strong><span>by hirayama</span><p>Centro consultivo de inteligência em saúde internacional para decisões médicas, familiares e patrimoniais mais conscientes.</p></div></div><div class="footer-col"><h3 class="footer-title">Contato</h3><div class="footer-lines"><p>Matriz: Biritiba Mirim / Centro / SP</p><p>Filial: São Paulo / Bela Vista / SP</p><p><a href="mailto:contato@hirayamacorretora.com.br">contato@hirayamacorretora.com.br</a></p><p><a href="tel:+551146922643">(11) 4692-2643</a> / <a href="tel:+5511938020789">(11) 9-3802-0789</a></p></div></div><div class="footer-col"><h3 class="footer-title">Navegação</h3><nav class="footer-nav" aria-label="Navegação do rodapé"><a href="#home">Início</a><a href="#inteligencia">Inteligência</a><a href="#temas">Temas</a><a href="/blog/">Blog</a><a href="#mapeamento">Mapeamento</a></nav></div><div class="footer-col"><h3 class="footer-title">Redes</h3><div class="footer-social-list"><a href="https://www.linkedin.com/in/ewertonhirayama/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/hirayamaseguros" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/@HirayamaCorretora" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@ewertonhirayama" target="_blank" rel="noopener">TikTok</a></div><p class="footer-note">A Hirayama atua como consultoria especializada. A contratação de seguros internacionais é realizada pela FDS Seguros quando aplicável.</p></div></div><div class="footer-bottom"><span>© 2024 Hirayama. Site idealizado por Ewerton Hirayama | Consultor de Benefícios.</span><a href="#home">Voltar ao topo</a></div></div></footer>
+    <footer class="footer" id="contato">
+      <div class="shell">
+        <div class="footer-cta">
+          <div>
+            <span class="footer-eyebrow">Consultoria internacional em saúde</span>
+            <h2>Compare coberturas com orientação premium antes de contratar.</h2>
+            <p>Receba uma análise consultiva para entender rede, reembolso, carências, exclusões e critérios de elegibilidade com mais segurança.</p>
+          </div>
+          <a class="btn btn-gold" href="https://wa.link/3gwhbl" target="_blank" rel="noopener">Solicitar demonstração</a>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div>
+              <strong>Saúde Internacional</strong>
+              <span>by hirayama</span>
+              <p>Consultoria especializada para estrangeiros, expatriados, estudantes e famílias que buscam proteção médica no Brasil e no mundo.</p>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-title">Contato</h3>
+            <div class="footer-lines">
+              <p>Matriz : Biritiba Mirim / Centro / SP</p>
+              <p>Filial : São Paulo / Bela Vista / SP</p>
+              <p><a href="mailto:contato@hirayamacorretora.com.br">contato@hirayamacorretora.com.br</a></p>
+              <p><a href="tel:+551146922643">(11) 4692-2643</a> / <a href="tel:+5511938020789">(11) 9-3802-0789</a></p>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-title">Navegação</h3>
+            <nav class="footer-nav" aria-label="Navegação do rodapé">
+              <a href="#home">Home</a>
+              <a href="#sobre">Sobre nós</a>
+              <a href="#contato">Contato</a>
+              <a href="/blog/">Blog</a>
+            </nav>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-title">Redes</h3>
+            <div class="footer-social-list">
+              <a href="https://www.linkedin.com/in/ewertonhirayama/" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="https://www.instagram.com/hirayamaseguros" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://www.youtube.com/@HirayamaCorretora" target="_blank" rel="noopener">YouTube</a>
+              <a href="https://www.tiktok.com/@ewertonhirayama" target="_blank" rel="noopener">TikTok</a>
+            </div>
+            <p class="footer-note">Contratação realizada por corretora parceira legalmente habilitada quando aplicável.</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2024 Hirayama. Site idealizado por Ewerton Hirayama | Consultor de Benefícios.</span>
+          <a href="#home">Voltar ao topo</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="floating-socials" aria-label="Redes sociais">
+      <a class="float-btn whatsapp" href="https://wa.link/3gwhbl" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 21a9 9 0 1 0-7.2-3.6L3.8 21l3.9-1a9 9 0 0 0 4.3 1z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+          <path d="M8.8 9.5c.7 2.4 2.2 4 4.7 4.7l1.4-1.4 2.1.5v2.1c0 .5-.4.9-.9.9A8.1 8.1 0 0 1 7.7 7.9c0-.5.4-.9.9-.9h2.1l.5 2.1-1.4 1.4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <a class="float-btn linkedin" href="https://www.linkedin.com/in/ewertonhirayama/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#ffffff" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45z" />
+        </svg>
+      </a>
+      <a class="float-btn instagram" href="https://www.instagram.com/hirayamaseguros" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="4" y="4" width="16" height="16" rx="4.5" stroke="#ffffff" stroke-width="2" />
+          <circle cx="12" cy="12" r="3.4" stroke="#ffffff" stroke-width="2" />
+          <circle cx="17.2" cy="6.8" r="1.1" fill="#ffffff" />
+        </svg>
+      </a>
+      <a class="float-btn youtube" href="https://www.youtube.com/@HirayamaCorretora" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#ffffff" d="M21.58 7.19a2.74 2.74 0 0 0-1.93-1.94C17.95 4.8 12 4.8 12 4.8s-5.95 0-7.65.45a2.74 2.74 0 0 0-1.93 1.94A28.6 28.6 0 0 0 2 12a28.6 28.6 0 0 0 .42 4.81 2.74 2.74 0 0 0 1.93 1.94c1.7.45 7.65.45 7.65.45s5.95 0 7.65-.45a2.74 2.74 0 0 0 1.93-1.94A28.6 28.6 0 0 0 22 12a28.6 28.6 0 0 0-.42-4.81zM10 15.2V8.8l5.5 3.2-5.5 3.2z" />
+        </svg>
+      </a>
+      <a class="float-btn tiktok" href="https://www.tiktok.com/@ewertonhirayama" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#25f4ee" d="M16.1 4.3c.7 1.9 1.9 3.2 3.8 3.5v3.1c-1.5.1-2.8-.4-3.9-1.1v5.7c0 3.1-2.2 5.3-5.4 5.3-2.9 0-5.1-2-5.1-4.8 0-3 2.4-5.1 5.6-4.8v3.2c-1.4-.2-2.4.5-2.4 1.7 0 1 .8 1.7 1.8 1.7 1.2 0 2-.7 2-2.1V4.3h3.6z" />
+          <path fill="#fe2c55" d="M17.1 4.3c.7 1.9 1.9 3.2 3.8 3.5v3.1c-1.5.1-2.8-.4-3.9-1.1v5.7c0 3.1-2.2 5.3-5.4 5.3-1.4 0-2.7-.5-3.6-1.3.9.5 1.9.8 3 .8 3.2 0 5.4-2.2 5.4-5.3V9.4c1.1.7 2.4 1.2 3.9 1.1V8.2c-1.9-.3-3.1-1.6-3.8-3.5h.6z" />
+          <path fill="#ffffff" d="M15 4.3c.7 1.9 1.9 3.2 3.8 3.5v3.1c-1.5.1-2.8-.4-3.9-1.1v5.7c0 3.1-2.2 5.3-5.4 5.3-2.9 0-5.1-2-5.1-4.8 0-3 2.4-5.1 5.6-4.8v3.2c-1.4-.2-2.4.5-2.4 1.7 0 1 .8 1.7 1.8 1.7 1.2 0 2-.7 2-2.1V4.3H15z" />
+        </svg>
+      </a>
+    </div>
 
     <script>
       const header = document.querySelector("[data-header]");
@@ -1935,31 +2221,6 @@
       );
 
       document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
-
-      const mappingForm = document.querySelector("[data-mapping-form]");
-      if (mappingForm) {
-        mappingForm.addEventListener("submit", (event) => {
-          event.preventDefault();
-          const data = new FormData(mappingForm);
-          const checked = ["dependentes", "pais_idosos", "holding", "viagens", "exterior"].filter((key) => data.get(key)).join(", ") || "não informado";
-          const message = [
-            "Olá, gostaria de um mapeamento consultivo inicial sobre saúde internacional.",
-            "",
-            "Nome: " + (data.get("nome") || ""),
-            "E-mail: " + (data.get("email") || ""),
-            "WhatsApp: " + (data.get("whatsapp") || ""),
-            "Cidade: " + (data.get("cidade") || ""),
-            "Idade: " + (data.get("idade") || ""),
-            "Plano atual: " + (data.get("plano") || ""),
-            "Operadora: " + (data.get("operadora") || ""),
-            "Uso de reembolso: " + (data.get("reembolso") || ""),
-            "Objetivo principal: " + (data.get("objetivo") || ""),
-            "Perfil: " + (data.get("perfil") || ""),
-            "Contexto: " + checked
-          ].join("\n");
-          window.open("https://wa.me/5511938020789?text=" + encodeURIComponent(message), "_blank", "noopener");
-        });
-      }
     </script>
   </body>
 </html>
