@@ -1451,6 +1451,144 @@
         outline: none;
       }
 
+      .quote-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 220;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 22px;
+      }
+
+      .quote-modal.open {
+        display: flex;
+      }
+
+      .quote-backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(3, 22, 37, 0.72);
+        backdrop-filter: blur(8px);
+      }
+
+      .quote-dialog {
+        position: relative;
+        width: min(920px, 100%);
+        max-height: min(88vh, 860px);
+        overflow: auto;
+        padding: 30px;
+        background: var(--white);
+        border: 1px solid rgba(6, 36, 63, 0.12);
+        border-radius: 8px;
+        box-shadow: 0 34px 80px rgba(6, 36, 63, 0.26);
+      }
+
+      .quote-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(6, 36, 63, 0.14);
+        border-radius: 50%;
+        color: var(--navy);
+        background: #f4f8fb;
+        cursor: pointer;
+      }
+
+      .quote-dialog h2 {
+        max-width: 720px;
+        margin: 0 52px 10px 0;
+        color: var(--navy);
+        font-size: clamp(1.65rem, 3vw, 2.35rem);
+        line-height: 1.12;
+      }
+
+      .quote-dialog > p {
+        max-width: 760px;
+        margin: 0 0 22px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .quote-form {
+        display: grid;
+        gap: 18px;
+      }
+
+      .quote-form fieldset {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin: 0;
+        padding: 20px;
+        border: 1px solid rgba(6, 36, 63, 0.12);
+        border-radius: 8px;
+        background: #f7fafc;
+      }
+
+      .quote-form legend {
+        padding: 0 8px;
+        color: var(--navy);
+        font-weight: 850;
+      }
+
+      .quote-form label {
+        display: grid;
+        gap: 7px;
+        color: var(--navy);
+        font-size: 0.9rem;
+        font-weight: 760;
+      }
+
+      .quote-form input,
+      .quote-form select {
+        min-height: 46px;
+        width: 100%;
+        padding: 0 13px;
+        border: 1px solid rgba(6, 36, 63, 0.16);
+        border-radius: 8px;
+        color: var(--navy);
+        background: var(--white);
+        font: inherit;
+      }
+
+      .quote-checks {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .quote-checks label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px;
+        border-radius: 8px;
+        background: var(--white);
+      }
+
+      .quote-checks input {
+        min-height: auto;
+        width: auto;
+      }
+
+      .quote-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .quote-actions small {
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
       .reveal {
         opacity: 0;
         transform: translateY(28px);
@@ -1748,6 +1886,15 @@
           min-height: 420px;
         }
 
+        .quote-dialog {
+          padding: 24px 18px;
+        }
+
+        .quote-form fieldset,
+        .quote-checks {
+          grid-template-columns: 1fr;
+        }
+
         .floating-socials {
           right: 15px;
           bottom: 15px;
@@ -1785,11 +1932,11 @@
               <path d="M4.8 7l7.2 6 7.2-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
             </svg>
           </a>
-          <a class="btn btn-primary" href="https://wa.link/3gwhbl" target="_blank" rel="noopener">
+          <a class="btn btn-primary" href="#cotacao" data-quote-open>
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M7.5 10.2c1.4 2.8 3.5 4.8 6.3 6.3l2.1-2.1c.3-.3.8-.4 1.2-.2 1 .3 2 .5 3.1.5.6 0 1 .4 1 1V19c0 .6-.4 1-1 1C10.8 20 4 13.2 4 4.8c0-.6.4-1 1-1h3.3c.6 0 1 .4 1 1 0 1.1.2 2.2.5 3.1.1.4 0 .8-.2 1.1l-2.1 2.2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
             </svg>
-            Diagnóstico agora
+            Solicitar cotação
           </a>
           <button class="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-button>
             <svg class="menu-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true">
@@ -1804,7 +1951,7 @@
         <a href="#sobre">Sobre nós</a>
         <a href="#contato">Contato</a>
         <a href="/blog/">Blog</a>
-        <a class="btn btn-primary" href="https://wa.link/3gwhbl" target="_blank" rel="noopener">Diagnóstico agora</a>
+        <a class="btn btn-primary" href="#cotacao" data-quote-open>Solicitar cotação</a>
       </div>
     </header>
 
@@ -1818,35 +1965,35 @@
         </div>
         <div class="shell">
           <div class="hero-content">
-            <span class="eyebrow reveal visible">Consultoria especializada em seguros internacionais</span>
-            <h1 class="reveal visible delay-1">Proteção médica premium no Brasil e no mundo.</h1>
+            <span class="eyebrow reveal visible">Centro consultivo de inteligência em saúde internacional</span>
+            <h1 class="reveal visible delay-1">Decisões importantes sobre saúde não deveriam ser tomadas no escuro.</h1>
             <p class="hero-lead reveal visible delay-2">
-              Acesso a hospitais de referência como Einstein, Sírio-Libanês e centros internacionais de excelência, mesmo se você precisar viajar.
+              Antes de contratar qualquer coisa, entenda se saúde internacional faz sentido para sua realidade, família, patrimônio e continuidade.
             </p>
             <div class="hero-actions reveal visible delay-3">
-              <a class="btn btn-gold" href="https://wa.link/3gwhbl" target="_blank" rel="noopener">
+              <a class="btn btn-gold" href="#cotacao" data-quote-open>
                 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path d="M12 21a9 9 0 1 0-7.2-3.6L3.8 21l3.9-1a9 9 0 0 0 4.3 1z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
                   <path d="M8.8 9.5c.7 2.4 2.2 4 4.7 4.7l1.4-1.4 2.1.5v2.1c0 .5-.4.9-.9.9A8.1 8.1 0 0 1 7.7 7.9c0-.5.4-.9.9-.9h2.1l.5 2.1-1.4 1.4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
                 </svg>
-                Quero meu diagnóstico agora
+                Solicitar cotação
               </a>
               <a class="btn btn-ghost" href="#consultoria">Ver diferenciais</a>
             </div>
-            <div class="response-note reveal visible delay-3"><span></span>Resposta em até 5 minutos / Atendimento sem compromisso</div>
+            <div class="response-note reveal visible delay-3"><span></span>Mapeamento consultivo inicial / Atendimento sem compromisso</div>
 
             <div class="hero-stats reveal visible delay-3" aria-label="Destaques">
               <div class="stat">
                 <strong>24/7</strong>
-                <span>Assistência médica em emergências internacionais</span>
+                <span>Critérios de acesso, rede, reembolso e uso internacional</span>
               </div>
               <div class="stat">
                 <strong>Global</strong>
-                <span>Comparação de coberturas, exclusões e benefícios</span>
+                <span>Comparação de coberturas, exclusões, carências e benefícios</span>
               </div>
               <div class="stat">
-                <strong>Premium</strong>
-                <span>Orientação para famílias, estrangeiros e empresas</span>
+                <strong>Estratégia</strong>
+                <span>Orientação para famílias, executivos, médicos e empresas</span>
               </div>
             </div>
           </div>
@@ -1854,14 +2001,14 @@
 
         <aside class="hero-card" aria-label="Resumo da consultoria">
           <header>
-            <strong>Diagnóstico personalizado</strong>
+            <strong>Mapeamento consultivo</strong>
             <small>Confidencial</small>
           </header>
           <div class="coverage-line" aria-hidden="true"><i></i></div>
           <ul>
-            <li><span class="check" aria-hidden="true"></span>Seguro internacional sob medida para seu perfil</li>
-            <li><span class="check" aria-hidden="true"></span>Contratação com corretora parceira habilitada</li>
-            <li><span class="check" aria-hidden="true"></span>Resposta ainda hoje, sem compromisso</li>
+            <li><span class="check" aria-hidden="true"></span>Entendimento do seu cenário antes da proposta</li>
+            <li><span class="check" aria-hidden="true"></span>Análise de rede, reembolso, elegibilidade e continuidade</li>
+            <li><span class="check" aria-hidden="true"></span>Conversa sem pressão comercial</li>
           </ul>
         </aside>
       </section>
@@ -1899,15 +2046,15 @@
           <div class="trust-grid">
             <article class="quote-card reveal">
               <span>01</span>
-              <p>Planos escolhidos por médicos, advogados e empresários exigentes.</p>
+              <p>Saúde internacional não é apenas cobertura. É uma decisão de longo prazo.</p>
             </article>
             <article class="quote-card reveal delay-1">
               <span>02</span>
-              <p>Cobertura global com atendimento local e internacional.</p>
+              <p>Nem todo perfil se beneficia do seguro saúde internacional.</p>
             </article>
             <article class="quote-card reveal delay-2">
               <span>03</span>
-              <p>Check-up anual incluído em planos selecionados.</p>
+              <p>Antes de comparar preço, vale entender modelo, elegibilidade, continuidade e uso real.</p>
             </article>
           </div>
         </div>
@@ -1917,8 +2064,8 @@
         <div class="shell">
           <div class="section-head">
             <div>
-              <div class="kicker">Consultoria premium</div>
-              <h2>Por que contar com uma consultoria especializada faz toda a diferença</h2>
+              <div class="kicker">Consultoria executiva em saúde</div>
+              <h2>Por que entender antes de contratar faz toda a diferença</h2>
             </div>
           </div>
 
@@ -1927,10 +2074,10 @@
               <figure class="service-photo">
                 <img src="/assets/saude-internacional-consulta.png" alt="Família estrangeira em consulta sobre seguro saúde internacional" loading="lazy" />
               </figure>
-              <small>Planos de saúde personalizados</small>
-              <h3>Seguro alinhado ao seu perfil</h3>
+              <small>Decisão informada</small>
+              <h3>Modelo alinhado ao seu perfil</h3>
               <p>
-                Identificamos o seguro saúde internacional que melhor se adapta às suas necessidades, com comparação de cobertura, exclusões e benefícios.
+                Organizamos as informações para comparar cobertura, exclusões, benefícios, carências, franquia e critérios de aceitação antes de qualquer decisão.
               </p>
             </article>
 
@@ -1938,10 +2085,10 @@
               <figure class="service-photo">
                 <img src="/assets/saude-internacional-assistencia.png" alt="Equipe de assistência médica internacional acompanhando atendimentos 24 horas" loading="lazy" />
               </figure>
-              <small>Assistência 24 horas</small>
-              <h3>Suporte médico 24/7</h3>
+              <small>Uso na prática</small>
+              <h3>Acesso, rede e reembolso</h3>
               <p>
-                As seguradoras parceiras oferecem suporte médico todos os dias da semana, com orientação e acompanhamento em emergências onde quer que você esteja.
+                Explicamos como funcionam rede parceira, pagamento direto, reembolso, autorização prévia e atendimento em diferentes países.
               </p>
             </article>
 
@@ -1949,20 +2096,20 @@
               <figure class="service-photo">
                 <img src="/assets/saude-internacional-viajantes.png" alt="Casal internacional avaliando cobertura médica em viagem" loading="lazy" />
               </figure>
-              <small>Aconselhamento especializado</small>
-              <h3>Atendimento personalizado</h3>
+              <small>Estratégia familiar</small>
+              <h3>Continuidade e previsibilidade</h3>
               <p>
-                Explicamos como funcionam os seguros internacionais e quais critérios considerar para tomar decisões conscientes, independentes e transparentes.
+                Avaliamos dependentes, pais idosos, vida internacional, holding familiar, uso de reembolso e objetivos de longo prazo.
               </p>
             </article>
           </div>
 
           <div class="cta-band reveal">
             <div>
-              <h3>Receba agora sua simulação gratuita</h3>
-              <p>Descubra o plano ideal para o seu perfil e receba seu diagnóstico ainda hoje.</p>
+              <h3>Entenda se saúde internacional faz sentido para você</h3>
+              <p>Preencha um cenário inicial para orientar uma conversa mais objetiva, clara e sem compromisso.</p>
             </div>
-            <a class="btn btn-primary" href="https://wa.link/3gwhbl" target="_blank" rel="noopener">Receber minha simulação gratuita</a>
+            <a class="btn btn-primary" href="#cotacao" data-quote-open>Solicitar cotação</a>
           </div>
         </div>
       </section>
@@ -1980,16 +2127,16 @@
               <span class="pin one"></span>
               <span class="pin two"></span>
               <span class="pin three"></span>
-              <h3>Conectamos você às melhores seguradoras internacionais do mundo.</h3>
-              <p>Cobertura global, atendimento local e orientação consultiva para contratar com segurança.</p>
+              <h3>Traduzimos um mercado complexo para decisões mais seguras.</h3>
+              <p>Cobertura global, atendimento local e orientação consultiva para entender antes de contratar.</p>
             </div>
           </div>
 
           <div class="insurer-copy-card reveal delay-1">
             <div class="kicker">Cobertura global</div>
-            <h2>Segurança para estrangeiros, expatriados, estudantes e famílias internacionais</h2>
+            <h2>Continuidade, liberdade médica e previsibilidade para quem vive entre países</h2>
             <p class="section-copy">
-              Organizamos informações técnicas em uma jornada simples, ajudando você a comparar alternativas e entender limites, rede, reembolso, urgências e cobertura em viagens.
+              Saúde internacional não deve ser analisada apenas por hospital e preço. A decisão envolve continuidade, elegibilidade, reembolso, pré-existências, família e objetivos de longo prazo.
             </p>
           </div>
 
@@ -2011,7 +2158,7 @@
             <article class="plan-item reveal delay-2">
               <span class="check" aria-hidden="true"></span>
               <div>
-                <h3>Parceira legalmente habilitada</h3>
+                <h3>Contratação com intermediação habilitada</h3>
                 <p>A contratação de seguros internacionais é realizada pela FDS Seguros, corretora parceira responsável pela intermediação.</p>
               </div>
             </article>
@@ -2023,10 +2170,10 @@
         <div class="shell about-grid">
           <div>
             <div class="kicker">Hirayama Corretora de Seguros</div>
-            <h2>Sua saúde e tranquilidade nas mãos de um consultor premium</h2>
+            <h2>Sua saúde e tranquilidade com orientação consultiva</h2>
             <div class="about-copy" style="margin-top: 24px;">
               <p>
-                A Hirayama Corretora de Seguros atua há mais de 10 anos oferecendo consultoria especializada em benefícios empresariais e orientação em seguros de saúde, com foco em soluções que entregam tranquilidade, proteção e informação de qualidade.
+                A Hirayama Corretora de Seguros atua há mais de 10 anos oferecendo consultoria especializada em benefícios empresariais e orientação em seguros de saúde, com foco em clareza, proteção e informação de qualidade.
               </p>
               <p>
                 Somos referência no apoio consultivo para empresas e famílias que buscam entender melhor as opções disponíveis de cobertura no Brasil e no exterior, com clareza e responsabilidade.
@@ -2055,9 +2202,9 @@
           <div class="section-head">
             <div>
               <div class="kicker">Blog</div>
-              <h2>Dúvidas comuns sobre saúde internacional?</h2>
+              <h2>Dúvidas comuns antes de decidir?</h2>
             </div>
-            <p class="section-copy">Artigos consultivos sobre seguro saúde internacional, estudantes, expatriados, reembolso, maternidade e seguradoras globais.</p>
+            <p class="section-copy">Artigos consultivos sobre seguro saúde internacional, estudantes, expatriados, reembolso, maternidade e critérios que influenciam a decisão.</p>
           </div>
           <div class="blog-grid">
             <article class="blog-card reveal">
@@ -2095,10 +2242,10 @@
         <div class="footer-cta">
           <div>
             <span class="footer-eyebrow">Consultoria internacional em saúde</span>
-            <h2>Compare coberturas com orientação premium antes de contratar.</h2>
-            <p>Receba uma análise consultiva para entender rede, reembolso, carências, exclusões e critérios de elegibilidade com mais segurança.</p>
+            <h2>Converse sobre o seu cenário antes de decidir.</h2>
+            <p>Receba uma análise consultiva para entender rede, reembolso, carências, exclusões, continuidade e critérios de elegibilidade com mais segurança.</p>
           </div>
-          <a class="btn btn-gold" href="https://wa.link/3gwhbl" target="_blank" rel="noopener">Solicitar demonstração</a>
+          <a class="btn btn-gold" href="#cotacao" data-quote-open>Solicitar cotação</a>
         </div>
 
         <div class="footer-grid">
@@ -2149,6 +2296,97 @@
       </div>
     </footer>
 
+    <div class="quote-modal" id="cotacao" role="dialog" aria-modal="true" aria-labelledby="quote-title" aria-hidden="true" data-quote-modal>
+      <div class="quote-backdrop" data-quote-close></div>
+      <div class="quote-dialog">
+        <button class="quote-close" type="button" aria-label="Fechar formulário" data-quote-close>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <h2 id="quote-title">Mapeamento consultivo inicial</h2>
+        <p>
+          Preencha seu cenário para que a conversa comece pelo que realmente importa: realidade atual, objetivos, dependentes, uso de reembolso, viagens e continuidade familiar.
+        </p>
+        <form class="quote-form" data-quote-form>
+          <fieldset>
+            <legend>Informações básicas</legend>
+            <label>Nome
+              <input name="nome" type="text" autocomplete="name" required />
+            </label>
+            <label>E-mail
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label>WhatsApp
+              <input name="whatsapp" type="tel" autocomplete="tel" required />
+            </label>
+            <label>Cidade
+              <input name="cidade" type="text" autocomplete="address-level2" />
+            </label>
+            <label>Idade
+              <input name="idade" type="number" min="0" max="110" />
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Situação atual</legend>
+            <label>Possui plano atualmente?
+              <select name="plano_atual">
+                <option>Sim</option>
+                <option>Não</option>
+                <option>Estou avaliando para familiar</option>
+                <option>Estou avaliando para empresa</option>
+              </select>
+            </label>
+            <label>Operadora atual
+              <input name="operadora" type="text" placeholder="Bradesco, SulAmérica, Omint, outra..." />
+            </label>
+            <label>Utiliza reembolso?
+              <select name="reembolso">
+                <option>Não sei avaliar</option>
+                <option>Sim, com frequência</option>
+                <option>Às vezes</option>
+                <option>Não utilizo</option>
+              </select>
+            </label>
+            <label>Objetivo principal
+              <select name="objetivo">
+                <option>Liberdade médica</option>
+                <option>Previsibilidade</option>
+                <option>Acesso internacional</option>
+                <option>Proteção familiar</option>
+                <option>Continuidade</option>
+                <option>Custo</option>
+              </select>
+            </label>
+            <label>Perfil
+              <select name="perfil">
+                <option>Executivo</option>
+                <option>Empresário</option>
+                <option>Médico</option>
+                <option>Profissional liberal</option>
+                <option>Aposentado</option>
+                <option>Família</option>
+                <option>RH/C-Level</option>
+              </select>
+            </label>
+            <div class="quote-checks" aria-label="Contexto adicional">
+              <label><input name="dependentes" type="checkbox" /> Possui dependentes</label>
+              <label><input name="pais_idosos" type="checkbox" /> Pais idosos</label>
+              <label><input name="holding" type="checkbox" /> Holding familiar</label>
+              <label><input name="viagens" type="checkbox" /> Viagens frequentes</label>
+              <label><input name="exterior" type="checkbox" /> Residência fora do Brasil</label>
+            </div>
+          </fieldset>
+
+          <div class="quote-actions">
+            <button class="btn btn-gold" type="submit">Enviar meu cenário para análise</button>
+            <small>O formulário não armazena dados no site. Ele abre uma mensagem estruturada no WhatsApp para iniciar o atendimento.</small>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <div class="floating-socials" aria-label="Redes sociais">
       <a class="float-btn whatsapp" href="https://wa.link/3gwhbl" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -2187,6 +2425,10 @@
       const menuButton = document.querySelector("[data-menu-button]");
       const mobilePanel = document.querySelector("[data-mobile-panel]");
       const menuIcon = document.querySelector(".menu-icon path");
+      const quoteModal = document.querySelector("[data-quote-modal]");
+      const quoteForm = document.querySelector("[data-quote-form]");
+      const quoteOpeners = document.querySelectorAll("[data-quote-open]");
+      const quoteClosers = document.querySelectorAll("[data-quote-close]");
 
       const setMenu = (open) => {
         mobilePanel.classList.toggle("open", open);
@@ -2221,6 +2463,63 @@
       );
 
       document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+
+      const setQuoteModal = (open) => {
+        quoteModal.classList.toggle("open", open);
+        quoteModal.setAttribute("aria-hidden", String(!open));
+        document.body.style.overflow = open ? "hidden" : "";
+        if (open) {
+          quoteModal.querySelector("input")?.focus();
+        }
+      };
+
+      quoteOpeners.forEach((opener) => {
+        opener.addEventListener("click", (event) => {
+          event.preventDefault();
+          setMenu(false);
+          setQuoteModal(true);
+        });
+      });
+
+      quoteClosers.forEach((closer) => {
+        closer.addEventListener("click", () => setQuoteModal(false));
+      });
+
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && quoteModal.classList.contains("open")) {
+          setQuoteModal(false);
+        }
+      });
+
+      quoteForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const data = new FormData(quoteForm);
+        const context = [
+          data.get("dependentes") ? "Possui dependentes" : null,
+          data.get("pais_idosos") ? "Pais idosos" : null,
+          data.get("holding") ? "Holding familiar" : null,
+          data.get("viagens") ? "Viagens frequentes" : null,
+          data.get("exterior") ? "Residência fora do Brasil" : null
+        ].filter(Boolean);
+        const message = [
+          "Olá, gostaria de solicitar uma cotação com mapeamento consultivo inicial.",
+          "",
+          "Nome: " + (data.get("nome") || ""),
+          "E-mail: " + (data.get("email") || ""),
+          "WhatsApp: " + (data.get("whatsapp") || ""),
+          "Cidade: " + (data.get("cidade") || ""),
+          "Idade: " + (data.get("idade") || ""),
+          "Possui plano atualmente: " + (data.get("plano_atual") || ""),
+          "Operadora atual: " + (data.get("operadora") || ""),
+          "Utiliza reembolso: " + (data.get("reembolso") || ""),
+          "Objetivo principal: " + (data.get("objetivo") || ""),
+          "Perfil: " + (data.get("perfil") || ""),
+          "Contexto adicional: " + (context.length ? context.join(", ") : "Não informado")
+        ].join("\n");
+
+        window.open("https://wa.me/5511938020789?text=" + encodeURIComponent(message), "_blank", "noopener");
+        setQuoteModal(false);
+      });
     </script>
   </body>
 </html>
