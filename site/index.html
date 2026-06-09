@@ -1484,7 +1484,8 @@
       }
 
       .quote-form input,
-      .quote-form select {
+      .quote-form select,
+      .quote-form textarea {
         min-height: 46px;
         width: 100%;
         padding: 0 13px;
@@ -1493,6 +1494,13 @@
         color: var(--navy);
         background: var(--white);
         font: inherit;
+      }
+
+      .quote-form textarea {
+        min-height: 92px;
+        padding-top: 12px;
+        resize: vertical;
+        line-height: 1.5;
       }
 
       .quote-checks {
@@ -1918,11 +1926,11 @@
             <div class="hero-stats reveal visible delay-3" aria-label="Destaques">
               <div class="stat">
                 <strong>24/7</strong>
-                <span>Critérios de acesso, rede, reembolso e uso internacional</span>
+                <span>Critérios de acesso, rede, reembolso, uso nacional e internacional</span>
               </div>
               <div class="stat">
                 <strong>Global</strong>
-                <span>Comparação de coberturas, exclusões, carências e benefícios</span>
+                <span>Comparação de coberturas, exclusões, carências e benefícios premium</span>
               </div>
               <div class="stat">
                 <strong>Estratégia</strong>
@@ -2065,7 +2073,7 @@
               <small>Uso na prática</small>
               <h3>Acesso, rede e reembolso</h3>
               <p>
-                Explicamos como funcionam rede parceira, pagamento direto, reembolso, autorização prévia e atendimento em diferentes países.
+                Explicamos rede parceira, pagamento direto, reembolso e a diferença entre seguro viagem e saúde internacional para quem precisa de orientação além da viagem.
               </p>
             </article>
 
@@ -2303,10 +2311,31 @@
             <label>Idade
               <input name="idade" type="number" min="0" max="110" />
             </label>
+            <label>Cotação para quem?
+              <select name="cotacao_para">
+                <option>Somente para mim</option>
+                <option>Para mim e cônjuge</option>
+                <option>Para família</option>
+                <option>Para sócios</option>
+                <option>Para equipe/empresa</option>
+              </select>
+            </label>
+            <label>Idades dos participantes
+              <textarea name="idades_participantes" placeholder="Ex.: titular 42, esposa 39, filhos 8 e 12, sócio 45"></textarea>
+            </label>
           </fieldset>
 
           <fieldset>
             <legend>Situação atual</legend>
+            <label>O que você está buscando?
+              <select name="tipo_interesse">
+                <option>Seguro saúde internacional</option>
+                <option>Seguro viagem</option>
+                <option>Tenho dúvida entre seguro viagem e saúde internacional</option>
+                <option>Proteção para morar fora do Brasil</option>
+                <option>Proteção para viagens frequentes</option>
+              </select>
+            </label>
             <label>Possui plano atualmente?
               <select name="plano_atual">
                 <option>Sim</option>
@@ -2453,6 +2482,9 @@
           "WhatsApp: " + (data.get("whatsapp") || ""),
           "Cidade: " + (data.get("cidade") || ""),
           "Idade: " + (data.get("idade") || ""),
+          "Cotação para: " + (data.get("cotacao_para") || ""),
+          "Idades dos participantes: " + (data.get("idades_participantes") || ""),
+          "Interesse principal: " + (data.get("tipo_interesse") || ""),
           "Possui plano atualmente: " + (data.get("plano_atual") || ""),
           "Operadora atual: " + (data.get("operadora") || ""),
           "Utiliza reembolso: " + (data.get("reembolso") || ""),
