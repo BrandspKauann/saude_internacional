@@ -2293,7 +2293,9 @@
         <p>
           Preencha seu cenário para que a conversa comece pelo que realmente importa: realidade atual, objetivos, dependentes, uso de reembolso, viagens e continuidade familiar.
         </p>
-        <form class="quote-form" data-quote-form>
+        <form class="quote-form" action="https://formspree.io/f/xvznbqab" method="POST" data-quote-form>
+          <input type="hidden" name="_subject" value="Novo mapeamento - Saúde Internacional" />
+          <input type="hidden" name="resumo_cenario" data-summary-field />
           <fieldset>
             <legend>Informações básicas</legend>
             <label>Nome
@@ -2467,6 +2469,8 @@
       quoteForm.addEventListener("submit", (event) => {
         event.preventDefault();
         const data = new FormData(quoteForm);
+        const summaryField = quoteForm.querySelector("[data-summary-field]");
+        const submitButton = quoteForm.querySelector("button[type='submit']");
         const context = [
           data.get("dependentes") ? "Possui dependentes" : null,
           data.get("pais_idosos") ? "Pais idosos" : null,
@@ -2493,8 +2497,28 @@
           "Contexto adicional: " + (context.length ? context.join(", ") : "Não informado")
         ].join("\n");
 
-        window.open("https://wa.me/5511938020789?text=" + encodeURIComponent(message), "_blank", "noopener");
-        setQuoteModal(false);
+        summaryField.value = message;
+        submitButton.disabled = true;
+        submitButton.textContent = "Enviando...";
+
+        fetch(quoteForm.action, {
+          method: "POST",
+          body: new FormData(quoteForm),
+          headers: { Accept: "application/json" }
+        })
+          .then((response) => {
+            if (!response.ok) throw new Error("Formspree request failed");
+            window.open("https://wa.me/5511938020789?text=" + encodeURIComponent(message), "_blank", "noopener");
+            quoteForm.reset();
+            setQuoteModal(false);
+          })
+          .catch(() => {
+            alert("Não foi possível enviar o formulário agora. Tente novamente ou fale pelo WhatsApp.");
+          })
+          .finally(() => {
+            submitButton.disabled = false;
+            submitButton.textContent = "Enviar meu cenário para análise";
+          });
       });
 
       const openQuoteFromHash = () => {
