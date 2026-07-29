@@ -1,9 +1,11 @@
 :root {
   --navy: #06243f;
   --navy-2: #0b385f;
-  --teal: #0aa6a6;
-  --teal-dark: #087f83;
-  --gold: #d8a94a;
+  --teal: #103f3b;
+  --teal-dark: #0b302d;
+  --teal-light: #3ccbb6;
+  --gold: #da9f3c;
+  --off-white: #f4efe4;
   --ink: #162332;
   --muted: #607080;
   --line: #dbe6ef;
@@ -700,7 +702,8 @@ img {
   padding: 0;
   color: rgba(255, 255, 255, 0.72);
   background:
-    radial-gradient(circle at 12% 0%, rgba(10, 166, 166, 0.18), transparent 34%),
+    radial-gradient(circle at 12% 0%, rgba(60, 203, 182, 0.16), transparent 34%),
+    linear-gradient(90deg, rgba(16, 63, 59, 0.54), transparent 38%),
     linear-gradient(180deg, #05243d 0%, #031625 100%);
 }
 
@@ -772,7 +775,10 @@ img {
 .footer-brand span {
   display: block;
   margin-top: 4px;
-  color: rgba(255, 255, 255, 0.58);
+  color: var(--gold);
+  font-size: 0.74rem;
+  font-weight: 860;
+  text-transform: uppercase;
 }
 
 .footer-brand p {
@@ -780,6 +786,21 @@ img {
   margin: 18px 0 0;
   color: rgba(255, 255, 255, 0.72);
   line-height: 1.7;
+}
+
+.footer-brand::after {
+  content: "Identidade Hirayama";
+  display: inline-flex;
+  margin-top: 20px;
+  padding: 8px 12px;
+  border: 1px solid rgba(218, 159, 60, 0.42);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  background: rgba(244, 239, 228, 0.08);
+  color: var(--off-white);
+  font-size: 0.72rem;
+  font-weight: 860;
+  text-transform: uppercase;
 }
 
 .footer-title {
