@@ -104,6 +104,73 @@ img {
   background: rgba(10, 166, 166, 0.1);
 }
 
+.service-menu {
+  position: relative;
+}
+
+.service-menu summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px 13px;
+  color: #304252;
+  border-radius: 8px;
+  font-size: 0.94rem;
+  font-weight: 750;
+  transition: background 0.2s, color 0.2s;
+}
+
+.service-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.service-menu summary::after {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-left: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.service-menu[open] summary,
+.service-menu summary:hover,
+.service-menu summary:focus-visible {
+  color: var(--teal-dark);
+  background: rgba(16, 63, 59, 0.1);
+  outline: none;
+}
+
+.service-menu-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 20;
+  min-width: 250px;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 22px 54px rgba(6, 36, 63, 0.14);
+}
+
+.service-menu-panel a {
+  display: block;
+  padding: 11px 12px;
+  color: #304252;
+  border-radius: 8px;
+  font-size: 0.91rem;
+  line-height: 1.25;
+}
+
+.service-menu-panel a:hover,
+.service-menu-panel a:focus-visible {
+  color: var(--navy);
+  background: rgba(16, 63, 59, 0.08);
+  outline: none;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -786,21 +853,6 @@ img {
   margin: 18px 0 0;
   color: rgba(255, 255, 255, 0.72);
   line-height: 1.7;
-}
-
-.footer-brand::after {
-  content: "Identidade Hirayama";
-  display: inline-flex;
-  margin-top: 20px;
-  padding: 8px 12px;
-  border: 1px solid rgba(218, 159, 60, 0.42);
-  border-left: 4px solid var(--gold);
-  border-radius: 8px;
-  background: rgba(244, 239, 228, 0.08);
-  color: var(--off-white);
-  font-size: 0.72rem;
-  font-weight: 860;
-  text-transform: uppercase;
 }
 
 .footer-title {
