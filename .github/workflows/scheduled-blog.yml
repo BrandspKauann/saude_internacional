@@ -1,0 +1,45 @@
+name: Publicar posts programados
+
+on:
+  schedule:
+    - cron: "0 15 * * 4"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Publicar conteúdos vencidos
+        run: npm run publish:scheduled
+
+      - name: Conferir build
+        run: npm run build
+
+      - name: Commitar publicação, se houver
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add content/scheduled-posts.json site/blog site/assets/blog site/sitemap.xml
+            git commit -m "Publica post programado"
+            git push
+          else
+            echo "Nenhum post programado para publicar."
+          fi

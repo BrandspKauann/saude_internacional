@@ -6,7 +6,8 @@
     "start": "node server.mjs",
     "serve": "node server.mjs",
     "dev": "node server.mjs",
-    "build": "node scripts/build-static.mjs"
+    "build": "node scripts/generate-scheduled-blog.mjs && node scripts/build-static.mjs",
+    "publish:scheduled": "node scripts/generate-scheduled-blog.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1"
