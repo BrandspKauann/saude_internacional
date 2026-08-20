@@ -1,6 +1,6 @@
 [
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-08-20T15:00:00.000Z",
     "title": "O que é seguro saúde internacional e quando ele realmente faz sentido?",
     "slug": "o-que-e-seguro-saude-internacional-quando-faz-sentido",
@@ -44,7 +44,8 @@
       "#SeguroViagem",
       "#DecisaoInformada"
     ],
-    "imagePrompt": "Photorealistic editorial image of a Brazilian executive couple reviewing international health documents at a clean table, subtle medical folder, calm natural light, modern consulting atmosphere, no text, no logos, no luxury excess."
+    "imagePrompt": "Photorealistic editorial image of a Brazilian executive couple reviewing international health documents at a clean table, subtle medical folder, calm natural light, modern consulting atmosphere, no text, no logos, no luxury excess.",
+    "publishedAt": "2026-08-20T15:22:51.942Z"
   },
   {
     "status": "scheduled",
