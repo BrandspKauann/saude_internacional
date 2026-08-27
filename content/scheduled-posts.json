@@ -45,10 +45,10 @@
       "#DecisaoInformada"
     ],
     "imagePrompt": "Photorealistic editorial image of a Brazilian executive couple reviewing international health documents at a clean table, subtle medical folder, calm natural light, modern consulting atmosphere, no text, no logos, no luxury excess.",
-    "publishedAt": "2026-08-20T15:22:51.942Z"
+    "publishedAt": "2026-08-27T18:10:15.572Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-08-27T15:00:00.000Z",
     "title": "Seguro viagem, cartão de crédito ou saúde internacional: por que tanta gente confunde?",
     "slug": "seguro-viagem-cartao-credito-saude-internacional-diferencas",
@@ -91,7 +91,8 @@
       "#AssistenciaViagem",
       "#SeguroSaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of a traveler at an airport lounge comparing a passport, credit card, and medical insurance papers on a tablet, discreet international setting, natural light, no text, no brand logos."
+    "imagePrompt": "Photorealistic editorial image of a traveler at an airport lounge comparing a passport, credit card, and medical insurance papers on a tablet, discreet international setting, natural light, no text, no brand logos.",
+    "publishedAt": "2026-08-27T18:10:15.577Z"
   },
   {
     "status": "scheduled",

@@ -34,13 +34,13 @@ const formatDate = (iso) =>
   }).format(new Date(iso));
 
 const header = (current = "") => `<!doctype html><html lang="pt-BR"><head><!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W6Q01H0MLS"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L41YP59DDV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-W6Q01H0MLS');
+  gtag('config', 'G-L41YP59DDV');
 </script>`;
 
 const topbar = (blogCurrent = false) => `<header class="topbar"><div class="shell nav"><a class="brand" href="/" aria-label="Saúde Internacional"><span><strong>Saúde Internacional</strong><span>by hirayama</span></span></a><nav class="nav-links" aria-label="Navegação principal"><a href="/">Início</a><a href="/blog/"${blogCurrent ? ' aria-current="page"' : ""}>Blog</a><a href="/#cotacao">Mapeamento</a><details class="service-menu"><summary>Outros serviços</summary><div class="service-menu-panel"><a href="https://www.hirayamacorretora.com.br/" target="_blank" rel="noopener">Hirayama Corretora</a><a href="https://www.segurosdecredito.com.br/" target="_blank" rel="noopener">Seguro de Crédito</a><a href="https://www.consultoriavr.com.br/" target="_blank" rel="noopener">Consultoria VR</a><a href="https://consorcio-hirayama-eeva.vercel.app/" target="_blank" rel="noopener">Consórcio Platinum</a></div></details></nav><a class="btn btn-primary" href="/#cotacao">Entenda seu cenário</a></div></header>`;
