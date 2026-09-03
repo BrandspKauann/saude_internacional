@@ -95,7 +95,7 @@
     "publishedAt": "2026-08-27T18:10:15.577Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-09-03T15:00:00.000Z",
     "title": "Plano nacional ou seguro internacional: você está comparando produtos ou modelos?",
     "slug": "plano-nacional-ou-seguro-internacional-comparando-modelos",
@@ -138,7 +138,8 @@
       "#ComparativoSaude",
       "#ReembolsoMedico"
     ],
-    "imagePrompt": "Photorealistic editorial image of an executive analyzing two clean healthcare folders on a conference table, one domestic and one global represented by abstract map lines, professional atmosphere, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of an executive analyzing two clean healthcare folders on a conference table, one domestic and one global represented by abstract map lines, professional atmosphere, no text, no logos.",
+    "publishedAt": "2026-09-03T18:10:39.847Z"
   },
   {
     "status": "scheduled",
