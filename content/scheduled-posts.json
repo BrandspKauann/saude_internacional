@@ -142,7 +142,7 @@
     "publishedAt": "2026-09-03T18:10:39.847Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-09-10T15:00:00.000Z",
     "title": "Franquia anual no seguro saúde internacional: custo ruim ou ferramenta de planejamento?",
     "slug": "franquia-anual-seguro-saude-internacional-planejamento",
@@ -185,7 +185,8 @@
       "#CustosDeSaude",
       "#Planejamento"
     ],
-    "imagePrompt": "Photorealistic editorial image of a mature couple and consultant reviewing healthcare cost scenarios on paper and tablet, calm office, subtle calculator and medical documents, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a mature couple and consultant reviewing healthcare cost scenarios on paper and tablet, calm office, subtle calculator and medical documents, no text, no logos.",
+    "publishedAt": "2026-09-10T17:56:07.452Z"
   },
   {
     "status": "scheduled",
