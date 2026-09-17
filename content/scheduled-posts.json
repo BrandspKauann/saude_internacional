@@ -189,7 +189,7 @@
     "publishedAt": "2026-09-10T17:56:07.452Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-09-17T15:00:00.000Z",
     "title": "Pré-existência: o que declarar antes de contratar saúde internacional?",
     "slug": "pre-existencia-o-que-declarar-saude-internacional",
@@ -232,7 +232,8 @@
       "#SeguroSaudeInternacional",
       "#Elegibilidade"
     ],
-    "imagePrompt": "Photorealistic editorial image of a doctor and patient calmly reviewing medical history documents in a modern clinic office, human and respectful, no visible text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a doctor and patient calmly reviewing medical history documents in a modern clinic office, human and respectful, no visible text, no logos.",
+    "publishedAt": "2026-09-17T18:39:47.698Z"
   },
   {
     "status": "scheduled",
