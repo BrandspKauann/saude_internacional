@@ -46,7 +46,20 @@ const googleTagManagerBody = `<!-- Google Tag Manager (noscript) -->
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->`;
 
+const hotjarTrackingCode = `<!-- Hotjar Tracking Code for saude -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:6782889,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>`;
+
 const header = (current = "") => `<!doctype html><html lang="pt-BR"><head>${googleTagManagerHead}
+${hotjarTrackingCode}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CK6GNJTH3T"></script>
 <script>
