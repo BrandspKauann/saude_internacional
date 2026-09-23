@@ -2599,6 +2599,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         })
           .then((response) => {
             if (!response.ok) throw new Error("Formspree request failed");
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+              event: "generate_lead",
+              form_id: "cotacao_saude_internacional",
+              form_name: "Cotação Saúde Internacional",
+              service: "saude_internacional"
+            });
             window.open("https://wa.me/5511938020789?text=" + encodeURIComponent(message), "_blank", "noopener");
             quoteForm.reset();
             setQuoteModal(false);
