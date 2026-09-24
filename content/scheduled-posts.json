@@ -236,7 +236,7 @@
     "publishedAt": "2026-09-17T18:39:47.698Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-09-24T15:00:00.000Z",
     "title": "Análise de aceitação: o que é underwriting em saúde internacional?",
     "slug": "analise-de-aceitacao-underwriting-saude-internacional",
@@ -279,7 +279,8 @@
       "#SeguroSaudeInternacional",
       "#DeclaracaoDeSaude"
     ],
-    "imagePrompt": "Photorealistic editorial image of a healthcare consultant studying medical forms and risk notes on a laptop in a refined office, no readable text, no logos, calm executive tone."
+    "imagePrompt": "Photorealistic editorial image of a healthcare consultant studying medical forms and risk notes on a laptop in a refined office, no readable text, no logos, calm executive tone.",
+    "publishedAt": "2026-09-24T18:43:42.158Z"
   },
   {
     "status": "scheduled",
