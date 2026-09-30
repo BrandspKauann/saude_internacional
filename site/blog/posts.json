@@ -1,5 +1,581 @@
 [
   {
+    "title": "Check-up internacional: benefício real ou detalhe de marketing?",
+    "slug": "check-up-internacional-beneficio-real-ou-marketing",
+    "category": "Prevenção",
+    "description": "Entenda como avaliar check-up anual, medicina preventiva e limites de cobertura sem se encantar apenas pelo benefício.",
+    "date": "2027-03-11T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/check-up-internacional-beneficio-real-ou-marketing-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/check-up-internacional-beneficio-real-ou-marketing/",
+    "keywords": [
+      "check-up internacional",
+      "medicina preventiva",
+      "seguro saúde internacional",
+      "exames preventivos",
+      "benefícios do plano"
+    ],
+    "hashtags": [
+      "#CheckUp",
+      "#MedicinaPreventiva",
+      "#ExamesPreventivos",
+      "#Beneficios",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "Saúde mental no exterior: cobertura, teleconsulta e acompanhamento contínuo",
+    "slug": "saude-mental-exterior-cobertura-teleconsulta-acompanhamento",
+    "category": "Saúde mental",
+    "description": "Veja como analisar psicologia, psiquiatria, telemedicina e limites de saúde mental em contratos internacionais.",
+    "date": "2027-03-04T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/saude-mental-exterior-cobertura-teleconsulta-acompanhamento-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/saude-mental-exterior-cobertura-teleconsulta-acompanhamento/",
+    "keywords": [
+      "saúde mental",
+      "psicólogo no exterior",
+      "psiquiatra internacional",
+      "telemedicina",
+      "seguro saúde internacional"
+    ],
+    "hashtags": [
+      "#SaudeMental",
+      "#PsicologoNoExterior",
+      "#Psiquiatria",
+      "#Telemedicina",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "Doenças crônicas e saúde internacional: como avaliar sem criar falsas expectativas?",
+    "slug": "doencas-cronicas-saude-internacional-avaliar-sem-falsas-expectativas",
+    "category": "Condições crônicas",
+    "description": "Entenda como diabetes, hipertensão, doenças autoimunes e tratamentos contínuos entram na análise de aceitação.",
+    "date": "2027-02-25T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/doencas-cronicas-saude-internacional-avaliar-sem-falsas-expectativas-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/doencas-cronicas-saude-internacional-avaliar-sem-falsas-expectativas/",
+    "keywords": [
+      "doenças crônicas",
+      "diabetes seguro saúde",
+      "hipertensão",
+      "seguro saúde internacional",
+      "pré-existência"
+    ],
+    "hashtags": [
+      "#DoencasCronicas",
+      "#Diabetes",
+      "#Hipertensao",
+      "#PreExistencia",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "Maternidade internacional: por que planejamento precisa vir antes da gravidez?",
+    "slug": "maternidade-internacional-planejamento-antes-da-gravidez",
+    "category": "Maternidade",
+    "description": "Entenda carências, recém-nascido, complicações e limites de cobertura antes de planejar gravidez no exterior.",
+    "date": "2027-02-18T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/maternidade-internacional-planejamento-antes-da-gravidez-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/maternidade-internacional-planejamento-antes-da-gravidez/",
+    "keywords": [
+      "maternidade internacional",
+      "parto no exterior",
+      "seguro saúde internacional",
+      "carência maternidade",
+      "recém-nascido"
+    ],
+    "hashtags": [
+      "#MaternidadeInternacional",
+      "#PartoNoExterior",
+      "#Carencia",
+      "#RecemNascido",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "Cidadania europeia e saúde: o que muda para quem pretende viver na Europa?",
+    "slug": "cidadania-europeia-saude-viver-na-europa",
+    "category": "Europa",
+    "description": "Entenda por que cidadania, residência e acesso ao sistema local não eliminam a necessidade de planejamento médico.",
+    "date": "2027-02-11T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/cidadania-europeia-saude-viver-na-europa-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/cidadania-europeia-saude-viver-na-europa/",
+    "keywords": [
+      "cidadania europeia",
+      "saúde na Europa",
+      "seguro saúde internacional",
+      "morar na Europa",
+      "seguro viagem"
+    ],
+    "hashtags": [
+      "#CidadaniaEuropeia",
+      "#MorarNaEuropa",
+      "#SaudeNaEuropa",
+      "#SeguroViagem",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "Morar parte do ano fora do Brasil: qual lógica de saúde combina com essa rotina?",
+    "slug": "morar-parte-do-ano-fora-do-brasil-logica-de-saude",
+    "category": "Vida internacional",
+    "description": "Veja como residência parcial, viagens longas e família internacional mudam a análise de proteção médica.",
+    "date": "2027-02-04T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/morar-parte-do-ano-fora-do-brasil-logica-de-saude-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/morar-parte-do-ano-fora-do-brasil-logica-de-saude/",
+    "keywords": [
+      "morar fora do Brasil",
+      "residência internacional",
+      "seguro saúde internacional",
+      "vida entre países",
+      "expatriados"
+    ],
+    "hashtags": [
+      "#MorarFora",
+      "#ResidenciaInternacional",
+      "#VidaEntrePaises",
+      "#Expatriados",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "Tenho SulAmérica: o que muda ao comparar com saúde internacional?",
+    "slug": "tenho-sulamerica-o-que-muda-comparar-saude-internacional",
+    "category": "Vida real",
+    "description": "Entenda diferenças de modelo, reembolso, rede e continuidade para quem já utiliza plano nacional consolidado.",
+    "date": "2027-01-28T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/tenho-sulamerica-o-que-muda-comparar-saude-internacional-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/tenho-sulamerica-o-que-muda-comparar-saude-internacional/",
+    "keywords": [
+      "SulAmérica",
+      "seguro saúde internacional",
+      "plano nacional",
+      "comparar planos",
+      "reembolso"
+    ],
+    "hashtags": [
+      "#SulAmerica",
+      "#SaudeInternacional",
+      "#PlanoNacional",
+      "#CompararPlanos",
+      "#Reembolso"
+    ]
+  },
+  {
+    "title": "Tenho Bradesco Saúde: faz sentido avaliar saúde internacional?",
+    "slug": "tenho-bradesco-saude-faz-sentido-avaliar-internacional",
+    "category": "Vida real",
+    "description": "Uma leitura consultiva para quem já possui plano nacional de alto padrão e quer entender diferenças sem comparações agressivas.",
+    "date": "2027-01-21T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/tenho-bradesco-saude-faz-sentido-avaliar-internacional-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/tenho-bradesco-saude-faz-sentido-avaliar-internacional/",
+    "keywords": [
+      "Bradesco Saúde",
+      "seguro saúde internacional",
+      "plano nacional ou internacional",
+      "reembolso médico",
+      "comparativo"
+    ],
+    "hashtags": [
+      "#BradescoSaude",
+      "#PlanoNacional",
+      "#SaudeInternacional",
+      "#ReembolsoMedico",
+      "#Comparativo"
+    ]
+  },
+  {
+    "title": "Reajuste do plano de saúde: quando ele vira sinal para rever a estratégia?",
+    "slug": "reajuste-plano-de-saude-sinal-para-rever-estrategia",
+    "category": "Planejamento",
+    "description": "Entenda quando um reajuste deve gerar apenas negociação e quando deve abrir uma análise mais ampla da proteção médica.",
+    "date": "2027-01-14T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/reajuste-plano-de-saude-sinal-para-rever-estrategia-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/reajuste-plano-de-saude-sinal-para-rever-estrategia/",
+    "keywords": [
+      "reajuste plano de saúde",
+      "seguro saúde internacional",
+      "alternativa ao plano nacional",
+      "planejamento de saúde",
+      "custo médico"
+    ],
+    "hashtags": [
+      "#Reajuste",
+      "#PlanoDeSaude",
+      "#Planejamento",
+      "#SaudeInternacional",
+      "#CustoMedico"
+    ]
+  },
+  {
+    "title": "O custo invisível de comparar saúde apenas pelo preço",
+    "slug": "custo-invisivel-comparar-saude-apenas-pelo-preco",
+    "category": "Decisão informada",
+    "description": "Veja como comparações incompletas podem esconder riscos de elegibilidade, franquia, exclusões e continuidade.",
+    "date": "2027-01-07T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/custo-invisivel-comparar-saude-apenas-pelo-preco-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/custo-invisivel-comparar-saude-apenas-pelo-preco/",
+    "keywords": [
+      "preço seguro saúde internacional",
+      "comparar plano de saúde",
+      "custo invisível",
+      "franquia",
+      "reembolso"
+    ],
+    "hashtags": [
+      "#Preco",
+      "#CustoInvisivel",
+      "#Comparacao",
+      "#Franquia",
+      "#Reembolso"
+    ]
+  },
+  {
+    "title": "Quando o plano nacional pode ser a melhor escolha?",
+    "slug": "quando-plano-nacional-pode-ser-melhor-escolha",
+    "category": "Contraponto",
+    "description": "Entenda por que uma consultoria séria também precisa mostrar quando o internacional pode não fazer sentido.",
+    "date": "2026-12-31T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/quando-plano-nacional-pode-ser-melhor-escolha-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/quando-plano-nacional-pode-ser-melhor-escolha/",
+    "keywords": [
+      "plano nacional",
+      "seguro saúde internacional",
+      "quando não contratar",
+      "plano de saúde",
+      "decisão consultiva"
+    ],
+    "hashtags": [
+      "#PlanoNacional",
+      "#QuandoNaoContratar",
+      "#DecisaoConsultiva",
+      "#SaudeInternacional",
+      "#Transparencia"
+    ]
+  },
+  {
+    "title": "RH e C-Level: saúde internacional como benefício executivo ou estratégia de retenção?",
+    "slug": "rh-c-level-saude-internacional-beneficio-executivo-retencao",
+    "category": "Empresas",
+    "description": "Veja como empresas podem analisar saúde internacional para liderança sem transformar o tema em catálogo de benefícios.",
+    "date": "2026-12-24T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/rh-c-level-saude-internacional-beneficio-executivo-retencao-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/rh-c-level-saude-internacional-beneficio-executivo-retencao/",
+    "keywords": [
+      "benefício executivo",
+      "RH saúde internacional",
+      "C-Level",
+      "seguro saúde internacional",
+      "retenção de executivos"
+    ],
+    "hashtags": [
+      "#RH",
+      "#CLevel",
+      "#BeneficioExecutivo",
+      "#Retencao",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "Brasileiros com vida internacional: como pensar saúde quando a rotina cruza fronteiras?",
+    "slug": "brasileiros-vida-internacional-saude-rotina-fronteiras",
+    "category": "Vida internacional",
+    "description": "Entenda critérios de residência, viagens frequentes, países de uso e continuidade para quem vive entre Brasil e exterior.",
+    "date": "2026-12-17T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/brasileiros-vida-internacional-saude-rotina-fronteiras-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/brasileiros-vida-internacional-saude-rotina-fronteiras/",
+    "keywords": [
+      "brasileiros no exterior",
+      "vida internacional",
+      "seguro saúde internacional",
+      "expatriados",
+      "dupla residência"
+    ],
+    "hashtags": [
+      "#BrasileirosNoExterior",
+      "#VidaInternacional",
+      "#Expatriados",
+      "#DuplaResidencia",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "Famílias 55+ e 70+: por que continuidade pesa mais com o passar dos anos?",
+    "slug": "familias-55-70-continuidade-saude-internacional",
+    "category": "Família 55+",
+    "description": "Analise elegibilidade, reajustes, dependentes e estabilidade contratual com uma comunicação sem medo e sem pressão.",
+    "date": "2026-12-10T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/familias-55-70-continuidade-saude-internacional-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/familias-55-70-continuidade-saude-internacional/",
+    "keywords": [
+      "plano de saúde idosos",
+      "família 55+",
+      "seguro saúde internacional",
+      "continuidade médica",
+      "elegibilidade"
+    ],
+    "hashtags": [
+      "#Familia55Mais",
+      "#Idosos",
+      "#ContinuidadeMedica",
+      "#Elegibilidade",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "Saúde internacional para executivos: previsibilidade ou apenas benefício corporativo?",
+    "slug": "saude-internacional-para-executivos-previsibilidade-beneficio",
+    "category": "Executivos",
+    "description": "Entenda como executivos podem avaliar saúde internacional além do benefício oferecido pela empresa.",
+    "date": "2026-12-03T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/saude-internacional-para-executivos-previsibilidade-beneficio-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/saude-internacional-para-executivos-previsibilidade-beneficio/",
+    "keywords": [
+      "saúde internacional para executivos",
+      "benefício executivo",
+      "seguro saúde internacional",
+      "reembolso médico",
+      "proteção familiar"
+    ],
+    "hashtags": [
+      "#Executivos",
+      "#BeneficioExecutivo",
+      "#Previsibilidade",
+      "#ProtecaoFamiliar",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "Saúde internacional para médicos: por que autonomia pesa tanto na decisão?",
+    "slug": "saude-internacional-para-medicos-autonomia-na-decisao",
+    "category": "Médicos",
+    "description": "Veja por que médicos costumam olhar para liberdade de escolha, qualidade assistencial e segunda opinião de forma diferente.",
+    "date": "2026-11-26T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/saude-internacional-para-medicos-autonomia-na-decisao-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/saude-internacional-para-medicos-autonomia-na-decisao/",
+    "keywords": [
+      "saúde internacional para médicos",
+      "seguro saúde internacional",
+      "autonomia médica",
+      "segunda opinião",
+      "liberdade médica"
+    ],
+    "hashtags": [
+      "#Medicos",
+      "#AutonomiaMedica",
+      "#LiberdadeMedica",
+      "#SegundaOpiniao",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "Holding familiar e saúde: sua estrutura patrimonial considera acesso médico?",
+    "slug": "holding-familiar-saude-estrutura-patrimonial-acesso-medico",
+    "category": "Planejamento patrimonial",
+    "description": "Entenda por que famílias patrimoniais devem incluir continuidade médica na análise de longo prazo.",
+    "date": "2026-11-19T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/holding-familiar-saude-estrutura-patrimonial-acesso-medico-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/holding-familiar-saude-estrutura-patrimonial-acesso-medico/",
+    "keywords": [
+      "holding familiar e saúde",
+      "planejamento patrimonial",
+      "seguro saúde internacional",
+      "continuidade médica",
+      "sucessão familiar"
+    ],
+    "hashtags": [
+      "#HoldingFamiliar",
+      "#PlanejamentoPatrimonial",
+      "#SucessaoFamiliar",
+      "#ContinuidadeMedica",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "Sua estratégia de saúde depende da sobrevivência de um CNPJ?",
+    "slug": "estrategia-de-saude-depende-da-sobrevivencia-de-um-cnpj",
+    "category": "Empresários",
+    "description": "Reflita sobre contratos empresariais, elegibilidade, sucessão e dependência de estruturas societárias.",
+    "date": "2026-11-12T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/estrategia-de-saude-depende-da-sobrevivencia-de-um-cnpj-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/estrategia-de-saude-depende-da-sobrevivencia-de-um-cnpj/",
+    "keywords": [
+      "plano empresarial",
+      "CNPJ plano de saúde",
+      "seguro saúde internacional",
+      "continuidade familiar",
+      "empresários"
+    ],
+    "hashtags": [
+      "#CNPJ",
+      "#PlanoEmpresarial",
+      "#Empresarios",
+      "#Continuidade",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "O que acontece se o titular falecer? Uma conversa necessária sobre continuidade",
+    "slug": "o-que-acontece-se-titular-falecer-continuidade-saude",
+    "category": "Continuidade",
+    "description": "Entenda por que titularidade, dependentes e continuidade devem ser analisados sem medo e sem sensacionalismo.",
+    "date": "2026-11-05T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/o-que-acontece-se-titular-falecer-continuidade-saude-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/o-que-acontece-se-titular-falecer-continuidade-saude/",
+    "keywords": [
+      "titular falece plano de saúde",
+      "continuidade familiar",
+      "seguro saúde internacional",
+      "dependentes",
+      "planejamento patrimonial"
+    ],
+    "hashtags": [
+      "#Titularidade",
+      "#ContinuidadeFamiliar",
+      "#Dependentes",
+      "#PlanejamentoPatrimonial",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "Continuidade familiar: sua proteção médica acompanha mudanças de vida?",
+    "slug": "continuidade-familiar-protecao-medica-mudancas-de-vida",
+    "category": "Família",
+    "description": "Veja por que dependentes, titularidade, envelhecimento e sucessão precisam entrar na conversa sobre saúde internacional.",
+    "date": "2026-10-29T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/continuidade-familiar-protecao-medica-mudancas-de-vida-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/continuidade-familiar-protecao-medica-mudancas-de-vida/",
+    "keywords": [
+      "continuidade familiar",
+      "dependentes plano de saúde",
+      "seguro saúde internacional",
+      "planejamento familiar",
+      "proteção médica"
+    ],
+    "hashtags": [
+      "#ContinuidadeFamiliar",
+      "#PlanejamentoFamiliar",
+      "#Dependentes",
+      "#ProtecaoMedica",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "Liberdade médica: o que esse conceito significa sem promessas exageradas?",
+    "slug": "liberdade-medica-saude-internacional-sem-promessas-exageradas",
+    "category": "Acesso médico",
+    "description": "Entenda como a saúde internacional pode ampliar possibilidades de escolha sem significar cobertura irrestrita.",
+    "date": "2026-10-22T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/liberdade-medica-saude-internacional-sem-promessas-exageradas-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/liberdade-medica-saude-internacional-sem-promessas-exageradas/",
+    "keywords": [
+      "liberdade médica",
+      "livre escolha médica",
+      "seguro saúde internacional",
+      "reembolso",
+      "segunda opinião médica"
+    ],
+    "hashtags": [
+      "#LiberdadeMedica",
+      "#LivreEscolha",
+      "#SegundaOpiniao",
+      "#Reembolso",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "Hospitais de referência: por que a lista de nomes não conta a história inteira?",
+    "slug": "hospitais-de-referencia-lista-nao-conta-historia-inteira",
+    "category": "Acesso médico",
+    "description": "Entenda por que Einstein, Sírio-Libanês e centros internacionais devem ser analisados dentro da lógica de acesso do contrato.",
+    "date": "2026-10-15T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/hospitais-de-referencia-lista-nao-conta-historia-inteira-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/hospitais-de-referencia-lista-nao-conta-historia-inteira/",
+    "keywords": [
+      "hospitais de referência",
+      "Einstein",
+      "Sírio-Libanês",
+      "seguro saúde internacional",
+      "acesso médico"
+    ],
+    "hashtags": [
+      "#HospitaisDeReferencia",
+      "#AcessoMedico",
+      "#Einstein",
+      "#SirioLibanes",
+      "#SaudeInternacional"
+    ]
+  },
+  {
+    "title": "Reembolso médico internacional: documentos, prazos e limites que você precisa entender",
+    "slug": "reembolso-medico-internacional-documentos-prazos-limites",
+    "category": "Reembolso",
+    "description": "Veja como organizar recibos, relatórios e solicitações para usar o reembolso com menos surpresa.",
+    "date": "2026-10-08T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/reembolso-medico-internacional-documentos-prazos-limites-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/reembolso-medico-internacional-documentos-prazos-limites/",
+    "keywords": [
+      "reembolso médico internacional",
+      "seguro saúde internacional",
+      "documentos reembolso",
+      "rede e reembolso",
+      "livre escolha médica"
+    ],
+    "hashtags": [
+      "#ReembolsoMedico",
+      "#SaudeInternacional",
+      "#LivreEscolha",
+      "#DocumentosMedicos",
+      "#SeguroSaudeInternacional"
+    ]
+  },
+  {
+    "title": "Rede parceira e pagamento direto: quando você não precisa desembolsar primeiro?",
+    "slug": "rede-parceira-pagamento-direto-saude-internacional",
+    "category": "Como funciona",
+    "description": "Entenda a lógica de rede parceira, autorização prévia e pagamento direto em seguros saúde internacionais.",
+    "date": "2026-10-01T15:00:00.000Z",
+    "readTime": 8,
+    "image": "/assets/blog/rede-parceira-pagamento-direto-saude-internacional-ai-photo.png",
+    "sourceUrl": "https://www.saudeinternacional.com.br/blog/rede-parceira-pagamento-direto-saude-internacional/",
+    "keywords": [
+      "rede parceira",
+      "pagamento direto",
+      "direct billing",
+      "seguro saúde internacional",
+      "autorização prévia"
+    ],
+    "hashtags": [
+      "#RedeParceira",
+      "#PagamentoDireto",
+      "#DirectBilling",
+      "#SeguroSaudeInternacional",
+      "#AutorizacaoPrevia"
+    ]
+  },
+  {
     "title": "Análise de aceitação: o que é underwriting em saúde internacional?",
     "slug": "analise-de-aceitacao-underwriting-saude-internacional",
     "category": "Elegibilidade",

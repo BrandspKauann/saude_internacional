@@ -280,10 +280,10 @@
       "#DeclaracaoDeSaude"
     ],
     "imagePrompt": "Photorealistic editorial image of a healthcare consultant studying medical forms and risk notes on a laptop in a refined office, no readable text, no logos, calm executive tone.",
-    "publishedAt": "2026-09-24T18:43:42.158Z"
+    "publishedAt": "2026-09-30T01:23:15.616Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-10-01T15:00:00.000Z",
     "title": "Rede parceira e pagamento direto: quando você não precisa desembolsar primeiro?",
     "slug": "rede-parceira-pagamento-direto-saude-internacional",
@@ -326,10 +326,11 @@
       "#SeguroSaudeInternacional",
       "#AutorizacaoPrevia"
     ],
-    "imagePrompt": "Photorealistic editorial image of an international hospital reception with a patient and coordinator discussing documents, professional healthcare environment, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of an international hospital reception with a patient and coordinator discussing documents, professional healthcare environment, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.621Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-10-08T15:00:00.000Z",
     "title": "Reembolso médico internacional: documentos, prazos e limites que você precisa entender",
     "slug": "reembolso-medico-internacional-documentos-prazos-limites",
@@ -372,10 +373,11 @@
       "#DocumentosMedicos",
       "#SeguroSaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of hands organizing medical receipts, laptop, passport, and healthcare claim documents on a clean desk, no readable text, no logos."
+    "imagePrompt": "Photorealistic editorial image of hands organizing medical receipts, laptop, passport, and healthcare claim documents on a clean desk, no readable text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.629Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-10-15T15:00:00.000Z",
     "title": "Hospitais de referência: por que a lista de nomes não conta a história inteira?",
     "slug": "hospitais-de-referencia-lista-nao-conta-historia-inteira",
@@ -418,10 +420,11 @@
       "#SirioLibanes",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of a modern hospital corridor with a thoughtful doctor and consultant in conversation, premium but discreet healthcare setting, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a modern hospital corridor with a thoughtful doctor and consultant in conversation, premium but discreet healthcare setting, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.636Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-10-22T15:00:00.000Z",
     "title": "Liberdade médica: o que esse conceito significa sem promessas exageradas?",
     "slug": "liberdade-medica-saude-internacional-sem-promessas-exageradas",
@@ -464,10 +467,11 @@
       "#Reembolso",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of a physician reviewing options with a patient in a quiet consultation room, thoughtful and professional, no readable text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a physician reviewing options with a patient in a quiet consultation room, thoughtful and professional, no readable text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.643Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-10-29T15:00:00.000Z",
     "title": "Continuidade familiar: sua proteção médica acompanha mudanças de vida?",
     "slug": "continuidade-familiar-protecao-medica-mudancas-de-vida",
@@ -510,10 +514,11 @@
       "#ProtecaoMedica",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of a multigenerational family calmly discussing planning documents at home, warm natural light, authentic and discreet, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a multigenerational family calmly discussing planning documents at home, warm natural light, authentic and discreet, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.659Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-11-05T15:00:00.000Z",
     "title": "O que acontece se o titular falecer? Uma conversa necessária sobre continuidade",
     "slug": "o-que-acontece-se-titular-falecer-continuidade-saude",
@@ -556,10 +561,11 @@
       "#PlanejamentoPatrimonial",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of an older couple and adult child reviewing family planning documents in a calm living room, respectful tone, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of an older couple and adult child reviewing family planning documents in a calm living room, respectful tone, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.664Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-11-12T15:00:00.000Z",
     "title": "Sua estratégia de saúde depende da sobrevivência de um CNPJ?",
     "slug": "estrategia-de-saude-depende-da-sobrevivencia-de-um-cnpj",
@@ -602,10 +608,11 @@
       "#Continuidade",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of a business owner reviewing corporate and family healthcare documents in an executive meeting room, serious calm tone, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a business owner reviewing corporate and family healthcare documents in an executive meeting room, serious calm tone, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.670Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-11-19T15:00:00.000Z",
     "title": "Holding familiar e saúde: sua estrutura patrimonial considera acesso médico?",
     "slug": "holding-familiar-saude-estrutura-patrimonial-acesso-medico",
@@ -648,10 +655,11 @@
       "#ContinuidadeMedica",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of a family office meeting with discreet documents, a medical folder, and multigenerational planning atmosphere, refined but not ostentatious, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a family office meeting with discreet documents, a medical folder, and multigenerational planning atmosphere, refined but not ostentatious, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.676Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-11-26T15:00:00.000Z",
     "title": "Saúde internacional para médicos: por que autonomia pesa tanto na decisão?",
     "slug": "saude-internacional-para-medicos-autonomia-na-decisao",
@@ -694,10 +702,11 @@
       "#SegundaOpiniao",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial portrait of a doctor thoughtfully reviewing international healthcare options in a modern medical office, professional and human, no text, no logos."
+    "imagePrompt": "Photorealistic editorial portrait of a doctor thoughtfully reviewing international healthcare options in a modern medical office, professional and human, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.680Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-12-03T15:00:00.000Z",
     "title": "Saúde internacional para executivos: previsibilidade ou apenas benefício corporativo?",
     "slug": "saude-internacional-para-executivos-previsibilidade-beneficio",
@@ -740,10 +749,11 @@
       "#ProtecaoFamiliar",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of an executive in a quiet office reviewing family healthcare planning on a tablet, city background, understated sophistication, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of an executive in a quiet office reviewing family healthcare planning on a tablet, city background, understated sophistication, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.686Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-12-10T15:00:00.000Z",
     "title": "Famílias 55+ e 70+: por que continuidade pesa mais com o passar dos anos?",
     "slug": "familias-55-70-continuidade-saude-internacional",
@@ -786,10 +796,11 @@
       "#Elegibilidade",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of a 60+ couple and adult daughter discussing healthcare documents in a bright home, calm and respectful, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a 60+ couple and adult daughter discussing healthcare documents in a bright home, calm and respectful, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.692Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-12-17T15:00:00.000Z",
     "title": "Brasileiros com vida internacional: como pensar saúde quando a rotina cruza fronteiras?",
     "slug": "brasileiros-vida-internacional-saude-rotina-fronteiras",
@@ -832,10 +843,11 @@
       "#DuplaResidencia",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of a Brazilian family at a quiet international airport lounge reviewing healthcare documents and passports, elegant natural light, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a Brazilian family at a quiet international airport lounge reviewing healthcare documents and passports, elegant natural light, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.701Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-12-24T15:00:00.000Z",
     "title": "RH e C-Level: saúde internacional como benefício executivo ou estratégia de retenção?",
     "slug": "rh-c-level-saude-internacional-beneficio-executivo-retencao",
@@ -878,10 +890,11 @@
       "#Retencao",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of HR and C-level leaders in a restrained boardroom discussing executive health benefits, professional documents, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of HR and C-level leaders in a restrained boardroom discussing executive health benefits, professional documents, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.715Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2026-12-31T15:00:00.000Z",
     "title": "Quando o plano nacional pode ser a melhor escolha?",
     "slug": "quando-plano-nacional-pode-ser-melhor-escolha",
@@ -924,10 +937,11 @@
       "#SaudeInternacional",
       "#Transparencia"
     ],
-    "imagePrompt": "Photorealistic editorial image of a consultant and family comparing healthcare options calmly, balanced decision atmosphere, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a consultant and family comparing healthcare options calmly, balanced decision atmosphere, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.727Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2027-01-07T15:00:00.000Z",
     "title": "O custo invisível de comparar saúde apenas pelo preço",
     "slug": "custo-invisivel-comparar-saude-apenas-pelo-preco",
@@ -970,10 +984,11 @@
       "#Franquia",
       "#Reembolso"
     ],
-    "imagePrompt": "Photorealistic editorial image of a person comparing healthcare proposals with financial notes and medical documents on a desk, thoughtful mood, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a person comparing healthcare proposals with financial notes and medical documents on a desk, thoughtful mood, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.736Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2027-01-14T15:00:00.000Z",
     "title": "Reajuste do plano de saúde: quando ele vira sinal para rever a estratégia?",
     "slug": "reajuste-plano-de-saude-sinal-para-rever-estrategia",
@@ -1016,10 +1031,11 @@
       "#SaudeInternacional",
       "#CustoMedico"
     ],
-    "imagePrompt": "Photorealistic editorial image of a family reviewing a healthcare bill and planning documents at a dining table, calm not dramatic, no readable text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a family reviewing a healthcare bill and planning documents at a dining table, calm not dramatic, no readable text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.761Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2027-01-21T15:00:00.000Z",
     "title": "Tenho Bradesco Saúde: faz sentido avaliar saúde internacional?",
     "slug": "tenho-bradesco-saude-faz-sentido-avaliar-internacional",
@@ -1062,10 +1078,11 @@
       "#ReembolsoMedico",
       "#Comparativo"
     ],
-    "imagePrompt": "Photorealistic editorial image of an executive comparing domestic health plan documents and international health strategy notes in a calm office, no logos, no readable text."
+    "imagePrompt": "Photorealistic editorial image of an executive comparing domestic health plan documents and international health strategy notes in a calm office, no logos, no readable text.",
+    "publishedAt": "2026-09-30T01:23:15.770Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2027-01-28T15:00:00.000Z",
     "title": "Tenho SulAmérica: o que muda ao comparar com saúde internacional?",
     "slug": "tenho-sulamerica-o-que-muda-comparar-saude-internacional",
@@ -1108,10 +1125,11 @@
       "#CompararPlanos",
       "#Reembolso"
     ],
-    "imagePrompt": "Photorealistic editorial image of a couple reviewing healthcare documents on a laptop at home, balanced comparison atmosphere, no brand logos, no readable text."
+    "imagePrompt": "Photorealistic editorial image of a couple reviewing healthcare documents on a laptop at home, balanced comparison atmosphere, no brand logos, no readable text.",
+    "publishedAt": "2026-09-30T01:23:15.778Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2027-02-04T15:00:00.000Z",
     "title": "Morar parte do ano fora do Brasil: qual lógica de saúde combina com essa rotina?",
     "slug": "morar-parte-do-ano-fora-do-brasil-logica-de-saude",
@@ -1154,10 +1172,11 @@
       "#Expatriados",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of a mature person planning between two homes with passport, tablet, and medical documents, subtle travel context, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a mature person planning between two homes with passport, tablet, and medical documents, subtle travel context, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.789Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2027-02-11T15:00:00.000Z",
     "title": "Cidadania europeia e saúde: o que muda para quem pretende viver na Europa?",
     "slug": "cidadania-europeia-saude-viver-na-europa",
@@ -1200,10 +1219,11 @@
       "#SeguroViagem",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of a family reviewing European relocation and healthcare planning documents near a window, discreet passports, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a family reviewing European relocation and healthcare planning documents near a window, discreet passports, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.802Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2027-02-18T15:00:00.000Z",
     "title": "Maternidade internacional: por que planejamento precisa vir antes da gravidez?",
     "slug": "maternidade-internacional-planejamento-antes-da-gravidez",
@@ -1246,10 +1266,11 @@
       "#RecemNascido",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of an expectant couple speaking with a healthcare consultant in a warm modern clinic, gentle and professional, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of an expectant couple speaking with a healthcare consultant in a warm modern clinic, gentle and professional, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.812Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2027-02-25T15:00:00.000Z",
     "title": "Doenças crônicas e saúde internacional: como avaliar sem criar falsas expectativas?",
     "slug": "doencas-cronicas-saude-internacional-avaliar-sem-falsas-expectativas",
@@ -1292,10 +1313,11 @@
       "#PreExistencia",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of a patient and doctor reviewing chronic condition monitoring results in a modern clinic, compassionate and calm, no readable text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a patient and doctor reviewing chronic condition monitoring results in a modern clinic, compassionate and calm, no readable text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.821Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2027-03-04T15:00:00.000Z",
     "title": "Saúde mental no exterior: cobertura, teleconsulta e acompanhamento contínuo",
     "slug": "saude-mental-exterior-cobertura-teleconsulta-acompanhamento",
@@ -1338,10 +1360,11 @@
       "#Telemedicina",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of a calm telehealth mental health consultation on laptop in a comfortable room, human and discreet, no text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a calm telehealth mental health consultation on laptop in a comfortable room, human and discreet, no text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.830Z"
   },
   {
-    "status": "scheduled",
+    "status": "published",
     "publishAt": "2027-03-11T15:00:00.000Z",
     "title": "Check-up internacional: benefício real ou detalhe de marketing?",
     "slug": "check-up-internacional-beneficio-real-ou-marketing",
@@ -1384,6 +1407,7 @@
       "#Beneficios",
       "#SaudeInternacional"
     ],
-    "imagePrompt": "Photorealistic editorial image of a preventive health consultation with doctor and executive reviewing wellness results, clean clinic, no readable text, no logos."
+    "imagePrompt": "Photorealistic editorial image of a preventive health consultation with doctor and executive reviewing wellness results, clean clinic, no readable text, no logos.",
+    "publishedAt": "2026-09-30T01:23:15.835Z"
   }
 ]
