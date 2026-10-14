@@ -27,6 +27,6 @@ Hipótese: explicar a comparação e os critérios já no resultado da busca apr
 
 Validação local em 14/10/2026: build concluído; segunda execução sem alterações nos links; título, descrição, canonical e H1 únicos e alinhados; dez artigos com um link contextual cada. Home retornou HTTP 200 e passou pela leitura em celular (390 px, sem rolagem horizontal) e desktop (1440 px).
 
-O push deste ciclo inicia a publicação na Vercel. Registrar a confirmação da versão servida em produção e a data em que o novo rastreamento do Google for observado antes de iniciar a avaliação.
+Commit de implementação: `74640e5`, enviado a `main` em 14/10/2026. Produção confirmada nessa data: home com o novo título e dez artigos com seus links contextuais; todas as onze URLs retornaram HTTP 200. Não há bloqueio `X-Robots-Tag` na home. O novo rastreamento do Google ainda não foi confirmado; registrar sua data antes de iniciar a avaliação.
 
 Manter esta versão por pelo menos 14 dias após o novo rastreamento. Comparar janelas completas e sem sobreposição de 14 dias, filtradas pela URL da home, com impressões, cliques, CTR, posição média e consultas. Ampliar a janela para 28 dias se o volume for baixo. A mudança será inconclusiva enquanto poucos cliques ou diferenças de consultas/posição impedirem separar o efeito do texto. Cliques não equivalem a leads ou vendas.
