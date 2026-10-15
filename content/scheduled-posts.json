@@ -1409,5 +1409,57 @@
     ],
     "imagePrompt": "Photorealistic editorial image of a preventive health consultation with doctor and executive reviewing wellness results, clean clinic, no readable text, no logos.",
     "publishedAt": "2026-09-30T01:23:15.835Z"
+  },
+  {
+    "status": "published",
+    "publishAt": "2026-10-15T15:00:00.000Z",
+    "title": "Quanto custa um seguro saúde internacional? O que muda sua cotação",
+    "slug": "quanto-custa-seguro-saude-internacional-cotacao",
+    "category": "Custos e planejamento",
+    "description": "Entenda quais fatores influenciam o custo do seguro saúde internacional e como comparar cotações sem olhar apenas para a mensalidade.",
+    "readTime": 10,
+    "image": "quanto-custa-seguro-saude-internacional-cotacao-ai-photo.png",
+    "focus": "quanto custa um seguro saúde internacional",
+    "angle": "Não existe um preço único para saúde internacional. A cotação reflete idade, país de residência, território, composição familiar, histórico médico, nível de cobertura, franquia e forma de utilização.",
+    "commonMistake": "Comparar apenas a mensalidade de duas propostas que possuem territórios, franquias, redes, módulos e regras de aceitação diferentes.",
+    "practicalImpact": "Na prática, escolhas sobre cobertura nos Estados Unidos, franquia, atendimento ambulatorial, maternidade, odontologia e composição familiar podem alterar tanto o custo quanto a experiência de uso.",
+    "whenItMatters": "O tema importa para famílias, empresários e executivos que desejam entender o orçamento real antes de solicitar ou comparar propostas internacionais.",
+    "questions": [
+      "Qual é o país de residência e onde a cobertura será utilizada?",
+      "A proteção precisa incluir os Estados Unidos?",
+      "Qual franquia anual cabe no planejamento financeiro?",
+      "Quem fará parte da proposta e quais coberturas são realmente necessárias?"
+    ],
+    "faq": [
+      {
+        "question": "Existe uma tabela única de preço para seguro saúde internacional?",
+        "answer": "Não. O valor depende do perfil dos proponentes, território, benefícios, franquia, análise de aceitação e regras de cada contrato."
+      },
+      {
+        "question": "Uma franquia maior sempre deixa o seguro mais barato?",
+        "answer": "Pode reduzir o prêmio em alguns produtos, mas aumenta a participação financeira no uso. A escolha precisa considerar orçamento e frequência provável de atendimento."
+      },
+      {
+        "question": "Incluir cobertura nos Estados Unidos muda o preço?",
+        "answer": "Em muitos modelos, sim. O impacto varia conforme produto, idade, residência e demais condições da proposta."
+      }
+    ],
+    "keywords": [
+      "quanto custa seguro saúde internacional",
+      "cotação seguro saúde internacional",
+      "preço plano de saúde internacional",
+      "franquia seguro internacional",
+      "cobertura internacional com EUA",
+      "seguro saúde para família"
+    ],
+    "hashtags": [
+      "#SeguroSaudeInternacional",
+      "#CotacaoDeSaude",
+      "#PlanejamentoFinanceiro",
+      "#Franquia",
+      "#SaudeInternacional"
+    ],
+    "imagePrompt": "Photorealistic editorial image of a Brazilian executive couple and healthcare consultant comparing international health insurance cost scenarios in a calm modern office, deep navy and subtle copper accents, no text, no logos, no luxury clichés.",
+    "publishedAt": "2026-10-15T11:55:42.334Z"
   }
 ]
