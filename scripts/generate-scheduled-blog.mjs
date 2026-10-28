@@ -88,6 +88,7 @@ const toPostMeta = (draft) => ({
 });
 
 const sectionHtml = (post) => {
+  if (post.sections?.length) return post.sections.map(section => `<section class="article-block"><h2>${escapeHtml(section.heading)}</h2>${section.paragraphs.map(p => `<p>${escapeHtml(p)}</p>`).join('')}</section>`).join('') + `<section class="article-block"><h2>Fontes e leitura complementar</h2>${[...(post.sources || []), ...(post.related || [])].map(link => `<p><a href="${escapeHtml(link.url)}">${escapeHtml(link.label)}</a></p>`).join('')}<p>Fontes conferidas em 28 de outubro de 2026. Condições e procedimentos dependem da apólice contratada.</p></section>`;
   const paragraphs = [
     {
       title: "O ponto central",
@@ -199,7 +200,7 @@ const updateSitemap = async (posts) => {
   for (const post of posts) {
     const loc = `${origin}/blog/${post.slug}/`;
     if (!existing.has(loc)) {
-      lines.push(`  <url><loc>${loc}</loc><priority>0.8</priority></url>`);
+      lines.push(`  <url><loc>${loc}</loc>${post.date ? `<lastmod>${new Date(post.date).toISOString()}</lastmod>` : ''}<priority>0.8</priority></url>`);
       existing.add(loc);
     }
   }
@@ -222,7 +223,14 @@ await mkdir(assetsDir, { recursive: true });
 for (const post of duePosts) {
   const postDir = path.join(blogDir, post.slug);
   await mkdir(postDir, { recursive: true });
-  await writeFile(path.join(postDir, "index.html"), articleHtml(post));
+  let html = articleHtml(post);
+  if (post.authorOrganization) {
+    html = html.replaceAll('{"@type":"Person","name":"Ewerton Hirayama"}', '{"@type":"Organization","name":"Saúde Internacional"}');
+    html = html.replace(/<div class="author">[\s\S]*?<\/div><\/div><button/, '<div class="author"><div><strong>Saúde Internacional</strong><span>Conteúdo editorial</span></div></div><button');
+    html = html.replace('<section class="article-block"><h2>Perguntas frequentes</h2></section>', '');
+    html = html.replace(`alt="${escapeHtml(post.title)}"><header class="article-head">`, `alt="${escapeHtml(post.imageAlt || post.title)}" width="1440" height="810"><p class="article-image-credit">Imagem ilustrativa gerada por IA.</p><header class="article-head">`);
+  }
+  await writeFile(path.join(postDir, "index.html"), html);
 
   const sourceImage = path.join(contentDir, "scheduled-assets", "blog", post.image);
   const targetImage = path.join(assetsDir, post.image);
