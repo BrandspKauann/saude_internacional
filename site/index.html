@@ -1647,7 +1647,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       .quote-progress-track i {
         display: block;
-        width: 50%;
+        width: 25%;
         height: 100%;
         background: linear-gradient(90deg, var(--teal), var(--gold));
         border-radius: inherit;
@@ -1655,6 +1655,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
 
       .quote-progress[data-step="2"] .quote-progress-track i {
+        width: 50%;
+      }
+
+      .quote-progress[data-step="3"] .quote-progress-track i {
+        width: 75%;
+      }
+
+      .quote-progress[data-step="4"] .quote-progress-track i {
         width: 100%;
       }
 
@@ -1670,6 +1678,147 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .quote-step {
         display: grid;
         gap: 16px;
+      }
+
+      .diagnostic-questions {
+        display: grid;
+        gap: 18px;
+      }
+
+      .quote-form .diagnostic-question {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: transparent;
+      }
+
+      .diagnostic-question legend {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 0;
+        color: var(--navy);
+        font-size: 1rem;
+        font-weight: 850;
+      }
+
+      .diagnostic-options {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .diagnostic-choice {
+        position: relative;
+        display: flex !important;
+        min-height: 58px;
+        align-items: center;
+        gap: 11px !important;
+        padding: 12px 14px;
+        border: 1px solid rgba(6, 36, 63, 0.14);
+        border-radius: 8px;
+        background: #f7fafc;
+        cursor: pointer;
+        transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+      }
+
+      .diagnostic-choice:hover {
+        border-color: rgba(10, 166, 166, 0.55);
+        transform: translateY(-1px);
+      }
+
+      .diagnostic-choice:has(input:checked) {
+        border-color: var(--teal);
+        background: rgba(10, 166, 166, 0.08);
+        box-shadow: inset 0 0 0 1px var(--teal);
+      }
+
+      .diagnostic-choice input {
+        width: 18px;
+        min-height: 18px;
+        margin: 0;
+        accent-color: var(--teal);
+      }
+
+      .diagnostic-choice span {
+        color: var(--navy);
+        line-height: 1.35;
+      }
+
+      .diagnostic-result {
+        overflow: hidden;
+        border: 1px solid rgba(6, 36, 63, 0.12);
+        border-radius: 8px;
+        background: #f7fafc;
+      }
+
+      .diagnostic-result-head {
+        padding: 24px;
+        color: var(--white);
+        background: linear-gradient(120deg, var(--navy), #0c4a56);
+      }
+
+      .diagnostic-result-head span {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--gold);
+        font-size: 0.78rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .diagnostic-result-head h3 {
+        margin: 0;
+        color: var(--white);
+        font-size: clamp(1.35rem, 3vw, 2rem);
+        line-height: 1.15;
+      }
+
+      .diagnostic-result-body {
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 24px;
+        padding: 24px;
+      }
+
+      .diagnostic-result-body p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .diagnostic-result-reasons {
+        display: grid;
+        gap: 9px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .diagnostic-result-reasons li {
+        display: flex;
+        gap: 9px;
+        color: var(--navy);
+        font-size: 0.9rem;
+        font-weight: 760;
+      }
+
+      .diagnostic-result-reasons li::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        flex: 0 0 auto;
+        margin-top: 6px;
+        border-radius: 50%;
+        background: var(--gold);
+      }
+
+      .diagnostic-disclaimer {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.78rem;
+        line-height: 1.55;
       }
 
       .quote-form fieldset {
@@ -2084,6 +2233,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           grid-template-columns: 1fr;
         }
 
+        .diagnostic-options,
+        .diagnostic-result-body {
+          grid-template-columns: 1fr;
+        }
+
+        .diagnostic-choice {
+          min-height: 54px;
+        }
+
       }
     </style>
   <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script><script defer src="/_vercel/insights/script.js"></script></head>
@@ -2175,7 +2333,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </a>
               <a class="btn btn-ghost" href="#comparar-planos">O que comparar nos planos</a>
             </div>
-            <div class="response-note reveal visible delay-3"><span></span>Leva cerca de 2 minutos / Gratuito e sem compromisso</div>
+            <div class="response-note reveal visible delay-3"><span></span>Leva cerca de 3 minutos / Gratuito e sem compromisso</div>
 
             <div class="hero-stats reveal visible delay-3" aria-label="Destaques">
               <div class="stat">
@@ -2364,7 +2522,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="cta-band reveal">
             <div>
               <h3>Descubra se saúde internacional faz sentido para você</h3>
-              <p>Responda algumas perguntas em cerca de 2 minutos. Isso nos ajuda a começar pela sua realidade, não por uma tabela.</p>
+              <p>Responda algumas perguntas em cerca de 3 minutos. Você recebe um resultado inicial antes de solicitar a cotação.</p>
             </div>
             <a class="btn btn-primary" href="#cotacao" data-quote-open>Iniciar diagnóstico</a>
           </div>
@@ -2556,7 +2714,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="diagnostic-bar" data-diagnostic-bar aria-hidden="true">
       <div class="diagnostic-bar-copy">
         <strong>Quer saber se faz sentido para o seu perfil?</strong>
-        <span>Responda algumas perguntas em cerca de 2 minutos.</span>
+        <span>Descubra seu perfil em cerca de 3 minutos.</span>
       </div>
       <a class="btn btn-gold" href="#cotacao" data-quote-open>Fazer diagnóstico</a>
     </div>
@@ -2569,51 +2727,129 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
           </svg>
         </button>
-        <h2 id="quote-title">Solicite sua cotação de saúde internacional</h2>
-        <p>
-          Preencha seus dados para iniciarmos a análise do seu perfil. A equipe da Hirayama orienta os próximos passos para avaliar opções e solicitar uma proposta; não há preço ou aceitação automáticos.
-        </p>
+        <h2 id="quote-title">Qual proteção médica combina com o seu momento?</h2>
+        <p>Responda primeiro sobre sua rotina e necessidade. Você recebe um resultado inicial antes de informar seus dados pessoais.</p>
         <div class="quote-benefits" aria-label="Benefícios do diagnóstico">
-          <span>Cerca de 2 minutos</span>
+          <span>Cerca de 3 minutos</span>
           <span>Gratuito</span>
+          <span>Resultado imediato</span>
           <span>Sem compromisso</span>
         </div>
         <div class="quote-progress" data-quote-progress data-step="1">
-          <span data-step-label>Etapa 1 de 2</span>
-          <small>Seu cenário</small>
+          <span data-step-label>Etapa 1 de 4</span>
+          <small data-step-name>Seu cenário</small>
           <div class="quote-progress-track" aria-hidden="true"><i></i></div>
         </div>
         <form class="quote-form" action="https://formspree.io/f/xvznbqab" method="POST" data-quote-form>
-          <input type="hidden" name="_subject" value="Novo diagnóstico - Saúde Internacional" />
+          <input type="hidden" name="_subject" value="Novo diagnóstico de perfil - Saúde Internacional" />
           <input type="hidden" name="resumo_cenario" data-summary-field />
+          <input type="hidden" name="resultado_diagnostico" data-result-field />
+          <input type="hidden" name="pontuacao_diagnostico" data-score-field />
+
           <div class="quote-step" data-form-step="1">
-            <fieldset>
-              <legend>1. Sobre você</legend>
-              <label>Nome
-                <input name="nome" type="text" autocomplete="name" required />
-              </label>
-              <label>E-mail
-                <input name="email" type="email" autocomplete="email" required />
-              </label>
-              <label>WhatsApp
-                <input name="whatsapp" type="tel" autocomplete="tel" required />
-              </label>
-            </fieldset>
+            <div class="diagnostic-questions">
+              <fieldset class="diagnostic-question">
+                <legend>O que motivou sua busca?</legend>
+                <div class="diagnostic-options">
+                  <label class="diagnostic-choice"><input type="radio" name="motivo_busca" value="Viagem temporária" required /><span>Uma viagem específica</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="motivo_busca" value="Cobertura médica contínua no Brasil e exterior" /><span>Cobertura contínua no Brasil e exterior</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="motivo_busca" value="Atendimento médico principalmente no Brasil" /><span>Atendimento principalmente no Brasil</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="motivo_busca" value="Ainda não sei qual caminho faz sentido" /><span>Ainda não sei qual caminho faz sentido</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="diagnostic-question">
+                <legend>Onde a proteção precisa funcionar?</legend>
+                <div class="diagnostic-options">
+                  <label class="diagnostic-choice"><input type="radio" name="area_uso" value="Somente no Brasil" required /><span>Somente no Brasil</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="area_uso" value="Brasil e viagens ocasionais" /><span>Brasil e viagens ocasionais</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="area_uso" value="Brasil e viagens frequentes" /><span>Brasil e viagens frequentes</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="area_uso" value="Moro ou divido a vida entre países" /><span>Moro ou divido a vida entre países</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="diagnostic-question">
+                <legend>Por quanto tempo você precisa dessa proteção?</legend>
+                <div class="diagnostic-options">
+                  <label class="diagnostic-choice"><input type="radio" name="duracao_protecao" value="Dias ou semanas" required /><span>Dias ou semanas</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="duracao_protecao" value="Alguns meses" /><span>Alguns meses</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="duracao_protecao" value="Longo prazo" /><span>Longo prazo</span></label>
+                </div>
+              </fieldset>
+            </div>
             <div class="quote-actions">
-              <button class="btn btn-primary" type="button" data-quote-next>Continuar</button>
+              <button class="btn btn-primary" type="button" data-next-step="2">Continuar</button>
             </div>
           </div>
 
           <div class="quote-step" data-form-step="2" hidden>
+            <div class="diagnostic-questions">
+              <fieldset class="diagnostic-question">
+                <legend>O que mais importa nessa decisão?</legend>
+                <div class="diagnostic-options">
+                  <label class="diagnostic-choice"><input type="radio" name="prioridade" value="Emergências durante viagens" required /><span>Emergências durante viagens</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="prioridade" value="Rede médica ampla no Brasil" /><span>Rede médica ampla no Brasil</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="prioridade" value="Liberdade médica e acesso global" /><span>Liberdade médica e acesso global</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="prioridade" value="Continuidade e proteção familiar" /><span>Continuidade e proteção familiar</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="diagnostic-question">
+                <legend>Qual cenário mais se parece com o seu?</legend>
+                <div class="diagnostic-options">
+                  <label class="diagnostic-choice"><input type="radio" name="situacao_vida" value="Turista em viagem" required /><span>Turista em viagem</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="situacao_vida" value="Residente no Brasil" /><span>Residente no Brasil</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="situacao_vida" value="Expatriado ou vida entre países" /><span>Expatriado ou vida entre países</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="situacao_vida" value="Estudante ou intercambista" /><span>Estudante ou intercambista</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="diagnostic-question">
+                <legend>Com que frequência você viaja para fora do Brasil?</legend>
+                <div class="diagnostic-options">
+                  <label class="diagnostic-choice"><input type="radio" name="frequencia_viagens" value="Raramente ou nunca" required /><span>Raramente ou nunca</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="frequencia_viagens" value="Uma ou duas vezes por ano" /><span>Uma ou duas vezes por ano</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="frequencia_viagens" value="Três ou mais vezes por ano" /><span>Três ou mais vezes por ano</span></label>
+                  <label class="diagnostic-choice"><input type="radio" name="frequencia_viagens" value="Vivo parte do ano no exterior" /><span>Vivo parte do ano no exterior</span></label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="quote-actions">
+              <button class="quote-back-button" type="button" data-prev-step="1">Voltar</button>
+              <button class="btn btn-gold" type="button" data-calculate-diagnostic>Ver meu resultado</button>
+            </div>
+          </div>
+
+          <div class="quote-step" data-form-step="3" hidden>
+            <div class="diagnostic-result" aria-live="polite">
+              <div class="diagnostic-result-head">
+                <span>Resultado inicial</span>
+                <h3 data-result-title></h3>
+              </div>
+              <div class="diagnostic-result-body">
+                <p data-result-description></p>
+                <ul class="diagnostic-result-reasons" data-result-reasons></ul>
+              </div>
+            </div>
+            <p class="diagnostic-disclaimer">Este resultado é educativo e considera apenas as respostas informadas. Elegibilidade, aceitação, coberturas e condições dependem da análise individual e dos contratos disponíveis.</p>
+            <div class="quote-actions">
+              <button class="quote-back-button" type="button" data-prev-step="2">Rever respostas</button>
+              <button class="btn btn-gold" type="button" data-next-step="4">Solicitar cotação para este perfil</button>
+            </div>
+          </div>
+
+          <div class="quote-step" data-form-step="4" hidden>
             <fieldset>
-              <legend>2. O que você busca</legend>
+              <legend>Seus dados para a cotação</legend>
+              <label>Nome
+                <input name="nome" type="text" autocomplete="name" required />
+              </label>
+              <label>WhatsApp
+                <input name="whatsapp" type="tel" autocomplete="tel" required />
+              </label>
+              <label>E-mail
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
               <label>Cidade
                 <input name="cidade" type="text" autocomplete="address-level2" />
               </label>
-              <label>Idade
-                <input name="idade" type="number" min="0" max="110" />
-              </label>
-              <label>Diagnóstico para quem?
+              <label>Cotação para quem?
                 <select name="cotacao_para">
                   <option>Somente para mim</option>
                   <option>Para mim e cônjuge</option>
@@ -2623,68 +2859,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </select>
               </label>
               <label>Idades dos participantes
-                <textarea name="idades_participantes" placeholder="Ex.: titular 42, esposa 39, filhos 8 e 12, sócio 45"></textarea>
+                <textarea name="idades_participantes" placeholder="Ex.: titular 42, cônjuge 39, filhos 8 e 12"></textarea>
               </label>
-              <label>O que você está buscando?
-                <select name="tipo_interesse">
-                  <option>Seguro saúde internacional</option>
-                  <option>Seguro viagem</option>
-                  <option>Tenho dúvida entre seguro viagem e saúde internacional</option>
-                  <option>Proteção para morar fora do Brasil</option>
-                  <option>Proteção para viagens frequentes</option>
-                </select>
+              <label>Plano ou seguro atual
+                <input name="plano_atual" type="text" placeholder="Operadora ou informe que não possui" />
               </label>
-              <label>Possui plano atualmente?
-                <select name="plano_atual">
-                  <option>Sim</option>
-                  <option>Não</option>
-                  <option>Estou avaliando para familiar</option>
-                  <option>Estou avaliando para empresa</option>
-                </select>
-              </label>
-              <label>Operadora atual
-                <input name="operadora" type="text" placeholder="Bradesco, SulAmérica, Omint, outra..." />
-              </label>
-              <label>Utiliza reembolso?
-                <select name="reembolso">
-                  <option>Não sei avaliar</option>
-                  <option>Sim, com frequência</option>
-                  <option>Às vezes</option>
-                  <option>Não utilizo</option>
-                </select>
-              </label>
-              <label>Objetivo principal
-                <select name="objetivo">
-                  <option>Liberdade médica</option>
-                  <option>Previsibilidade</option>
-                  <option>Acesso internacional</option>
-                  <option>Proteção familiar</option>
-                  <option>Continuidade</option>
-                  <option>Custo</option>
-                </select>
-              </label>
-              <label>Perfil
-                <select name="perfil">
-                  <option>Executivo</option>
-                  <option>Empresário</option>
-                  <option>Médico</option>
-                  <option>Profissional liberal</option>
-                  <option>Aposentado</option>
-                  <option>Família</option>
-                  <option>RH/C-Level</option>
-                </select>
-              </label>
-              <div class="quote-checks" aria-label="Contexto adicional">
-                <label><input name="dependentes" type="checkbox" /> Possui dependentes</label>
-                <label><input name="pais_idosos" type="checkbox" /> Pais idosos</label>
-                <label><input name="holding" type="checkbox" /> Holding familiar</label>
-                <label><input name="viagens" type="checkbox" /> Viagens frequentes</label>
-                <label><input name="exterior" type="checkbox" /> Residência fora do Brasil</label>
-              </div>
             </fieldset>
             <div class="quote-actions">
-              <button class="quote-back-button" type="button" data-quote-back>Voltar</button>
-              <button class="btn btn-gold" type="submit">Enviar diagnóstico</button>
+              <button class="quote-back-button" type="button" data-prev-step="3">Voltar ao resultado</button>
+              <button class="btn btn-gold" type="submit">Solicitar cotação</button>
             </div>
           </div>
         </form>
@@ -2705,8 +2888,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       const quoteSteps = [...document.querySelectorAll("[data-form-step]")];
       const quoteProgress = document.querySelector("[data-quote-progress]");
       const quoteStepLabel = document.querySelector("[data-step-label]");
-      const quoteNext = document.querySelector("[data-quote-next]");
-      const quoteBack = document.querySelector("[data-quote-back]");
+      const quoteStepName = document.querySelector("[data-step-name]");
+      const resultField = quoteForm.querySelector("[data-result-field]");
+      const scoreField = quoteForm.querySelector("[data-score-field]");
+      let diagnosticResult = null;
 
       const setMenu = (open) => {
         mobilePanel.classList.toggle("open", open);
@@ -2750,8 +2935,104 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           quoteStep.hidden = Number(quoteStep.dataset.formStep) !== step;
         });
         quoteProgress.dataset.step = String(step);
-        quoteStepLabel.textContent = `Etapa ${step} de 2`;
-        quoteProgress.querySelector("small").textContent = step === 1 ? "Seu cenário" : "Objetivos e contexto";
+        quoteStepLabel.textContent = `Etapa ${step} de 4`;
+        quoteStepName.textContent = ["Seu cenário", "Sua necessidade", "Seu resultado", "Dados para cotação"][step - 1];
+        quoteDialogScrollTop();
+      };
+
+      const quoteDialogScrollTop = () => {
+        quoteModal.querySelector(".quote-dialog").scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      const validateStep = (step) => {
+        const fields = [...quoteSteps[step - 1].querySelectorAll("[required]")];
+        const invalidField = fields.find((field) => !field.checkValidity());
+        if (invalidField) {
+          invalidField.reportValidity();
+          return false;
+        }
+        return true;
+      };
+
+      const diagnosticProfiles = {
+        internacional: {
+          title: "Seu cenário indica perfil para saúde internacional",
+          description: "Você demonstrou necessidade de proteção contínua, mobilidade entre países ou maior liberdade de acesso médico. Um seguro saúde internacional merece entrar na comparação.",
+          reasons: ["Cobertura pensada para uso recorrente", "Possibilidade de acesso no Brasil e no exterior", "Análise de rede, reembolso e continuidade"]
+        },
+        viagem: {
+          title: "Seu cenário se aproxima de um seguro viagem",
+          description: "Sua necessidade parece temporária e ligada a uma viagem específica. Nesse caso, uma proteção de viagem pode ser mais proporcional do que uma estrutura médica internacional permanente.",
+          reasons: ["Proteção por período determinado", "Foco em urgências e imprevistos da viagem", "Custo alinhado à duração da estadia"]
+        },
+        nacional: {
+          title: "Seu cenário pode ser melhor atendido por um plano nacional",
+          description: "Seu uso está concentrado no Brasil e a prioridade parece ser acesso recorrente à rede médica nacional. Vale comparar planos locais antes de assumir uma solução internacional.",
+          reasons: ["Uso médico concentrado no Brasil", "Rede nacional como prioridade", "Comparação de custo, carências e abrangência local"]
+        }
+      };
+
+      const calculateDiagnostic = () => {
+        const data = new FormData(quoteForm);
+        const scores = { internacional: 0, viagem: 0, nacional: 0 };
+        const add = (profile, points) => { scores[profile] += points; };
+        const rules = {
+          motivo_busca: {
+            "Viagem temporária": [["viagem", 5]],
+            "Cobertura médica contínua no Brasil e exterior": [["internacional", 5]],
+            "Atendimento médico principalmente no Brasil": [["nacional", 5]],
+            "Ainda não sei qual caminho faz sentido": [["internacional", 1], ["viagem", 1], ["nacional", 1]]
+          },
+          area_uso: {
+            "Somente no Brasil": [["nacional", 4]],
+            "Brasil e viagens ocasionais": [["viagem", 3], ["nacional", 1]],
+            "Brasil e viagens frequentes": [["internacional", 4], ["viagem", 1]],
+            "Moro ou divido a vida entre países": [["internacional", 5]]
+          },
+          duracao_protecao: {
+            "Dias ou semanas": [["viagem", 4]],
+            "Alguns meses": [["viagem", 2], ["internacional", 2]],
+            "Longo prazo": [["internacional", 4], ["nacional", 1]]
+          },
+          prioridade: {
+            "Emergências durante viagens": [["viagem", 5]],
+            "Rede médica ampla no Brasil": [["nacional", 5]],
+            "Liberdade médica e acesso global": [["internacional", 5]],
+            "Continuidade e proteção familiar": [["internacional", 4], ["nacional", 1]]
+          },
+          situacao_vida: {
+            "Turista em viagem": [["viagem", 4]],
+            "Residente no Brasil": [["nacional", 4]],
+            "Expatriado ou vida entre países": [["internacional", 5]],
+            "Estudante ou intercambista": [["internacional", 3], ["viagem", 1]]
+          },
+          frequencia_viagens: {
+            "Raramente ou nunca": [["nacional", 3]],
+            "Uma ou duas vezes por ano": [["viagem", 3]],
+            "Três ou mais vezes por ano": [["internacional", 4], ["viagem", 1]],
+            "Vivo parte do ano no exterior": [["internacional", 5]]
+          }
+        };
+
+        Object.entries(rules).forEach(([field, options]) => {
+          (options[data.get(field)] || []).forEach(([profile, points]) => add(profile, points));
+        });
+
+        const profile = Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
+        diagnosticResult = { profile, scores, ...diagnosticProfiles[profile] };
+        resultField.value = diagnosticResult.title;
+        scoreField.value = `Internacional ${scores.internacional}; Viagem ${scores.viagem}; Nacional ${scores.nacional}`;
+        quoteForm.querySelector("[data-result-title]").textContent = diagnosticResult.title;
+        quoteForm.querySelector("[data-result-description]").textContent = diagnosticResult.description;
+        quoteForm.querySelector("[data-result-reasons]").innerHTML = diagnosticResult.reasons.map((reason) => `<li>${reason}</li>`).join("");
+        setQuoteStep(3);
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "diagnostic_result",
+          form_id: "cotacao_saude_internacional",
+          diagnostic_profile: profile,
+          service: "saude_internacional"
+        });
       };
 
       const setQuoteModal = (open) => {
@@ -2760,8 +3041,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         document.body.classList.toggle("quote-open", open);
         document.body.style.overflow = open ? "hidden" : "";
         if (open) {
+          quoteForm.reset();
+          diagnosticResult = null;
           setQuoteStep(1);
-          quoteSteps[0].querySelector("input")?.focus();
+          quoteSteps[0].querySelector("input")?.focus({ preventScroll: true });
         }
       };
 
@@ -2789,26 +3072,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       });
 
-      quoteNext.addEventListener("click", () => {
-        const invalidField = [...quoteSteps[0].querySelectorAll("[required]")]
-          .find((field) => !field.checkValidity());
-        if (invalidField) {
-          invalidField.reportValidity();
-          return;
-        }
-        setQuoteStep(2);
-        quoteSteps[1].querySelector("select, input")?.focus();
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: "diagnostic_step_2",
-          form_id: "cotacao_saude_internacional",
-          service: "saude_internacional"
+      quoteForm.querySelectorAll("[data-next-step]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const currentStep = Number(button.closest("[data-form-step]").dataset.formStep);
+          if (!validateStep(currentStep)) return;
+          const nextStep = Number(button.dataset.nextStep);
+          setQuoteStep(nextStep);
+          quoteSteps[nextStep - 1].querySelector("input, select")?.focus({ preventScroll: true });
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: "diagnostic_step_complete",
+            form_id: "cotacao_saude_internacional",
+            step_index: currentStep,
+            service: "saude_internacional"
+          });
         });
       });
 
-      quoteBack.addEventListener("click", () => {
-        setQuoteStep(1);
-        quoteSteps[0].querySelector("input")?.focus();
+      quoteForm.querySelectorAll("[data-prev-step]").forEach((button) => {
+        button.addEventListener("click", () => setQuoteStep(Number(button.dataset.prevStep)));
+      });
+
+      quoteForm.querySelector("[data-calculate-diagnostic]").addEventListener("click", () => {
+        if (!validateStep(2)) return;
+        calculateDiagnostic();
       });
 
       quoteForm.addEventListener("submit", (event) => {
@@ -2816,30 +3103,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         const data = new FormData(quoteForm);
         const summaryField = quoteForm.querySelector("[data-summary-field]");
         const submitButton = quoteForm.querySelector("button[type='submit']");
-        const context = [
-          data.get("dependentes") ? "Possui dependentes" : null,
-          data.get("pais_idosos") ? "Pais idosos" : null,
-          data.get("holding") ? "Holding familiar" : null,
-          data.get("viagens") ? "Viagens frequentes" : null,
-          data.get("exterior") ? "Residência fora do Brasil" : null
-        ].filter(Boolean);
         const message = [
-          "Olá, gostaria de solicitar um diagnóstico consultivo inicial sobre saúde internacional.",
+          "Olá, concluí o diagnóstico e gostaria de solicitar uma cotação para o perfil indicado.",
+          "",
+          "Resultado: " + (data.get("resultado_diagnostico") || ""),
+          "Pontuação: " + (data.get("pontuacao_diagnostico") || ""),
+          "Motivo da busca: " + (data.get("motivo_busca") || ""),
+          "Área de uso: " + (data.get("area_uso") || ""),
+          "Duração: " + (data.get("duracao_protecao") || ""),
+          "Prioridade: " + (data.get("prioridade") || ""),
+          "Situação de vida: " + (data.get("situacao_vida") || ""),
+          "Frequência de viagens: " + (data.get("frequencia_viagens") || ""),
           "",
           "Nome: " + (data.get("nome") || ""),
           "E-mail: " + (data.get("email") || ""),
           "WhatsApp: " + (data.get("whatsapp") || ""),
           "Cidade: " + (data.get("cidade") || ""),
-          "Idade: " + (data.get("idade") || ""),
-          "Diagnóstico para: " + (data.get("cotacao_para") || ""),
+          "Cotação para: " + (data.get("cotacao_para") || ""),
           "Idades dos participantes: " + (data.get("idades_participantes") || ""),
-          "Interesse principal: " + (data.get("tipo_interesse") || ""),
-          "Possui plano atualmente: " + (data.get("plano_atual") || ""),
-          "Operadora atual: " + (data.get("operadora") || ""),
-          "Utiliza reembolso: " + (data.get("reembolso") || ""),
-          "Objetivo principal: " + (data.get("objetivo") || ""),
-          "Perfil: " + (data.get("perfil") || ""),
-          "Contexto adicional: " + (context.length ? context.join(", ") : "Não informado")
+          "Plano ou seguro atual: " + (data.get("plano_atual") || "")
         ].join("\n");
 
         summaryField.value = message;
@@ -2857,7 +3139,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             window.dataLayer.push({
               event: "generate_lead",
               form_id: "cotacao_saude_internacional",
-              form_name: "Diagnóstico Saúde Internacional",
+              form_name: "Diagnóstico de perfil Saúde Internacional",
+              diagnostic_profile: diagnosticResult?.profile || "nao_identificado",
               service: "saude_internacional"
             });
             window.open("https://wa.me/5511938020789?text=" + encodeURIComponent(message), "_blank", "noopener");
@@ -2870,7 +3153,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           })
           .finally(() => {
             submitButton.disabled = false;
-            submitButton.textContent = "Enviar diagnóstico";
+            submitButton.textContent = "Solicitar cotação";
           });
       });
 
