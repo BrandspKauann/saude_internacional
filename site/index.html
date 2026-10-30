@@ -328,6 +328,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         outline: none;
       }
 
+      .btn:disabled {
+        color: #7b8c96;
+        background: #e5ecef;
+        box-shadow: none;
+        cursor: not-allowed;
+        transform: none;
+      }
+
       .btn-primary {
         color: var(--white);
         background: linear-gradient(135deg, var(--teal), var(--navy-2));
@@ -1566,80 +1574,351 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       .quote-dialog {
         position: relative;
-        width: min(920px, 100%);
-        max-height: min(88vh, 860px);
-        overflow: auto;
-        padding: 30px;
+        display: grid;
+        grid-template-columns: 320px minmax(0, 1fr);
+        width: min(1080px, 100%);
+        height: min(760px, 92vh);
+        overflow: hidden;
         background: var(--white);
         border: 1px solid rgba(6, 36, 63, 0.12);
         border-radius: 8px;
         box-shadow: 0 34px 80px rgba(6, 36, 63, 0.26);
       }
 
+      .diagnostic-aside {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 34px 30px 30px;
+        color: var(--white);
+        background: var(--navy);
+      }
+
+      .diagnostic-aside::after {
+        content: "";
+        position: absolute;
+        right: -100px;
+        bottom: -100px;
+        width: 260px;
+        height: 260px;
+        border: 1px solid rgba(60, 203, 182, 0.24);
+        border-radius: 50%;
+        box-shadow: 0 0 0 38px rgba(60, 203, 182, 0.05), 0 0 0 76px rgba(218, 159, 60, 0.04);
+        pointer-events: none;
+      }
+
+      .diagnostic-aside-brand {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        margin-bottom: 50px;
+      }
+
+      .diagnostic-aside-mark {
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        color: var(--white);
+        background: var(--teal);
+        border-radius: 8px;
+        font-size: 1.2rem;
+        font-weight: 900;
+      }
+
+      .diagnostic-aside-brand strong,
+      .diagnostic-aside-brand small {
+        display: block;
+        letter-spacing: 0;
+      }
+
+      .diagnostic-aside-brand strong {
+        font-size: 0.86rem;
+      }
+
+      .diagnostic-aside-brand small {
+        margin-top: 2px;
+        color: rgba(255, 255, 255, 0.58);
+        font-size: 0.68rem;
+        font-weight: 800;
+      }
+
+      .diagnostic-aside h2 {
+        position: relative;
+        z-index: 1;
+        margin: 0 0 14px;
+        color: var(--white);
+        font-size: 1.85rem;
+        line-height: 1.12;
+      }
+
+      .diagnostic-aside-copy {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+        line-height: 1.65;
+      }
+
+      .diagnostic-stage-list {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        gap: 18px;
+        margin: 36px 0 28px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .diagnostic-stage-list li {
+        position: relative;
+        display: grid;
+        grid-template-columns: 30px 1fr;
+        gap: 11px;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.46);
+        font-size: 0.82rem;
+        font-weight: 800;
+        transition: color 220ms ease;
+      }
+
+      .diagnostic-stage-list li:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 14px;
+        width: 1px;
+        height: 18px;
+        background: rgba(255, 255, 255, 0.16);
+      }
+
+      .diagnostic-stage-number {
+        display: grid;
+        width: 30px;
+        height: 30px;
+        place-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 50%;
+        font-size: 0.72rem;
+      }
+
+      .diagnostic-stage-list li.active {
+        color: var(--white);
+      }
+
+      .diagnostic-stage-list li.active .diagnostic-stage-number {
+        color: var(--navy);
+        background: var(--gold);
+        border-color: var(--gold);
+      }
+
+      .diagnostic-stage-list li.completed {
+        color: rgba(255, 255, 255, 0.76);
+      }
+
+      .diagnostic-stage-list li.completed .diagnostic-stage-number {
+        color: var(--navy);
+        background: var(--teal-light, #3ccbb6);
+        border-color: var(--teal-light, #3ccbb6);
+      }
+
+      .diagnostic-stage-list li.completed .diagnostic-stage-number::before {
+        content: "\2713";
+      }
+
+      .diagnostic-stage-list li.completed .diagnostic-stage-number span {
+        display: none;
+      }
+
+      .diagnostic-aside-note {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 0.76rem;
+        line-height: 1.55;
+      }
+
+      .diagnostic-main {
+        position: relative;
+        min-width: 0;
+        overflow: auto;
+        padding: 32px 40px 34px;
+        scrollbar-gutter: stable;
+      }
+
+      .diagnostic-welcome {
+        min-height: 100%;
+        display: grid;
+        align-content: center;
+        justify-items: start;
+        gap: 18px;
+        max-width: 660px;
+        padding: 34px 8px;
+        animation: diagnosticStepIn 320ms ease both;
+      }
+
+      .diagnostic-welcome-eyebrow {
+        display: inline-flex;
+        min-height: 28px;
+        align-items: center;
+        padding: 0 10px;
+        color: var(--teal-dark);
+        background: rgba(10, 166, 166, 0.09);
+        border: 1px solid rgba(10, 166, 166, 0.16);
+        border-radius: 6px;
+        font-size: 0.74rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .diagnostic-welcome h3 {
+        max-width: 620px;
+        margin: 0;
+        color: var(--navy);
+        font-size: clamp(2rem, 4.4vw, 3.25rem);
+        line-height: 1.04;
+      }
+
+      .diagnostic-welcome > p {
+        max-width: 620px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+
+      .diagnostic-welcome-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .diagnostic-welcome-meta span {
+        display: inline-flex;
+        min-height: 34px;
+        align-items: center;
+        padding: 0 11px;
+        color: var(--navy);
+        background: #f2f7f8;
+        border: 1px solid rgba(6, 36, 63, 0.09);
+        border-radius: 6px;
+        font-size: 0.76rem;
+        font-weight: 820;
+      }
+
+      .diagnostic-welcome .btn {
+        min-width: 230px;
+        min-height: 52px;
+      }
+
+      .diagnostic-welcome small {
+        max-width: 590px;
+        color: var(--muted);
+        font-size: 0.75rem;
+        line-height: 1.55;
+      }
+
       .quote-close {
         position: absolute;
-        top: 16px;
-        right: 16px;
-        width: 42px;
-        height: 42px;
+        z-index: 5;
+        top: 18px;
+        right: 18px;
+        width: 38px;
+        height: 38px;
         display: grid;
         place-items: center;
         border: 1px solid rgba(6, 36, 63, 0.14);
         border-radius: 50%;
         color: var(--navy);
-        background: #f4f8fb;
+        background: rgba(244, 248, 251, 0.92);
         cursor: pointer;
+        transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
       }
 
-      .quote-dialog h2 {
-        max-width: 720px;
-        margin: 0 52px 10px 0;
+      .quote-close:hover {
+        border-color: rgba(6, 36, 63, 0.35);
+        background: var(--white);
+        transform: rotate(4deg);
+      }
+
+      .diagnostic-main-intro {
+        margin: 0 52px 22px 0;
+      }
+
+      .diagnostic-main-intro strong {
+        display: block;
+        margin-bottom: 5px;
         color: var(--navy);
-        font-size: clamp(1.65rem, 3vw, 2.35rem);
-        line-height: 1.12;
+        font-size: 0.82rem;
+        font-weight: 900;
+        text-transform: uppercase;
       }
 
-      .quote-dialog > p {
-        max-width: 760px;
-        margin: 0 0 22px;
+      .diagnostic-main-intro span {
         color: var(--muted);
-        line-height: 1.7;
+        font-size: 0.82rem;
+        line-height: 1.5;
       }
 
       .quote-benefits {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        margin: -8px 0 22px;
+        margin-top: 18px;
       }
 
       .quote-benefits span {
         display: inline-flex;
         align-items: center;
-        min-height: 30px;
-        padding: 0 10px;
-        color: var(--teal-dark);
-        background: rgba(10, 166, 166, 0.09);
-        border: 1px solid rgba(10, 166, 166, 0.16);
-        border-radius: 8px;
-        font-size: 0.8rem;
+        min-height: 28px;
+        padding: 0 9px;
+        color: #47616f;
+        background: #f1f6f7;
+        border: 1px solid rgba(6, 36, 63, 0.08);
+        border-radius: 6px;
+        font-size: 0.74rem;
         font-weight: 800;
       }
 
       .quote-progress {
         display: grid;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: auto 1fr auto;
         gap: 8px 14px;
         align-items: center;
-        margin-bottom: 18px;
+        margin-bottom: 28px;
         color: var(--navy);
-        font-size: 0.86rem;
+        font-size: 0.8rem;
         font-weight: 820;
+      }
+
+      .quote-progress[hidden],
+      .quote-form[hidden],
+      .diagnostic-welcome[hidden] {
+        display: none !important;
+      }
+
+      .quote-progress small {
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 750;
+      }
+
+      .quote-progress-count {
+        color: var(--muted);
+        font-size: 0.75rem;
+        font-weight: 800;
       }
 
       .quote-progress-track {
         grid-column: 1 / -1;
-        height: 6px;
+        height: 4px;
         overflow: hidden;
         background: #e2ebf1;
         border-radius: 99px;
@@ -1647,23 +1926,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       .quote-progress-track i {
         display: block;
-        width: 25%;
+        width: var(--diagnostic-progress, 12.5%);
         height: 100%;
         background: linear-gradient(90deg, var(--teal), var(--gold));
         border-radius: inherit;
         transition: width 260ms ease;
-      }
-
-      .quote-progress[data-step="2"] .quote-progress-track i {
-        width: 50%;
-      }
-
-      .quote-progress[data-step="3"] .quote-progress-track i {
-        width: 75%;
-      }
-
-      .quote-progress[data-step="4"] .quote-progress-track i {
-        width: 100%;
       }
 
       .quote-form {
@@ -1677,12 +1944,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       .quote-step {
         display: grid;
-        gap: 16px;
+        gap: 26px;
+        animation: diagnosticStepIn 320ms ease both;
       }
 
       .diagnostic-questions {
         display: grid;
-        gap: 18px;
+        gap: 24px;
       }
 
       .quote-form .diagnostic-question {
@@ -1696,73 +1964,183 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .diagnostic-question legend {
         display: block;
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         padding: 0;
         color: var(--navy);
-        font-size: 1rem;
-        font-weight: 850;
+        font-size: clamp(1.45rem, 3vw, 2rem);
+        font-weight: 860;
+        line-height: 1.17;
+      }
+
+      .diagnostic-question-help {
+        display: block;
+        margin-bottom: 20px;
+        color: var(--muted);
+        font-size: 0.88rem;
+        font-weight: 500;
+        line-height: 1.55;
       }
 
       .diagnostic-options {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
+        gap: 12px;
       }
 
       .diagnostic-choice {
         position: relative;
-        display: flex !important;
-        min-height: 58px;
+        display: grid !important;
+        grid-template-columns: 34px minmax(0, 1fr) 24px;
+        width: 100%;
+        min-height: 82px;
         align-items: center;
-        gap: 11px !important;
-        padding: 12px 14px;
+        gap: 13px !important;
+        padding: 14px 16px;
         border: 1px solid rgba(6, 36, 63, 0.14);
         border-radius: 8px;
-        background: #f7fafc;
+        background: var(--white);
         cursor: pointer;
-        transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+        font: inherit;
+        text-align: left;
+        box-shadow: 0 8px 24px rgba(6, 36, 63, 0.04);
+        transition: border-color 180ms ease, background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
       }
 
       .diagnostic-choice:hover {
         border-color: rgba(10, 166, 166, 0.55);
-        transform: translateY(-1px);
+        box-shadow: 0 12px 28px rgba(6, 36, 63, 0.09);
+        transform: translateY(-2px);
       }
 
-      .diagnostic-choice:has(input:checked) {
+      .diagnostic-choice:has(input:checked),
+      .diagnostic-choice.selected {
         border-color: var(--teal);
-        background: rgba(10, 166, 166, 0.08);
-        box-shadow: inset 0 0 0 1px var(--teal);
+        background: rgba(10, 166, 166, 0.055);
+        box-shadow: inset 0 0 0 1px var(--teal), 0 12px 28px rgba(10, 166, 166, 0.1);
       }
 
       .diagnostic-choice input {
-        width: 18px;
-        min-height: 18px;
-        margin: 0;
-        accent-color: var(--teal);
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        min-height: 0;
+        opacity: 0;
+        pointer-events: none;
       }
 
-      .diagnostic-choice span {
+      .diagnostic-choice:focus-within,
+      .diagnostic-choice:focus-visible {
+        outline: 3px solid rgba(10, 166, 166, 0.18);
+        outline-offset: 2px;
+      }
+
+      .diagnostic-choice-index {
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        color: #607784;
+        background: #eef4f6;
+        border-radius: 8px;
+        font-size: 0.74rem;
+        font-weight: 900;
+        transition: color 180ms ease, background 180ms ease;
+      }
+
+      .diagnostic-choice:has(input:checked) .diagnostic-choice-index,
+      .diagnostic-choice.selected .diagnostic-choice-index {
+        color: var(--white);
+        background: var(--teal);
+      }
+
+      .diagnostic-choice-copy {
+        display: block;
+        min-width: 0;
+      }
+
+      .diagnostic-choice-copy strong,
+      .diagnostic-choice-copy small {
+        display: block;
+      }
+
+      .diagnostic-choice-copy strong {
         color: var(--navy);
-        line-height: 1.35;
+        font-size: 0.91rem;
+        line-height: 1.3;
+      }
+
+      .diagnostic-choice-copy small {
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 0.75rem;
+        font-weight: 520;
+        line-height: 1.4;
+      }
+
+      .diagnostic-choice-check {
+        display: grid;
+        width: 22px;
+        height: 22px;
+        place-items: center;
+        border: 1px solid rgba(6, 36, 63, 0.2);
+        border-radius: 50%;
+        color: transparent;
+        font-size: 0.72rem;
+        transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+      }
+
+      .diagnostic-choice:has(input:checked) .diagnostic-choice-check,
+      .diagnostic-choice.selected .diagnostic-choice-check {
+        color: var(--white);
+        background: var(--teal);
+        border-color: var(--teal);
+      }
+
+      .diagnostic-choice.selected .diagnostic-choice-check::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        background: currentColor;
+        border-radius: 50%;
       }
 
       .diagnostic-result {
-        overflow: hidden;
-        border: 1px solid rgba(6, 36, 63, 0.12);
-        border-radius: 8px;
-        background: #f7fafc;
+        display: grid;
+        gap: 24px;
       }
 
       .diagnostic-result-head {
-        padding: 24px;
-        color: var(--white);
-        background: linear-gradient(120deg, var(--navy), #0c4a56);
+        display: grid;
+        grid-template-columns: 58px minmax(0, 1fr);
+        gap: 18px;
+        align-items: center;
+        padding-bottom: 22px;
+        border-bottom: 1px solid rgba(6, 36, 63, 0.1);
+        color: var(--navy);
+        background: transparent;
       }
 
-      .diagnostic-result-head span {
+      .diagnostic-result-icon {
+        display: grid;
+        width: 58px;
+        height: 58px;
+        place-items: center;
+        color: var(--white);
+        background: var(--teal);
+        border-radius: 50%;
+        box-shadow: 0 10px 24px rgba(10, 166, 166, 0.2);
+        font-size: 1.35rem;
+        font-weight: 900;
+      }
+
+      .diagnostic-result-icon::before {
+        content: "+";
+      }
+
+      .diagnostic-result-head > div > span {
         display: block;
         margin-bottom: 8px;
-        color: var(--gold);
+        color: var(--teal-dark);
         font-size: 0.78rem;
         font-weight: 900;
         text-transform: uppercase;
@@ -1770,16 +2148,103 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       .diagnostic-result-head h3 {
         margin: 0;
-        color: var(--white);
+        color: var(--navy);
         font-size: clamp(1.35rem, 3vw, 2rem);
         line-height: 1.15;
       }
 
+      .diagnostic-result-copy {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.96rem;
+        line-height: 1.75;
+      }
+
+      .diagnostic-result-section {
+        display: grid;
+        gap: 12px;
+        padding: 18px;
+        border: 1px solid rgba(6, 36, 63, 0.1);
+        border-radius: 8px;
+        background: #f7fafc;
+      }
+
+      .diagnostic-result-section > strong {
+        color: var(--navy);
+        font-size: 0.84rem;
+        text-transform: uppercase;
+      }
+
+      .diagnostic-layers {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .diagnostic-layer {
+        min-height: 128px;
+        padding: 18px;
+        border: 1px solid rgba(6, 36, 63, 0.11);
+        border-top: 3px solid var(--gold);
+        border-radius: 8px;
+        background: var(--white);
+        box-shadow: 0 10px 24px rgba(6, 36, 63, 0.05);
+      }
+
+      .diagnostic-layer strong,
+      .diagnostic-layer span {
+        display: block;
+      }
+
+      .diagnostic-layer strong {
+        margin-bottom: 8px;
+        color: var(--navy);
+        font-size: 0.88rem;
+      }
+
+      .diagnostic-layer span {
+        color: var(--muted);
+        font-size: 0.79rem;
+        line-height: 1.55;
+      }
+
+      .diagnostic-alerts {
+        display: grid;
+        gap: 10px;
+      }
+
+      .diagnostic-alerts:empty {
+        display: none;
+      }
+
+      .diagnostic-alert {
+        padding: 15px 16px;
+        border-left: 3px solid var(--gold);
+        background: rgba(218, 159, 60, 0.075);
+      }
+
+      .diagnostic-alert strong,
+      .diagnostic-alert span {
+        display: block;
+      }
+
+      .diagnostic-alert strong {
+        margin-bottom: 4px;
+        color: var(--navy);
+        font-size: 0.82rem;
+      }
+
+      .diagnostic-alert span {
+        color: var(--muted);
+        font-size: 0.78rem;
+        line-height: 1.55;
+      }
+
       .diagnostic-result-body {
         display: grid;
-        grid-template-columns: 1.25fr 0.75fr;
-        gap: 24px;
-        padding: 24px;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 30px;
+        padding: 0;
       }
 
       .diagnostic-result-body p {
@@ -1800,25 +2265,133 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         display: flex;
         gap: 9px;
         color: var(--navy);
-        font-size: 0.9rem;
+        font-size: 0.86rem;
         font-weight: 760;
       }
 
       .diagnostic-result-reasons li::before {
-        content: "";
-        width: 8px;
-        height: 8px;
+        content: "\2713";
+        display: grid;
+        width: 20px;
+        height: 20px;
         flex: 0 0 auto;
-        margin-top: 6px;
+        place-items: center;
         border-radius: 50%;
-        background: var(--gold);
+        color: var(--teal-dark);
+        background: rgba(10, 166, 166, 0.1);
+        font-size: 0.65rem;
+        font-weight: 900;
+      }
+
+      .diagnostic-scoreboard {
+        display: grid;
+        gap: 13px;
+        padding: 18px;
+        border: 1px solid rgba(6, 36, 63, 0.1);
+        border-radius: 8px;
+        background: #f7fafc;
+      }
+
+      .diagnostic-scoreboard > strong {
+        color: var(--navy);
+        font-size: 0.82rem;
+      }
+
+      .diagnostic-score-row {
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        gap: 10px;
+        align-items: center;
+        color: var(--muted);
+        font-size: 0.72rem;
+        font-weight: 760;
+      }
+
+      .diagnostic-score-track {
+        height: 7px;
+        overflow: hidden;
+        border-radius: 99px;
+        background: #dfe9ed;
+      }
+
+      .diagnostic-score-track i {
+        display: block;
+        width: 0;
+        height: 100%;
+        border-radius: inherit;
+        background: #a6b8c1;
+        transition: width 600ms ease 120ms;
+      }
+
+      .diagnostic-score-row.primary {
+        color: var(--navy);
+      }
+
+      .diagnostic-score-row.primary .diagnostic-score-track i {
+        background: linear-gradient(90deg, var(--teal), #3ccbb6);
       }
 
       .diagnostic-disclaimer {
-        margin: 0;
+        margin: -8px 0 0;
+        padding: 12px 14px;
+        border-left: 3px solid var(--gold);
+        background: rgba(218, 159, 60, 0.07);
         color: var(--muted);
         font-size: 0.78rem;
         line-height: 1.55;
+      }
+
+      .diagnostic-contact-head {
+        display: grid;
+        gap: 8px;
+        margin-bottom: 2px;
+      }
+
+      .diagnostic-contact-head span {
+        color: var(--teal-dark);
+        font-size: 0.76rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .diagnostic-contact-head h3 {
+        margin: 0;
+        color: var(--navy);
+        font-size: clamp(1.4rem, 3vw, 1.9rem);
+        line-height: 1.18;
+      }
+
+      .diagnostic-contact-head p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.88rem;
+        line-height: 1.55;
+      }
+
+      .diagnostic-result-summary {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 11px 13px;
+        border: 1px solid rgba(10, 166, 166, 0.16);
+        border-radius: 8px;
+        color: var(--navy);
+        background: rgba(10, 166, 166, 0.055);
+        font-size: 0.82rem;
+        font-weight: 780;
+      }
+
+      .diagnostic-result-summary::before {
+        content: "\2713";
+        display: grid;
+        width: 22px;
+        height: 22px;
+        flex: 0 0 auto;
+        place-items: center;
+        border-radius: 50%;
+        color: var(--white);
+        background: var(--teal);
+        font-size: 0.7rem;
       }
 
       .quote-form fieldset {
@@ -1826,14 +2399,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
         margin: 0;
-        padding: 20px;
-        border: 1px solid rgba(6, 36, 63, 0.12);
-        border-radius: 8px;
-        background: #f7fafc;
+        padding: 0;
+        border: 0;
+        background: transparent;
       }
 
       .quote-form legend {
-        padding: 0 8px;
+        padding: 0;
         color: var(--navy);
         font-weight: 850;
       }
@@ -1849,14 +2421,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .quote-form input,
       .quote-form select,
       .quote-form textarea {
-        min-height: 46px;
+        min-height: 49px;
         width: 100%;
         padding: 0 13px;
         border: 1px solid rgba(6, 36, 63, 0.16);
         border-radius: 8px;
         color: var(--navy);
-        background: var(--white);
+        background: #fbfdfe;
         font: inherit;
+        transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      }
+
+      .quote-form input:focus,
+      .quote-form select:focus,
+      .quote-form textarea:focus {
+        outline: 0;
+        border-color: var(--teal);
+        background: var(--white);
+        box-shadow: 0 0 0 3px rgba(10, 166, 166, 0.1);
       }
 
       .quote-form textarea {
@@ -1893,6 +2475,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         gap: 12px;
         align-items: center;
         justify-content: flex-end;
+        padding-top: 4px;
+      }
+
+      .quote-actions-spread {
+        justify-content: space-between;
+      }
+
+      .quote-actions .btn {
+        min-width: 176px;
       }
 
       .quote-back-button {
@@ -1910,6 +2501,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .quote-actions small {
         color: var(--muted);
         line-height: 1.5;
+      }
+
+      .diagnostic-error {
+        display: none;
+        margin: -12px 0 0;
+        color: #b42318;
+        font-size: 0.8rem;
+        font-weight: 750;
+      }
+
+      .diagnostic-error.visible {
+        display: block;
+      }
+
+      @keyframes diagnosticStepIn {
+        from {
+          opacity: 0;
+          transform: translateX(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
       }
 
       .reveal {
@@ -2096,6 +2710,69 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
       }
 
+      @media (max-width: 820px) {
+        .quote-modal {
+          padding: 14px;
+        }
+
+        .quote-dialog {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto minmax(0, 1fr);
+          height: calc(100vh - 28px);
+          max-height: 860px;
+        }
+
+        .diagnostic-aside {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto;
+          gap: 10px 20px;
+          padding: 18px 66px 16px 20px;
+        }
+
+        .diagnostic-aside::after,
+        .diagnostic-aside-copy,
+        .diagnostic-aside-note {
+          display: none;
+        }
+
+        .diagnostic-aside-brand {
+          margin: 0;
+        }
+
+        .diagnostic-aside h2 {
+          grid-column: 1;
+          margin: 0;
+          font-size: 1.15rem;
+        }
+
+        .diagnostic-stage-list {
+          grid-column: 2;
+          grid-row: 1 / span 2;
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          margin: 0;
+        }
+
+        .diagnostic-stage-list li {
+          display: block;
+          font-size: 0;
+        }
+
+        .diagnostic-stage-list li::after {
+          display: none;
+        }
+
+        .diagnostic-main {
+          padding: 26px 28px 30px;
+        }
+
+        .diagnostic-welcome {
+          min-height: auto;
+          padding: 26px 6px;
+        }
+      }
+
       @media (max-width: 640px) {
         .shell {
           width: calc(100% - 26px);
@@ -2209,8 +2886,84 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           min-height: 420px;
         }
 
+        .quote-modal {
+          padding: 0;
+        }
+
         .quote-dialog {
-          padding: 24px 18px;
+          width: 100%;
+          height: 100dvh;
+          max-height: none;
+          border: 0;
+          border-radius: 0;
+        }
+
+        .diagnostic-aside {
+          min-height: 94px;
+          padding: 14px 58px 13px 16px;
+        }
+
+        .diagnostic-aside-brand {
+          gap: 8px;
+        }
+
+        .diagnostic-aside-mark {
+          width: 30px;
+          height: 30px;
+        }
+
+        .diagnostic-aside h2 {
+          font-size: 1rem;
+        }
+
+        .diagnostic-stage-list {
+          gap: 5px;
+        }
+
+        .diagnostic-stage-number {
+          width: 26px;
+          height: 26px;
+        }
+
+        .diagnostic-main {
+          padding: 22px 16px 26px;
+          scrollbar-gutter: auto;
+        }
+
+        .diagnostic-welcome {
+          align-content: start;
+          gap: 15px;
+          padding: 12px 0 24px;
+        }
+
+        .diagnostic-welcome h3 {
+          font-size: 1.85rem;
+          line-height: 1.08;
+        }
+
+        .diagnostic-welcome > p {
+          font-size: 0.9rem;
+          line-height: 1.65;
+        }
+
+        .diagnostic-welcome .btn {
+          width: 100%;
+        }
+
+        .quote-close {
+          top: 13px;
+          right: 13px;
+          color: var(--white);
+          background: rgba(255, 255, 255, 0.08);
+          border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .diagnostic-main-intro {
+          display: none;
+        }
+
+        .quote-progress {
+          margin-bottom: 22px;
         }
 
         .diagnostic-bar {
@@ -2234,12 +2987,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         .diagnostic-options,
-        .diagnostic-result-body {
+        .diagnostic-result-body,
+        .diagnostic-layers {
           grid-template-columns: 1fr;
         }
 
         .diagnostic-choice {
-          min-height: 54px;
+          min-height: 72px;
+          padding: 12px 13px;
+        }
+
+        .diagnostic-question legend {
+          font-size: 1.35rem;
+        }
+
+        .diagnostic-question-help {
+          margin-bottom: 16px;
+        }
+
+        .diagnostic-result-head {
+          grid-template-columns: 48px minmax(0, 1fr);
+          gap: 13px;
+        }
+
+        .diagnostic-result-icon {
+          width: 48px;
+          height: 48px;
+        }
+
+        .diagnostic-score-row {
+          grid-template-columns: 96px 1fr;
+        }
+
+        .quote-actions {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+
+        .quote-actions .btn,
+        .quote-back-button {
+          width: 100%;
+        }
+
+        .quote-actions .btn {
+          order: -1;
         }
 
       }
@@ -2281,12 +3072,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <path d="M4.8 7l7.2 6 7.2-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
             </svg>
           </a>
-          <a class="btn btn-primary" href="#cotacao" data-quote-open>
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M7.5 10.2c1.4 2.8 3.5 4.8 6.3 6.3l2.1-2.1c.3-.3.8-.4 1.2-.2 1 .3 2 .5 3.1.5.6 0 1 .4 1 1V19c0 .6-.4 1-1 1C10.8 20 4 13.2 4 4.8c0-.6.4-1 1-1h3.3c.6 0 1 .4 1 1 0 1.1.2 2.2.5 3.1.1.4 0 .8-.2 1.1l-2.1 2.2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
-            </svg>
-            Fazer diagnóstico
-          </a>
+          <a class="btn btn-gold" href="#cotacao" data-quote-open>Saiba o seu perfil de plano</a>
           <button class="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-button>
             <svg class="menu-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true">
               <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -2304,7 +3090,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="https://www.segurosdecredito.com.br/" target="_blank" rel="noopener">Seguro de Crédito</a>
         <a href="https://www.consultoriavr.com.br/" target="_blank" rel="noopener">Consultoria VR</a>
         <a href="https://consorcio-hirayama-eeva.vercel.app/" target="_blank" rel="noopener">Consórcio Platinum</a>
-        <a class="btn btn-primary" href="#cotacao" data-quote-open>Fazer diagnóstico</a>
+        <a class="btn btn-gold" href="#cotacao" data-quote-open>Saiba o seu perfil de plano</a>
       </div>
     </header>
 
@@ -2324,16 +3110,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               Quer contratar ou rever sua proteção médica? Compare opções de seguro saúde internacional por rede, franquia e reembolso. Conte o que você e sua família precisam e solicite uma cotação com a Hirayama.
             </p>
             <div class="hero-actions reveal visible delay-3">
-              <a class="btn btn-gold" href="#cotacao" data-quote-open>
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M12 21a9 9 0 1 0-7.2-3.6L3.8 21l3.9-1a9 9 0 0 0 4.3 1z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
-                  <path d="M8.8 9.5c.7 2.4 2.2 4 4.7 4.7l1.4-1.4 2.1.5v2.1c0 .5-.4.9-.9.9A8.1 8.1 0 0 1 7.7 7.9c0-.5.4-.9.9-.9h2.1l.5 2.1-1.4 1.4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                </svg>
-                Solicitar minha cotação
-              </a>
+              <a class="btn btn-gold" href="#cotacao" data-quote-open>Saiba o seu perfil de plano</a>
               <a class="btn btn-ghost" href="#comparar-planos">O que comparar nos planos</a>
             </div>
-            <div class="response-note reveal visible delay-3"><span></span>Leva cerca de 3 minutos / Gratuito e sem compromisso</div>
+            <div class="response-note reveal visible delay-3"><span></span>Leva cerca de 2 minutos / Gratuito e sem compromisso</div>
 
             <div class="hero-stats reveal visible delay-3" aria-label="Destaques">
               <div class="stat">
@@ -2404,7 +3184,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="section-copy">Se você procura um plano de saúde internacional ou seguro médico internacional, comece pelas condições do produto. A cotação deve ser avaliada junto da rede, dos limites e das regras de contratação.</p>
           </div>
           <div class="consult-grid">
-            <article class="service-card"><small>Cotação</small><h3>Quer entender o preço?</h3><p>Informe quem precisa da proteção e onde pretende utilizá-la. A análise deve considerar o produto, a elegibilidade e as condições da proposta, sem estimativa genérica apresentada como preço garantido.</p><a href="#cotacao" data-quote-open>Solicitar análise para cotação</a></article>
+            <article class="service-card"><small>Cotação</small><h3>Quer entender o preço?</h3><p>Informe quem precisa da proteção e onde pretende utilizá-la. A análise deve considerar o produto, a elegibilidade e as condições da proposta, sem estimativa genérica apresentada como preço garantido.</p><a href="#cotacao" data-quote-open>Saiba o seu perfil de plano</a></article>
             <article class="service-card"><small>Comparação</small><h3>Rede, franquia ou reembolso?</h3><p>Compare como cada opção atende sua rotina. Veja o que conferir sobre acesso à rede e reembolso antes de escolher apenas pelo valor da mensalidade.</p><a href="/blog/diferenca-entre-rede-direta-e-reembolso/">Entender rede e reembolso</a></article>
             <article class="service-card"><small>Contratação</small><h3>Vai usar no Brasil e no exterior?</h3><p>Verifique os países previstos, as condições de uso e a elegibilidade do produto. Seguro saúde internacional e seguro viagem precisam ser comparados conforme a sua necessidade.</p><a href="/blog/seguro-viagem-cartao-credito-saude-internacional-diferencas/">Saúde internacional ou seguro viagem?</a></article>
           </div>
@@ -2470,7 +3250,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <h3>Quando pode não fazer sentido?</h3>
               <p>Nem todo perfil se beneficia do seguro saúde internacional. Em alguns casos, um plano nacional, benefício empresarial ou outra solução pode continuar sendo o caminho mais adequado.</p>
             </div>
-            <a class="btn btn-primary" href="#cotacao" data-quote-open>Fazer diagnóstico</a>
+            <a class="btn btn-gold" href="#cotacao" data-quote-open>Saiba o seu perfil de plano</a>
           </div>
         </div>
       </section>
@@ -2522,9 +3302,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="cta-band reveal">
             <div>
               <h3>Descubra se saúde internacional faz sentido para você</h3>
-              <p>Responda algumas perguntas em cerca de 3 minutos. Você recebe um resultado inicial antes de solicitar a cotação.</p>
+              <p>Responda 10 perguntas em cerca de 2 minutos. Você recebe um resultado inicial antes de solicitar a cotação.</p>
             </div>
-            <a class="btn btn-primary" href="#cotacao" data-quote-open>Iniciar diagnóstico</a>
+            <a class="btn btn-gold" href="#cotacao" data-quote-open>Saiba o seu perfil de plano</a>
           </div>
         </div>
       </section>
@@ -2660,7 +3440,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h2>Converse sobre o seu cenário antes de decidir.</h2>
             <p>Receba uma análise consultiva para entender rede, reembolso, carências, exclusões, continuidade e critérios de elegibilidade com mais segurança.</p>
           </div>
-          <a class="btn btn-gold" href="#cotacao" data-quote-open>Fazer diagnóstico</a>
+          <a class="btn btn-gold" href="#cotacao" data-quote-open>Saiba o seu perfil de plano</a>
         </div>
 
         <div class="footer-grid">
@@ -2714,457 +3494,117 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="diagnostic-bar" data-diagnostic-bar aria-hidden="true">
       <div class="diagnostic-bar-copy">
         <strong>Quer saber se faz sentido para o seu perfil?</strong>
-        <span>Descubra seu perfil em cerca de 3 minutos.</span>
+        <span>Descubra seu perfil em cerca de 2 minutos.</span>
       </div>
-      <a class="btn btn-gold" href="#cotacao" data-quote-open>Fazer diagnóstico</a>
+      <a class="btn btn-gold" href="#cotacao" data-quote-open>Saiba o seu perfil de plano</a>
     </div>
 
     <div class="quote-modal" id="cotacao" role="dialog" aria-modal="true" aria-labelledby="quote-title" aria-hidden="true" data-quote-modal>
       <div class="quote-backdrop" data-quote-close></div>
       <div class="quote-dialog">
-        <button class="quote-close" type="button" aria-label="Fechar formulário" data-quote-close>
+        <button class="quote-close" type="button" aria-label="Fechar diagnóstico" data-quote-close>
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
             <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
           </svg>
         </button>
-        <h2 id="quote-title">Qual proteção médica combina com o seu momento?</h2>
-        <p>Responda primeiro sobre sua rotina e necessidade. Você recebe um resultado inicial antes de informar seus dados pessoais.</p>
-        <div class="quote-benefits" aria-label="Benefícios do diagnóstico">
-          <span>Cerca de 3 minutos</span>
-          <span>Gratuito</span>
-          <span>Resultado imediato</span>
-          <span>Sem compromisso</span>
-        </div>
-        <div class="quote-progress" data-quote-progress data-step="1">
-          <span data-step-label>Etapa 1 de 4</span>
-          <small data-step-name>Seu cenário</small>
-          <div class="quote-progress-track" aria-hidden="true"><i></i></div>
-        </div>
-        <form class="quote-form" action="https://formspree.io/f/xvznbqab" method="POST" data-quote-form>
-          <input type="hidden" name="_subject" value="Novo diagnóstico de perfil - Saúde Internacional" />
-          <input type="hidden" name="resumo_cenario" data-summary-field />
-          <input type="hidden" name="resultado_diagnostico" data-result-field />
-          <input type="hidden" name="pontuacao_diagnostico" data-score-field />
+        <aside class="diagnostic-aside">
+          <div class="diagnostic-aside-brand">
+            <span class="diagnostic-aside-mark" aria-hidden="true">+</span>
+            <span><strong>SAÚDE INTERNACIONAL</strong><small>BY HIRAYAMA</small></span>
+          </div>
+          <h2 id="quote-title">Descubra qual proteção combina com o seu momento.</h2>
+          <p class="diagnostic-aside-copy">Dez perguntas objetivas ajudam a diferenciar saúde internacional, plano nacional, combinação de coberturas e seguro viagem.</p>
+          <ol class="diagnostic-stage-list" aria-label="Etapas do diagnóstico">
+            <li class="active" data-stage-indicator="profile"><span class="diagnostic-stage-number"><span>1</span></span><span>Entender seu perfil</span></li>
+            <li data-stage-indicator="result"><span class="diagnostic-stage-number"><span>2</span></span><span>Apresentar o resultado</span></li>
+            <li data-stage-indicator="contact"><span class="diagnostic-stage-number"><span>3</span></span><span>Solicitar uma cotação</span></li>
+          </ol>
+          <p class="diagnostic-aside-note">Resultado educativo, gratuito e sem compromisso. Seus dados pessoais serão solicitados somente depois do diagnóstico.</p>
+        </aside>
 
-          <div class="quote-step" data-form-step="1">
-            <div class="diagnostic-questions">
-              <fieldset class="diagnostic-question">
-                <legend>O que motivou sua busca?</legend>
-                <div class="diagnostic-options">
-                  <label class="diagnostic-choice"><input type="radio" name="motivo_busca" value="Viagem temporária" required /><span>Uma viagem específica</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="motivo_busca" value="Cobertura médica contínua no Brasil e exterior" /><span>Cobertura contínua no Brasil e exterior</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="motivo_busca" value="Atendimento médico principalmente no Brasil" /><span>Atendimento principalmente no Brasil</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="motivo_busca" value="Ainda não sei qual caminho faz sentido" /><span>Ainda não sei qual caminho faz sentido</span></label>
-                </div>
-              </fieldset>
-              <fieldset class="diagnostic-question">
-                <legend>Onde a proteção precisa funcionar?</legend>
-                <div class="diagnostic-options">
-                  <label class="diagnostic-choice"><input type="radio" name="area_uso" value="Somente no Brasil" required /><span>Somente no Brasil</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="area_uso" value="Brasil e viagens ocasionais" /><span>Brasil e viagens ocasionais</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="area_uso" value="Brasil e viagens frequentes" /><span>Brasil e viagens frequentes</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="area_uso" value="Moro ou divido a vida entre países" /><span>Moro ou divido a vida entre países</span></label>
-                </div>
-              </fieldset>
-              <fieldset class="diagnostic-question">
-                <legend>Por quanto tempo você precisa dessa proteção?</legend>
-                <div class="diagnostic-options">
-                  <label class="diagnostic-choice"><input type="radio" name="duracao_protecao" value="Dias ou semanas" required /><span>Dias ou semanas</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="duracao_protecao" value="Alguns meses" /><span>Alguns meses</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="duracao_protecao" value="Longo prazo" /><span>Longo prazo</span></label>
-                </div>
-              </fieldset>
+        <main class="diagnostic-main">
+          <section class="diagnostic-welcome" data-diagnostic-intro>
+            <span class="diagnostic-welcome-eyebrow">Diagnóstico de perfil</span>
+            <h3>O seguro saúde internacional foi feito para você?</h3>
+            <p>Nem todo mundo que chega aqui precisa dele. Em 10 perguntas você descobre se o seu caso pede um seguro internacional, um bom plano nacional, a combinação dos dois ou um seguro viagem.</p>
+            <div class="diagnostic-welcome-meta" aria-label="Informações do diagnóstico">
+              <span>Cerca de 2 minutos</span><span>Resultado personalizado</span><span>Sem compromisso</span>
             </div>
-            <div class="quote-actions">
-              <button class="btn btn-primary" type="button" data-next-step="2">Continuar</button>
-            </div>
+            <button class="btn btn-gold" type="button" data-diagnostic-start>Começar o diagnóstico</button>
+            <small>Nenhuma resposta é enviada antes de você solicitar a cotação. Este resultado é uma orientação inicial e não substitui a análise individual.</small>
+          </section>
+
+          <div class="quote-progress" data-quote-progress hidden>
+            <span data-step-label>Pergunta 1 de 10</span>
+            <small data-step-name>Seu perfil</small>
+            <span class="quote-progress-count" data-progress-count>10%</span>
+            <div class="quote-progress-track" aria-hidden="true"><i></i></div>
           </div>
 
-          <div class="quote-step" data-form-step="2" hidden>
-            <div class="diagnostic-questions">
-              <fieldset class="diagnostic-question">
-                <legend>O que mais importa nessa decisão?</legend>
-                <div class="diagnostic-options">
-                  <label class="diagnostic-choice"><input type="radio" name="prioridade" value="Emergências durante viagens" required /><span>Emergências durante viagens</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="prioridade" value="Rede médica ampla no Brasil" /><span>Rede médica ampla no Brasil</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="prioridade" value="Liberdade médica e acesso global" /><span>Liberdade médica e acesso global</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="prioridade" value="Continuidade e proteção familiar" /><span>Continuidade e proteção familiar</span></label>
-                </div>
-              </fieldset>
-              <fieldset class="diagnostic-question">
-                <legend>Qual cenário mais se parece com o seu?</legend>
-                <div class="diagnostic-options">
-                  <label class="diagnostic-choice"><input type="radio" name="situacao_vida" value="Turista em viagem" required /><span>Turista em viagem</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="situacao_vida" value="Residente no Brasil" /><span>Residente no Brasil</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="situacao_vida" value="Expatriado ou vida entre países" /><span>Expatriado ou vida entre países</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="situacao_vida" value="Estudante ou intercambista" /><span>Estudante ou intercambista</span></label>
-                </div>
-              </fieldset>
-              <fieldset class="diagnostic-question">
-                <legend>Com que frequência você viaja para fora do Brasil?</legend>
-                <div class="diagnostic-options">
-                  <label class="diagnostic-choice"><input type="radio" name="frequencia_viagens" value="Raramente ou nunca" required /><span>Raramente ou nunca</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="frequencia_viagens" value="Uma ou duas vezes por ano" /><span>Uma ou duas vezes por ano</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="frequencia_viagens" value="Três ou mais vezes por ano" /><span>Três ou mais vezes por ano</span></label>
-                  <label class="diagnostic-choice"><input type="radio" name="frequencia_viagens" value="Vivo parte do ano no exterior" /><span>Vivo parte do ano no exterior</span></label>
-                </div>
-              </fieldset>
-            </div>
-            <div class="quote-actions">
-              <button class="quote-back-button" type="button" data-prev-step="1">Voltar</button>
-              <button class="btn btn-gold" type="button" data-calculate-diagnostic>Ver meu resultado</button>
-            </div>
-          </div>
+          <form class="quote-form" action="https://formspree.io/f/xvznbqab" method="POST" data-quote-form hidden>
+            <input type="hidden" name="_subject" value="Novo diagnóstico de perfil - Saúde Internacional" />
+            <input type="hidden" name="resumo_cenario" data-summary-field />
+            <input type="hidden" name="resultado_diagnostico" data-result-field />
+            <input type="hidden" name="leituras_diagnostico" data-reasons-field />
+            <input type="hidden" name="respostas_diagnostico" data-answers-field />
 
-          <div class="quote-step" data-form-step="3" hidden>
-            <div class="diagnostic-result" aria-live="polite">
-              <div class="diagnostic-result-head">
-                <span>Resultado inicial</span>
-                <h3 data-result-title></h3>
+            <section class="quote-step" data-diagnostic-question hidden>
+              <fieldset class="diagnostic-question">
+                <legend data-question-title></legend>
+                <span class="diagnostic-question-help" data-question-help></span>
+                <div class="diagnostic-options" data-question-options></div>
+              </fieldset>
+              <div class="quote-actions quote-actions-spread">
+                <button class="quote-back-button" type="button" data-question-back>Voltar</button>
+                <small>Selecione uma opção para avançar</small>
               </div>
-              <div class="diagnostic-result-body">
-                <p data-result-description></p>
-                <ul class="diagnostic-result-reasons" data-result-reasons></ul>
-              </div>
-            </div>
-            <p class="diagnostic-disclaimer">Este resultado é educativo e considera apenas as respostas informadas. Elegibilidade, aceitação, coberturas e condições dependem da análise individual e dos contratos disponíveis.</p>
-            <div class="quote-actions">
-              <button class="quote-back-button" type="button" data-prev-step="2">Rever respostas</button>
-              <button class="btn btn-gold" type="button" data-next-step="4">Solicitar cotação para este perfil</button>
-            </div>
-          </div>
+            </section>
 
-          <div class="quote-step" data-form-step="4" hidden>
-            <fieldset>
-              <legend>Seus dados para a cotação</legend>
-              <label>Nome
-                <input name="nome" type="text" autocomplete="name" required />
-              </label>
-              <label>WhatsApp
-                <input name="whatsapp" type="tel" autocomplete="tel" required />
-              </label>
-              <label>E-mail
-                <input name="email" type="email" autocomplete="email" required />
-              </label>
-              <label>Cidade
-                <input name="cidade" type="text" autocomplete="address-level2" />
-              </label>
-              <label>Cotação para quem?
-                <select name="cotacao_para">
-                  <option>Somente para mim</option>
-                  <option>Para mim e cônjuge</option>
-                  <option>Para família</option>
-                  <option>Para sócios</option>
-                  <option>Para equipe/empresa</option>
-                </select>
-              </label>
-              <label>Idades dos participantes
-                <textarea name="idades_participantes" placeholder="Ex.: titular 42, cônjuge 39, filhos 8 e 12"></textarea>
-              </label>
-              <label>Plano ou seguro atual
-                <input name="plano_atual" type="text" placeholder="Operadora ou informe que não possui" />
-              </label>
-            </fieldset>
-            <div class="quote-actions">
-              <button class="quote-back-button" type="button" data-prev-step="3">Voltar ao resultado</button>
-              <button class="btn btn-gold" type="submit">Solicitar cotação</button>
-            </div>
-          </div>
-        </form>
+            <section class="quote-step" data-diagnostic-result hidden aria-live="polite">
+              <div class="diagnostic-result">
+                <div class="diagnostic-result-head">
+                  <span class="diagnostic-result-icon" aria-hidden="true"></span>
+                  <div><span data-result-tag>Resultado do diagnóstico</span><h3 data-result-title></h3></div>
+                </div>
+                <p class="diagnostic-result-copy" data-result-description></p>
+                <div class="diagnostic-layers" data-result-layers hidden></div>
+                <div class="diagnostic-result-section" data-reasons-section>
+                  <strong>Por que chegamos aqui</strong>
+                  <ul class="diagnostic-result-reasons" data-result-reasons></ul>
+                </div>
+                <div class="diagnostic-alerts" data-result-alerts></div>
+              </div>
+              <p class="diagnostic-disclaimer">Orientação inicial com base nas suas respostas. A recomendação final depende de idade, histórico de saúde, país de residência e condições de cada seguradora.</p>
+              <div class="quote-actions">
+                <button class="quote-back-button" type="button" data-diagnostic-restart>Refazer</button>
+                <button class="btn btn-gold" type="button" data-result-cta></button>
+              </div>
+            </section>
+
+            <section class="quote-step" data-diagnostic-contact hidden>
+              <div class="diagnostic-contact-head">
+                <span>Última etapa</span>
+                <h3>Agora, para quem devemos preparar a análise?</h3>
+                <p>Preencha seus dados para que a equipe já conheça o contexto antes de conversar com você.</p>
+              </div>
+              <div class="diagnostic-result-summary"><span data-result-summary>Seu perfil será exibido aqui.</span></div>
+              <fieldset>
+                <label>Nome completo<input name="nome" type="text" autocomplete="name" placeholder="Como podemos chamar você?" required /></label>
+                <label>WhatsApp<input name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 99999-9999" required /></label>
+                <label>E-mail<input name="email" type="email" autocomplete="email" placeholder="seu@email.com" required /></label>
+                <label>Cidade<input name="cidade" type="text" autocomplete="address-level2" placeholder="Cidade / UF" /></label>
+                <label>Cotação para quem?<select name="cotacao_para"><option>Somente para mim</option><option>Para mim e cônjuge</option><option>Para família</option><option>Para sócios</option><option>Para equipe/empresa</option></select></label>
+                <label>Idades dos participantes<textarea name="idades_participantes" placeholder="Ex.: titular 42, cônjuge 39, filhos 8 e 12"></textarea></label>
+                <label>Plano ou seguro atual<input name="plano_atual" type="text" placeholder="Operadora ou informe que não possui" /></label>
+              </fieldset>
+              <div class="quote-actions"><button class="quote-back-button" type="button" data-contact-back>Voltar ao resultado</button><button class="btn btn-gold" type="submit">Solicitar cotação</button></div>
+            </section>
+          </form>
+        </main>
       </div>
     </div>
 
 
-    <script>
-      const header = document.querySelector("[data-header]");
-      const menuButton = document.querySelector("[data-menu-button]");
-      const mobilePanel = document.querySelector("[data-mobile-panel]");
-      const menuIcon = document.querySelector(".menu-icon path");
-      const quoteModal = document.querySelector("[data-quote-modal]");
-      const quoteForm = document.querySelector("[data-quote-form]");
-      const quoteOpeners = document.querySelectorAll("[data-quote-open]");
-      const quoteClosers = document.querySelectorAll("[data-quote-close]");
-      const diagnosticBar = document.querySelector("[data-diagnostic-bar]");
-      const quoteSteps = [...document.querySelectorAll("[data-form-step]")];
-      const quoteProgress = document.querySelector("[data-quote-progress]");
-      const quoteStepLabel = document.querySelector("[data-step-label]");
-      const quoteStepName = document.querySelector("[data-step-name]");
-      const resultField = quoteForm.querySelector("[data-result-field]");
-      const scoreField = quoteForm.querySelector("[data-score-field]");
-      let diagnosticResult = null;
-
-      const setMenu = (open) => {
-        mobilePanel.classList.toggle("open", open);
-        document.body.classList.toggle("menu-open", open);
-        menuButton.setAttribute("aria-expanded", String(open));
-        menuButton.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
-        menuIcon.setAttribute("d", open ? "M6 6l12 12M18 6L6 18" : "M4 7h16M4 12h16M4 17h16");
-      };
-
-      menuButton.addEventListener("click", () => {
-        setMenu(!mobilePanel.classList.contains("open"));
-      });
-
-      mobilePanel.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => setMenu(false));
-      });
-
-      const onScroll = () => {
-        header.classList.toggle("is-scrolled", window.scrollY > 16);
-        const shouldShowDiagnostic = window.scrollY > Math.min(window.innerHeight * 0.75, 720);
-        diagnosticBar.classList.toggle("visible", shouldShowDiagnostic);
-        diagnosticBar.setAttribute("aria-hidden", String(!shouldShowDiagnostic));
-      };
-
-      window.addEventListener("scroll", onScroll, { passive: true });
-      onScroll();
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            entry.target.classList.toggle("visible", entry.isIntersecting);
-          });
-        },
-        { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
-      );
-
-      document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
-
-      const setQuoteStep = (step) => {
-        quoteSteps.forEach((quoteStep) => {
-          quoteStep.hidden = Number(quoteStep.dataset.formStep) !== step;
-        });
-        quoteProgress.dataset.step = String(step);
-        quoteStepLabel.textContent = `Etapa ${step} de 4`;
-        quoteStepName.textContent = ["Seu cenário", "Sua necessidade", "Seu resultado", "Dados para cotação"][step - 1];
-        quoteDialogScrollTop();
-      };
-
-      const quoteDialogScrollTop = () => {
-        quoteModal.querySelector(".quote-dialog").scrollTo({ top: 0, behavior: "smooth" });
-      };
-
-      const validateStep = (step) => {
-        const fields = [...quoteSteps[step - 1].querySelectorAll("[required]")];
-        const invalidField = fields.find((field) => !field.checkValidity());
-        if (invalidField) {
-          invalidField.reportValidity();
-          return false;
-        }
-        return true;
-      };
-
-      const diagnosticProfiles = {
-        internacional: {
-          title: "Seu cenário indica perfil para saúde internacional",
-          description: "Você demonstrou necessidade de proteção contínua, mobilidade entre países ou maior liberdade de acesso médico. Um seguro saúde internacional merece entrar na comparação.",
-          reasons: ["Cobertura pensada para uso recorrente", "Possibilidade de acesso no Brasil e no exterior", "Análise de rede, reembolso e continuidade"]
-        },
-        viagem: {
-          title: "Seu cenário se aproxima de um seguro viagem",
-          description: "Sua necessidade parece temporária e ligada a uma viagem específica. Nesse caso, uma proteção de viagem pode ser mais proporcional do que uma estrutura médica internacional permanente.",
-          reasons: ["Proteção por período determinado", "Foco em urgências e imprevistos da viagem", "Custo alinhado à duração da estadia"]
-        },
-        nacional: {
-          title: "Seu cenário pode ser melhor atendido por um plano nacional",
-          description: "Seu uso está concentrado no Brasil e a prioridade parece ser acesso recorrente à rede médica nacional. Vale comparar planos locais antes de assumir uma solução internacional.",
-          reasons: ["Uso médico concentrado no Brasil", "Rede nacional como prioridade", "Comparação de custo, carências e abrangência local"]
-        }
-      };
-
-      const calculateDiagnostic = () => {
-        const data = new FormData(quoteForm);
-        const scores = { internacional: 0, viagem: 0, nacional: 0 };
-        const add = (profile, points) => { scores[profile] += points; };
-        const rules = {
-          motivo_busca: {
-            "Viagem temporária": [["viagem", 5]],
-            "Cobertura médica contínua no Brasil e exterior": [["internacional", 5]],
-            "Atendimento médico principalmente no Brasil": [["nacional", 5]],
-            "Ainda não sei qual caminho faz sentido": [["internacional", 1], ["viagem", 1], ["nacional", 1]]
-          },
-          area_uso: {
-            "Somente no Brasil": [["nacional", 4]],
-            "Brasil e viagens ocasionais": [["viagem", 3], ["nacional", 1]],
-            "Brasil e viagens frequentes": [["internacional", 4], ["viagem", 1]],
-            "Moro ou divido a vida entre países": [["internacional", 5]]
-          },
-          duracao_protecao: {
-            "Dias ou semanas": [["viagem", 4]],
-            "Alguns meses": [["viagem", 2], ["internacional", 2]],
-            "Longo prazo": [["internacional", 4], ["nacional", 1]]
-          },
-          prioridade: {
-            "Emergências durante viagens": [["viagem", 5]],
-            "Rede médica ampla no Brasil": [["nacional", 5]],
-            "Liberdade médica e acesso global": [["internacional", 5]],
-            "Continuidade e proteção familiar": [["internacional", 4], ["nacional", 1]]
-          },
-          situacao_vida: {
-            "Turista em viagem": [["viagem", 4]],
-            "Residente no Brasil": [["nacional", 4]],
-            "Expatriado ou vida entre países": [["internacional", 5]],
-            "Estudante ou intercambista": [["internacional", 3], ["viagem", 1]]
-          },
-          frequencia_viagens: {
-            "Raramente ou nunca": [["nacional", 3]],
-            "Uma ou duas vezes por ano": [["viagem", 3]],
-            "Três ou mais vezes por ano": [["internacional", 4], ["viagem", 1]],
-            "Vivo parte do ano no exterior": [["internacional", 5]]
-          }
-        };
-
-        Object.entries(rules).forEach(([field, options]) => {
-          (options[data.get(field)] || []).forEach(([profile, points]) => add(profile, points));
-        });
-
-        const profile = Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
-        diagnosticResult = { profile, scores, ...diagnosticProfiles[profile] };
-        resultField.value = diagnosticResult.title;
-        scoreField.value = `Internacional ${scores.internacional}; Viagem ${scores.viagem}; Nacional ${scores.nacional}`;
-        quoteForm.querySelector("[data-result-title]").textContent = diagnosticResult.title;
-        quoteForm.querySelector("[data-result-description]").textContent = diagnosticResult.description;
-        quoteForm.querySelector("[data-result-reasons]").innerHTML = diagnosticResult.reasons.map((reason) => `<li>${reason}</li>`).join("");
-        setQuoteStep(3);
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: "diagnostic_result",
-          form_id: "cotacao_saude_internacional",
-          diagnostic_profile: profile,
-          service: "saude_internacional"
-        });
-      };
-
-      const setQuoteModal = (open) => {
-        quoteModal.classList.toggle("open", open);
-        quoteModal.setAttribute("aria-hidden", String(!open));
-        document.body.classList.toggle("quote-open", open);
-        document.body.style.overflow = open ? "hidden" : "";
-        if (open) {
-          quoteForm.reset();
-          diagnosticResult = null;
-          setQuoteStep(1);
-          quoteSteps[0].querySelector("input")?.focus({ preventScroll: true });
-        }
-      };
-
-      quoteOpeners.forEach((opener) => {
-        opener.addEventListener("click", (event) => {
-          event.preventDefault();
-          setMenu(false);
-          setQuoteModal(true);
-          window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push({
-            event: "begin_diagnostic",
-            form_id: "cotacao_saude_internacional",
-            service: "saude_internacional"
-          });
-        });
-      });
-
-      quoteClosers.forEach((closer) => {
-        closer.addEventListener("click", () => setQuoteModal(false));
-      });
-
-      window.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && quoteModal.classList.contains("open")) {
-          setQuoteModal(false);
-        }
-      });
-
-      quoteForm.querySelectorAll("[data-next-step]").forEach((button) => {
-        button.addEventListener("click", () => {
-          const currentStep = Number(button.closest("[data-form-step]").dataset.formStep);
-          if (!validateStep(currentStep)) return;
-          const nextStep = Number(button.dataset.nextStep);
-          setQuoteStep(nextStep);
-          quoteSteps[nextStep - 1].querySelector("input, select")?.focus({ preventScroll: true });
-          window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push({
-            event: "diagnostic_step_complete",
-            form_id: "cotacao_saude_internacional",
-            step_index: currentStep,
-            service: "saude_internacional"
-          });
-        });
-      });
-
-      quoteForm.querySelectorAll("[data-prev-step]").forEach((button) => {
-        button.addEventListener("click", () => setQuoteStep(Number(button.dataset.prevStep)));
-      });
-
-      quoteForm.querySelector("[data-calculate-diagnostic]").addEventListener("click", () => {
-        if (!validateStep(2)) return;
-        calculateDiagnostic();
-      });
-
-      quoteForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const data = new FormData(quoteForm);
-        const summaryField = quoteForm.querySelector("[data-summary-field]");
-        const submitButton = quoteForm.querySelector("button[type='submit']");
-        const message = [
-          "Olá, concluí o diagnóstico e gostaria de solicitar uma cotação para o perfil indicado.",
-          "",
-          "Resultado: " + (data.get("resultado_diagnostico") || ""),
-          "Pontuação: " + (data.get("pontuacao_diagnostico") || ""),
-          "Motivo da busca: " + (data.get("motivo_busca") || ""),
-          "Área de uso: " + (data.get("area_uso") || ""),
-          "Duração: " + (data.get("duracao_protecao") || ""),
-          "Prioridade: " + (data.get("prioridade") || ""),
-          "Situação de vida: " + (data.get("situacao_vida") || ""),
-          "Frequência de viagens: " + (data.get("frequencia_viagens") || ""),
-          "",
-          "Nome: " + (data.get("nome") || ""),
-          "E-mail: " + (data.get("email") || ""),
-          "WhatsApp: " + (data.get("whatsapp") || ""),
-          "Cidade: " + (data.get("cidade") || ""),
-          "Cotação para: " + (data.get("cotacao_para") || ""),
-          "Idades dos participantes: " + (data.get("idades_participantes") || ""),
-          "Plano ou seguro atual: " + (data.get("plano_atual") || "")
-        ].join("\n");
-
-        summaryField.value = message;
-        submitButton.disabled = true;
-        submitButton.textContent = "Enviando...";
-
-        fetch(quoteForm.action, {
-          method: "POST",
-          body: new FormData(quoteForm),
-          headers: { Accept: "application/json" }
-        })
-          .then((response) => {
-            if (!response.ok) throw new Error("Formspree request failed");
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-              event: "generate_lead",
-              form_id: "cotacao_saude_internacional",
-              form_name: "Diagnóstico de perfil Saúde Internacional",
-              diagnostic_profile: diagnosticResult?.profile || "nao_identificado",
-              service: "saude_internacional"
-            });
-            window.open("https://wa.me/5511938020789?text=" + encodeURIComponent(message), "_blank", "noopener");
-            quoteForm.reset();
-            setQuoteStep(1);
-            setQuoteModal(false);
-          })
-          .catch(() => {
-            alert("Não foi possível enviar o formulário agora. Tente novamente ou fale pelo WhatsApp.");
-          })
-          .finally(() => {
-            submitButton.disabled = false;
-            submitButton.textContent = "Solicitar cotação";
-          });
-      });
-
-      const openQuoteFromHash = () => {
-        if (window.location.hash === "#cotacao") {
-          setQuoteModal(true);
-        }
-      };
-
-      window.addEventListener("hashchange", openQuoteFromHash);
-      openQuoteFromHash();
-    </script>
+    <script type="module" src="/assets/diagnostic-ui.js"></script>
   </body>
 </html>

@@ -7,6 +7,7 @@
     "serve": "node server.mjs",
     "dev": "node server.mjs",
     "build": "node scripts/generate-scheduled-blog.mjs && node scripts/link-home-comparison.mjs && node scripts/build-static.mjs",
+    "test:diagnostic": "node scripts/diagnostic-engine.test.mjs",
     "publish:scheduled": "node scripts/generate-scheduled-blog.mjs"
   },
   "dependencies": {
