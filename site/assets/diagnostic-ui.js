@@ -345,6 +345,10 @@ quoteClosers.forEach((closer) => {
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && quoteModal.classList.contains("open")) {
     setQuoteModal(false);
+    return;
+  }
+  if (event.key === "Escape" && document.querySelector("[data-direct-quote-modal]")?.classList.contains("open")) {
+    setDirectQuoteModal(false);
   }
 });
 
@@ -401,8 +405,207 @@ quoteForm.addEventListener("submit", async (event) => {
   }
 });
 
+const directQuoteModal = document.querySelector("[data-direct-quote-modal]");
+const directQuoteForm = directQuoteModal.querySelector("[data-direct-quote-form]");
+const directQuoteOpeners = document.querySelectorAll("[data-direct-quote-open]");
+const directQuoteClosers = directQuoteModal.querySelectorAll("[data-direct-quote-close]");
+const directQuoteSteps = [...directQuoteModal.querySelectorAll("[data-direct-quote-step]")];
+const directStageIndicators = [...directQuoteModal.querySelectorAll("[data-direct-stage-indicator]")];
+const directStepLabel = directQuoteModal.querySelector("[data-direct-step-label]");
+const directStepName = directQuoteModal.querySelector("[data-direct-step-name]");
+const directProgressCount = directQuoteModal.querySelector("[data-direct-progress-count]");
+const directProgressTrack = directQuoteModal.querySelector(".quote-progress");
+const directAudienceField = directQuoteModal.querySelector("[data-direct-audience-field]");
+const directAudienceOptions = [...directQuoteModal.querySelectorAll("[data-direct-choice]")];
+const directSummaryField = directQuoteModal.querySelector("[data-direct-summary-field]");
+const directSummary = directQuoteModal.querySelector("[data-direct-quote-summary]");
+const directNextButtons = [...directQuoteModal.querySelectorAll("[data-direct-next]")];
+const directBackButtons = [...directQuoteModal.querySelectorAll("[data-direct-back]")];
+
+let directQuoteStep = 0;
+let directAdvanceTimer = null;
+
+const directStepMeta = [
+  { label: "Etapa 1 de 4", name: "Composição", stage: "profile" },
+  { label: "Etapa 2 de 4", name: "Participantes", stage: "profile" },
+  { label: "Etapa 3 de 4", name: "Uso da cobertura", stage: "use" },
+  { label: "Etapa 4 de 4", name: "Seus dados", stage: "contact" }
+];
+
+const setDirectStage = (stage) => {
+  const order = ["profile", "use", "contact"];
+  const activeIndex = order.indexOf(stage);
+  directStageIndicators.forEach((indicator) => {
+    const indicatorIndex = order.indexOf(indicator.dataset.directStageIndicator);
+    indicator.classList.toggle("active", indicatorIndex === activeIndex);
+    indicator.classList.toggle("completed", indicatorIndex < activeIndex);
+  });
+};
+
+const validateDirectStep = () => {
+  const fields = [...directQuoteSteps[directQuoteStep].querySelectorAll("input, select, textarea")]
+    .filter((field) => field.type !== "hidden");
+  return fields.every((field) => field.reportValidity());
+};
+
+const renderDirectSummary = () => {
+  const data = new FormData(directQuoteForm);
+  const items = [
+    ["Cotação para", data.get("cotacao_para")],
+    ["Participantes", data.get("idades_participantes")],
+    ["Uso principal", data.get("uso_cobertura")]
+  ];
+  directSummary.replaceChildren();
+  items.forEach(([label, value]) => {
+    const item = document.createElement("div");
+    const title = document.createElement("strong");
+    const text = document.createElement("span");
+    title.textContent = label;
+    text.textContent = value || "Não informado";
+    item.append(title, text);
+    directSummary.append(item);
+  });
+};
+
+const showDirectQuoteStep = (step, { track = false } = {}) => {
+  directQuoteStep = Math.max(0, Math.min(step, directQuoteSteps.length - 1));
+  directQuoteSteps.forEach((screen, index) => { screen.hidden = index !== directQuoteStep; });
+  const meta = directStepMeta[directQuoteStep];
+  const progress = Math.round(((directQuoteStep + 1) / directQuoteSteps.length) * 100);
+  directStepLabel.textContent = meta.label;
+  directStepName.textContent = meta.name;
+  directProgressCount.textContent = `${progress}%`;
+  directProgressTrack.style.setProperty("--diagnostic-progress", `${progress}%`);
+  setDirectStage(meta.stage);
+  if (directQuoteStep === directQuoteSteps.length - 1) renderDirectSummary();
+  directQuoteModal.querySelector(".direct-quote-main").scrollTo({ top: 0, behavior: "smooth" });
+  window.setTimeout(() => directQuoteSteps[directQuoteStep].querySelector("button, input, select, textarea")?.focus({ preventScroll: true }), 80);
+
+  if (track) {
+    pushDataLayer({
+      event: "direct_quote_step_complete",
+      form_id: "cotacao_direta_saude_internacional",
+      step_index: directQuoteStep,
+      total_steps: directQuoteSteps.length,
+      service: "saude_internacional"
+    });
+  }
+};
+
+const resetDirectQuote = () => {
+  window.clearTimeout(directAdvanceTimer);
+  directAdvanceTimer = null;
+  directQuoteForm.reset();
+  directAudienceField.value = "";
+  directSummaryField.value = "";
+  directAudienceOptions.forEach((option) => option.classList.remove("selected"));
+  showDirectQuoteStep(0);
+};
+
+const setDirectQuoteModal = (open) => {
+  if (open) setQuoteModal(false);
+  directQuoteModal.classList.toggle("open", open);
+  directQuoteModal.setAttribute("aria-hidden", String(!open));
+  document.body.classList.toggle("quote-open", open);
+  document.body.style.overflow = open ? "hidden" : "";
+  if (open) {
+    resetDirectQuote();
+    pushDataLayer({
+      event: "begin_direct_quote",
+      form_id: "cotacao_direta_saude_internacional",
+      total_steps: directQuoteSteps.length,
+      service: "saude_internacional"
+    });
+  } else {
+    window.clearTimeout(directAdvanceTimer);
+    directAdvanceTimer = null;
+  }
+};
+
+directAudienceOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    directAudienceField.value = option.dataset.directChoice;
+    directAudienceOptions.forEach((item) => item.classList.toggle("selected", item === option));
+    window.clearTimeout(directAdvanceTimer);
+    directAdvanceTimer = window.setTimeout(() => showDirectQuoteStep(1, { track: true }), 220);
+  });
+});
+
+directNextButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (!validateDirectStep()) return;
+    showDirectQuoteStep(directQuoteStep + 1, { track: true });
+  });
+});
+
+directBackButtons.forEach((button) => {
+  button.addEventListener("click", () => showDirectQuoteStep(directQuoteStep - 1));
+});
+
+directQuoteOpeners.forEach((opener) => {
+  opener.addEventListener("click", (event) => {
+    event.preventDefault();
+    setMenu(false);
+    setDirectQuoteModal(true);
+  });
+});
+
+directQuoteClosers.forEach((closer) => {
+  closer.addEventListener("click", () => setDirectQuoteModal(false));
+});
+
+directQuoteForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  if (!validateDirectStep()) return;
+  const data = new FormData(directQuoteForm);
+  const message = [
+    "Olá, gostaria de solicitar uma cotação de saúde internacional.",
+    "",
+    `Cotação para: ${data.get("cotacao_para") || ""}`,
+    `Idades dos participantes: ${data.get("idades_participantes") || ""}`,
+    `Possui plano atual: ${data.get("possui_plano_atual") || ""}`,
+    `Plano ou operadora atual: ${data.get("plano_atual") || ""}`,
+    `Uso pretendido: ${data.get("uso_cobertura") || ""}`,
+    `Frequência de viagens: ${data.get("frequencia_viagens") || ""}`,
+    `Prioridade principal: ${data.get("prioridade_principal") || ""}`,
+    "",
+    `Nome: ${data.get("nome") || ""}`,
+    `WhatsApp: ${data.get("whatsapp") || ""}`,
+    `E-mail: ${data.get("email") || ""}`
+  ].join("\n");
+  directSummaryField.value = message;
+
+  const submitButton = directQuoteForm.querySelector("button[type='submit']");
+  submitButton.disabled = true;
+  submitButton.textContent = "Enviando...";
+
+  try {
+    const response = await fetch(directQuoteForm.action, {
+      method: "POST",
+      body: new FormData(directQuoteForm),
+      headers: { Accept: "application/json" }
+    });
+    if (!response.ok) throw new Error("Formspree request failed");
+
+    pushDataLayer({
+      event: "generate_lead",
+      form_id: "cotacao_direta_saude_internacional",
+      form_name: "Cotação Direta Saúde Internacional",
+      service: "saude_internacional"
+    });
+    window.open(`https://wa.me/5511938020789?text=${encodeURIComponent(message)}`, "_blank", "noopener");
+    setDirectQuoteModal(false);
+  } catch {
+    alert("Não foi possível enviar o formulário agora. Tente novamente ou fale pelo WhatsApp.");
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = "Solicitar minha cotação";
+  }
+});
+
 const openQuoteFromHash = () => {
   if (window.location.hash === "#cotacao") setQuoteModal(true);
+  if (window.location.hash === "#solicitar-cotacao") setDirectQuoteModal(true);
 };
 
 window.addEventListener("hashchange", openQuoteFromHash);
