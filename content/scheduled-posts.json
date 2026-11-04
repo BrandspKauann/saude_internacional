@@ -1,5 +1,88 @@
 [
   {
+    "slug": "seguro-saude-internacional-com-ou-sem-eua",
+    "title": "Seguro saúde internacional com ou sem EUA: como comparar a cobertura",
+    "description": "A área de cobertura muda a escolha do seguro saúde internacional. Compare opções com e sem EUA pela sua rotina, rede e condições de atendimento.",
+    "category": "Escolha e cobertura",
+    "imageAlt": "Globo e documentos de planejamento de viagem em ambiente residencial iluminado; ilustração gerada por IA",
+    "intro": [
+      "Duas propostas podem parecer semelhantes no nome e atender a rotinas muito diferentes. Uma das primeiras decisões está no mapa: em quais países você pretende receber atendimento e quais deles estão efetivamente incluídos na modalidade oferecida? A resposta vem antes de comparar apenas a mensalidade."
+    ],
+    "sections": [
+      {
+        "heading": "Internacional não significa uma única área de cobertura",
+        "paragraphs": [
+          "O seguro saúde internacional precisa ser lido pelo produto e pelas condições contratadas. Uma opção que exclui os Estados Unidos não deve ser entendida como uma versão apenas mais barata da mesma experiência. Ela estabelece uma delimitação geográfica que pode ser decisiva para quem viaja, mora ou deseja realizar tratamento naquele país.",
+          "A Cigna, por exemplo, apresenta em suas perguntas e respostas modalidades globais com e sem os EUA, além de uma opção com outra configuração territorial. Essa referência mostra que o território é uma escolha de produto. Não significa que todas as seguradoras ofereçam a mesma divisão ou as mesmas condições.",
+          "Na comparação, peça a identificação completa da modalidade e o documento vigente que descreve sua área. Uma expressão ampla em uma apresentação comercial não substitui essa leitura. O que vale para a decisão é a combinação de produto, elegibilidade e condições oferecidas ao seu perfil."
+        ]
+      },
+      {
+        "heading": "Desenhe a sua rotina antes de desenhar o orçamento",
+        "paragraphs": [
+          "Comece pelo país de residência e pelos destinos que fazem parte da vida real, não por uma lista de viagens possíveis. Considere visitas familiares frequentes, deslocamentos profissionais e a intenção de buscar atendimento programado em outro país. Uma necessidade recorrente merece ser discutida explicitamente na análise.",
+          "Pense em uma família que reside no Brasil e visita parentes nos EUA todos os anos. Esse cenário é diferente do de alguém que não pretende utilizar serviços naquele país. O exemplo não define qual produto contratar; ajuda a explicar por que duas pessoas com idade semelhante podem precisar de comparações diferentes.",
+          "Mudanças futuras também entram na conversa, mas como hipóteses. Se uma transferência de residência ainda não foi confirmada, pergunte o procedimento de atualização e a eventual necessidade de nova análise. Não presuma que será possível incluir um território ou mudar a modalidade a qualquer momento sem condições."
+        ]
+      },
+      {
+        "heading": "Área de cobertura, rede e pagamento são decisões diferentes",
+        "paragraphs": [
+          "Um país estar na área contratada não confirma que qualquer hospital terá atendimento pago diretamente. A rede, o procedimento, os limites e as exigências de autorização precisam ser verificados separadamente. É possível entender a diferença antes da contratação pedindo um exemplo documentado do caminho de atendimento.",
+          "Se existe preferência por uma instituição ou médico, confirme a informação pelos canais indicados para o produto. O nome de um hospital no material de uma seguradora não comprova que todas as modalidades terão a mesma relação com aquele prestador. A data e o contexto da consulta devem acompanhar a resposta.",
+          "Também compare como funciona uma despesa que exige reembolso. O valor cobrado, a documentação e as condições de cálculo não se resumem à presença do país no mapa. A análise da área territorial é o começo da escolha, não uma substituição da leitura dos benefícios."
+        ]
+      },
+      {
+        "heading": "Não conte com uma exceção que você ainda não verificou",
+        "paragraphs": [
+          "Se a proposta exclui determinada região, pergunte por escrito o que ocorre durante uma passagem por ela. Pode haver condições específicas ou ausência da proteção imaginada; a resposta deve vir do contrato e da seguradora. Não trate a palavra emergência como uma autorização automática para qualquer atendimento fora da área.",
+          "O mesmo vale para uma viagem planejada com a finalidade de tratar um problema conhecido. Descreva o objetivo ao profissional responsável pela análise e confira as condições aplicáveis antes de organizar o atendimento. Não apresente um tratamento programado como se fosse apenas um imprevisto de viagem.",
+          "Esses cuidados tornam a comparação mais clara sem exigir que você domine todos os termos técnicos. Uma boa orientação traduz a regra em um cenário de uso e identifica onde ainda falta uma confirmação."
+        ]
+      },
+      {
+        "heading": "Compare propostas equivalentes, não apenas dois preços",
+        "paragraphs": [
+          "Antes de concluir que uma alternativa custa menos, verifique se território, franquia, participação nas despesas e benefícios estão alinhados. Se vários itens mudam ao mesmo tempo, a diferença de preço não pode ser atribuída somente à inclusão dos EUA. Peça que a comparação destaque cada alteração relevante.",
+          "O Saúde Internacional organiza essa conversa a partir do perfil e da rotina de atendimento pretendida. A escolha pode priorizar uma área mais ampla ou uma configuração diferente, conforme a análise. O objetivo é conhecer as condições antes da contratação, sem promessa de cobertura universal nem indicação automática de uma marca.",
+          "Se você está avaliando opções, informe onde mora e onde pretende usar o seguro pelos canais de atendimento. A partir daí, é possível discutir rede, documentação e condições de forma mais útil do que começar por uma cotação sem contexto."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Cigna: áreas de cobertura e atendimento nas perguntas e respostas oficiais",
+        "url": "https://www.cignaglobal.com/individuals-families/members/resources/frequently-asked-questions"
+      }
+    ],
+    "related": [
+      {
+        "label": "Compare opções de seguro saúde internacional para seu perfil",
+        "url": "/"
+      },
+      {
+        "label": "Conheça os guias de seguro saúde internacional",
+        "url": "/blog/"
+      }
+    ],
+    "status": "published",
+    "publishAt": "2026-11-04T12:10:00.000Z",
+    "readTime": 7,
+    "image": "seguro-saude-internacional-com-ou-sem-eua.webp",
+    "authorOrganization": true,
+    "faq": [],
+    "hashtags": [],
+    "keywords": [
+      "seguro saúde internacional com EUA",
+      "seguro saúde sem EUA",
+      "área de cobertura",
+      "rede internacional"
+    ],
+    "publishedAt": "2026-11-04T12:11:09.541Z",
+    "sourcesCheckedAt": "4 de novembro de 2026"
+  },
+  {
     "slug": "autorizacao-previa-internacao-seguro-saude-internacional",
     "title": "Internação no exterior: como conferir a autorização do seguro saúde",
     "description": "Vai realizar um tratamento programado fora do país? Entenda como conferir autorização prévia, hospital, pagamento e documentos do seguro saúde internacional.",

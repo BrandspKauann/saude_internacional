@@ -88,7 +88,7 @@ const toPostMeta = (draft) => ({
 });
 
 const sectionHtml = (post) => {
-  if (post.sections?.length) return post.sections.map(section => `<section class="article-block"><h2>${escapeHtml(section.heading)}</h2>${section.paragraphs.map(p => `<p>${escapeHtml(p)}</p>`).join('')}</section>`).join('') + `<section class="article-block"><h2>Fontes e leitura complementar</h2>${[...(post.sources || []), ...(post.related || [])].map(link => `<p><a href="${escapeHtml(link.url)}">${escapeHtml(link.label)}</a></p>`).join('')}<p>Fontes conferidas em 28 de outubro de 2026. Condições e procedimentos dependem da apólice contratada.</p></section>`;
+  if (post.sections?.length) return post.sections.map(section => `<section class="article-block"><h2>${escapeHtml(section.heading)}</h2>${section.paragraphs.map(p => `<p>${escapeHtml(p)}</p>`).join('')}</section>`).join('') + `<section class="article-block"><h2>Fontes e leitura complementar</h2>${[...(post.sources || []), ...(post.related || [])].map(link => `<p><a href="${escapeHtml(link.url)}">${escapeHtml(link.label)}</a></p>`).join('')}<p>Fontes conferidas em ${post.sourcesCheckedAt || "28 de outubro de 2026"}. Condições e procedimentos dependem da apólice contratada.</p></section>`;
   const paragraphs = [
     {
       title: "O ponto central",
@@ -190,12 +190,13 @@ const blogIndexHtml = (posts) => `${header()}<meta charset="UTF-8"><meta name="v
 const updateSitemap = async (posts) => {
   const current = await readFile(sitemapPath, "utf8");
   const existing = new Set([...current.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]));
+  const previousLastmod = new Map([...current.matchAll(/<url><loc>(.*?)<\/loc>(?:<lastmod>(.*?)<\/lastmod>)?/g)].map(match => [match[1], match[2]]));
   const lines = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
   ];
   for (const loc of existing) {
-    lines.push(`  <url><loc>${loc}</loc><priority>${loc.includes("/blog/") && loc !== `${origin}/blog/` ? "0.8" : loc === origin + "/" ? "1.0" : loc === origin + "/blog/" ? "0.9" : "0.85"}</priority></url>`);
+    lines.push(`  <url><loc>${loc}</loc>${previousLastmod.get(loc) ? `<lastmod>${previousLastmod.get(loc)}</lastmod>` : ''}<priority>${loc.includes("/blog/") && loc !== `${origin}/blog/` ? "0.8" : loc === origin + "/" ? "1.0" : loc === origin + "/blog/" ? "0.9" : "0.85"}</priority></url>`);
   }
   for (const post of posts) {
     const loc = `${origin}/blog/${post.slug}/`;
