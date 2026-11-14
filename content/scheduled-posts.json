@@ -1,5 +1,84 @@
 [
   {
+    "slug": "evacuacao-medica-repatriacao-seguro-internacional",
+    "title": "Evacuação médica: como escolher a melhor cobertura no exterior",
+    "description": "Evacuação médica e repatriação são a mesma coisa? Entenda o que comparar no seguro saúde internacional e solicite um diagnóstico inicial grátis.",
+    "category": "Cobertura e assistência",
+    "imageAlt": "Aeronave de transporte médico e equipe ao amanhecer em aeroporto; imagem ilustrativa gerada por IA",
+    "sections": [
+      {
+        "heading": "Ter um hospital no mapa não encerra a comparação",
+        "paragraphs": [
+          "Uma família organiza a vida entre países e procura um seguro saúde internacional. Na apresentação, encontra hospitais, limites e franquias. Há outra pergunta que merece espaço: se o tratamento necessário não estiver disponível onde a pessoa está, como funciona uma eventual transferência médica?",
+          "Uma rotina internacional pede atenção ao atendimento disponível e ao caminho para receber ajuda longe de casa. A melhor cobertura para o seu perfil depende das condições do plano, da elegibilidade e dos lugares em que sua rotina realmente acontece."
+        ]
+      },
+      {
+        "heading": "Evacuação e repatriação precisam ser lidas separadamente",
+        "paragraphs": [
+          "Os materiais de seguradoras usam esses termos para descrever benefícios que podem ter condições distintas. Na orientação pública da Allianz Care, a utilização depende da inclusão no plano e da indisponibilidade local do tratamento coberto, conforme a situação descrita pela empresa. Isso não autoriza aplicar as mesmas regras a outros produtos.",
+          "Peça a definição contratual de cada benefício, o destino previsto, os limites e o processo de autorização. Não presuma que transferência para um centro adequado significa retorno livre ao Brasil ou ao país que a família preferir. A proposta precisa esclarecer essa diferença antes da contratação."
+        ]
+      },
+      {
+        "heading": "A assistência deve ser acionável, não apenas mencionada",
+        "paragraphs": [
+          "Antes de viajar ou mudar de residência, saiba onde encontrar o contato de assistência e como identificar sua apólice. Compartilhe essas orientações com quem poderá ajudar em uma emergência, preservando o acesso seguro aos documentos.",
+          "A Allianz Care orienta seus clientes a contatar a central diante da indicação de evacuação ou repatriação. Para qualquer outra proposta, confirme o procedimento com o fornecedor responsável. Não organize transporte particular supondo que haverá reembolso: solicite orientação sobre autorização e atendimento."
+        ]
+      },
+      {
+        "heading": "Compare o cenário de uso com a área contratada",
+        "paragraphs": [
+          "Morar em um país, trabalhar em outro e passar férias em um terceiro são situações diferentes. Apresente essa rotina na cotação. Uma expressão ampla como internacional não dispensa a verificação do território, das exclusões e das condições de atendimento fora da residência.",
+          "Use um exemplo hipotético para discutir a proposta: onde a pessoa estaria, de que ajuda precisaria e quem coordenaria os próximos passos? O exercício serve para identificar perguntas pendentes. Não confirma antecipadamente uma cobertura nem substitui a avaliação médica e contratual."
+        ]
+      },
+      {
+        "heading": "Comece gratuitamente e compare com clareza",
+        "paragraphs": [
+          "No Saúde Internacional, o diagnóstico inicial é gratuito e organiza informações para uma cotação compatível com seu perfil. Você pode apresentar a rotina da família e perguntar sobre evacuação, repatriação, rede e franquia em conjunto.",
+          "O atendimento inicial não torna o seguro gratuito nem garante aceitação. A proposta depende da análise e das condições do produto. A melhor escolha é aquela cujos limites você consegue entender antes de precisar usar."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Allianz Care: evacuação médica e repatriação",
+        "url": "https://www.allianzcare.com/en_GB/support/member-resources/frequently-asked-questions/topics/medical-repatriation.html"
+      },
+      {
+        "label": "Allianz Care: pré-autorização de procedimentos",
+        "url": "https://www.allianzcare.com/en/support/healthcare-provider-resources/medical-provider-preauthorisation-process.html"
+      }
+    ],
+    "related": [
+      {
+        "label": "Solicite seu diagnóstico grátis",
+        "url": "/#cotacao"
+      },
+      {
+        "label": "Entenda autorização de internação no exterior",
+        "url": "/blog/autorizacao-previa-internacao-seguro-saude-internacional/"
+      }
+    ],
+    "faq": [],
+    "status": "published",
+    "publishAt": "2026-11-14T14:59:02.347Z",
+    "image": "evacuacao-medica-repatriacao-seguro-internacional.webp",
+    "readTime": 5,
+    "authorOrganization": true,
+    "keywords": [
+      "evacuação médica",
+      "repatriação",
+      "seguro saúde internacional",
+      "diagnóstico grátis"
+    ],
+    "hashtags": [],
+    "sourcesCheckedAt": "14 de novembro de 2026",
+    "publishedAt": "2026-11-14T14:59:30.981Z"
+  },
+  {
     "slug": "seguro-saude-internacional-com-ou-sem-eua",
     "title": "Seguro saúde internacional com ou sem EUA: como comparar a cobertura",
     "description": "A área de cobertura muda a escolha do seguro saúde internacional. Compare opções com e sem EUA pela sua rotina, rede e condições de atendimento.",
