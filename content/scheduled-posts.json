@@ -1,5 +1,83 @@
 [
   {
+    "slug": "documentos-apolice-saude-internacional-organizacao-familiar",
+    "title": "Seguro saúde internacional: organize os documentos que a família precisa encontrar",
+    "description": "Apólice, cartão, contatos e versões: organize um arquivo familiar para consultar o seguro saúde internacional com clareza e preservar dados pessoais.",
+    "category": "Planejamento familiar",
+    "imageAlt": "Mulher organiza documentos em mesa de casa com mala ao fundo; imagem ilustrativa gerada por IA",
+    "openingTitle": "O arquivo precisa funcionar para quem vai usá-lo.",
+    "intro": [
+      "O seguro foi contratado, os documentos chegaram por e-mail e cada arquivo ficou em uma conversa diferente. Meses depois, ninguém sabe qual versão consultar ou onde encontrar o canal de atendimento. Esse problema é administrativo, mas pode tornar uma situação já difícil ainda mais confusa.",
+      "Organizar um arquivo familiar não substitui o atendimento médico ou a orientação da seguradora. O objetivo é mais simples: permitir que as pessoas certas encontrem os documentos vigentes sem compartilhar dados de saúde além do necessário."
+    ],
+    "sections": [
+      {
+        "heading": "Comece pela versão vigente, não pela primeira proposta",
+        "paragraphs": [
+          "Uma proposta comercial e os documentos emitidos após a aceitação têm funções diferentes. Guarde a proposta como histórico, mas identifique o material que efetivamente descreve a contratação e a vigência atual. Quando houver dúvida, confirme com o canal responsável antes de considerar uma informação como válida.",
+          "Na documentação de seus próprios planos, a Allianz Care informa que o pacote digital pode incluir certificado, cartão e tabela de benefícios, também disponíveis em seus serviços digitais. Trata-se de um exemplo de organização de uma seguradora, não de uma relação obrigatória para qualquer produto internacional. Peça ao seu fornecedor que identifique o conjunto correspondente ao seu contrato."
+        ]
+      },
+      {
+        "heading": "Separe contato de atendimento e documentação clínica",
+        "paragraphs": [
+          "O cartão e o telefone de assistência precisam ser fáceis de localizar por quem está autorizado a utilizá-los. Já exames, relatórios e recibos podem exigir um cuidado de acesso diferente. Colocar tudo em uma pasta aberta a qualquer pessoa da família ou em um grupo amplo de mensagens cria uma exposição desnecessária.",
+          "Combine uma forma de armazenamento apropriada ao uso da casa. Evite publicar senhas, documentos completos ou dados médicos em uma pasta compartilhada sem controle. Para apresentar informações à seguradora, prefira os canais oficiais indicados para essa finalidade."
+        ]
+      },
+      {
+        "heading": "Deixe claro quem confirma uma mudança",
+        "paragraphs": [
+          "Um endereço novo, um telefone alterado ou uma renovação podem tornar uma cópia antiga inadequada. Defina quem confere o documento recebido e como avisa as demais pessoas sobre a substituição. A organização deve evitar que duas versões pareçam igualmente atuais.",
+          "A Allianz Care orienta seus membros a manter os dados cadastrais atualizados e indica canais próprios para essa gestão. Cada contrato deve ser acompanhado pelo procedimento do respectivo fornecedor. Uma edição feita apenas na sua pasta não atualiza o cadastro da seguradora."
+        ]
+      },
+      {
+        "heading": "Faça uma simulação de localização, sem simular um atendimento",
+        "paragraphs": [
+          "Peça a uma pessoa autorizada que encontre o cartão e o contato oficial usando o arquivo combinado. A finalidade é testar a clareza da organização, não abrir um chamado fictício ou fornecer dados médicos para experimentar um serviço.",
+          "Se a busca exige lembrar o nome de uma conversa antiga ou pedir a senha de outra pessoa, vale revisar o processo. Um nome de arquivo compreensível e a separação entre documento vigente e histórico costumam resolver mais do que acumular cópias em vários lugares."
+        ]
+      },
+      {
+        "heading": "Use a organização para preparar uma conversa melhor",
+        "paragraphs": [
+          "Ao revisar o seguro, reúna as dúvidas sobre o contrato vigente e sobre a rotina atual da família. Este arquivo não confirma cobertura, autorização ou reembolso: essas respostas continuam dependendo das condições e do atendimento competente.",
+          "A Saúde Internacional ajuda a organizar a análise do perfil e as perguntas relevantes antes de uma decisão. Para documentação específica de despesas, consulte também o guia de reembolso. Aqui, o foco é manter a informação certa acessível a quem precisa dela, com cuidado e contexto."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.allianzcare.com/en/support/member-resources/frequently-asked-questions/topics/administration-of-your-policy.html",
+        "label": "Allianz Care: administração da apólice"
+      }
+    ],
+    "related": [
+      {
+        "url": "/blog/reembolso-medico-internacional-documentos-prazos-limites/",
+        "label": "Documentos para reembolso médico internacional"
+      },
+      {
+        "url": "/",
+        "label": "Solicite uma análise do seu perfil"
+      }
+    ],
+    "status": "published",
+    "publishAt": "2026-11-18T12:00:00.000Z",
+    "readTime": 4,
+    "image": "documentos-apolice-saude-internacional-organizacao-familiar.webp",
+    "authorOrganization": true,
+    "sourcesCheckedAt": "18 de novembro de 2026",
+    "faq": [],
+    "hashtags": [],
+    "keywords": [
+      "Seguro saúde internacional: organize os documentos que a família precisa encontrar",
+      "Planejamento familiar"
+    ],
+    "publishedAt": "2026-11-18T12:05:45.146Z"
+  },
+  {
     "slug": "evacuacao-medica-repatriacao-seguro-internacional",
     "title": "Evacuação médica: como escolher a melhor cobertura no exterior",
     "description": "Evacuação médica e repatriação são a mesma coisa? Entenda o que comparar no seguro saúde internacional e solicite um diagnóstico inicial grátis.",
