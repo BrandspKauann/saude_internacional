@@ -1743,10 +1743,10 @@
   {
     "status": "published",
     "publishAt": "2026-10-15T15:00:00.000Z",
-    "title": "Quanto custa um seguro saúde internacional? O que muda sua cotação",
+    "title": "Cotação de seguro saúde internacional: compare antes de decidir",
     "slug": "quanto-custa-seguro-saude-internacional-cotacao",
     "category": "Custos e planejamento",
-    "description": "Entenda quais fatores influenciam o custo do seguro saúde internacional e como comparar cotações sem olhar apenas para a mensalidade.",
+    "description": "Entenda o que muda o preço do seguro saúde internacional. Compare residência, cobertura e franquia e solicite uma análise para seu perfil.",
     "readTime": 10,
     "image": "quanto-custa-seguro-saude-internacional-cotacao-ai-photo.png",
     "focus": "quanto custa um seguro saúde internacional",
@@ -1790,6 +1790,7 @@
       "#SaudeInternacional"
     ],
     "imagePrompt": "Photorealistic editorial image of a Brazilian executive couple and healthcare consultant comparing international health insurance cost scenarios in a calm modern office, deep navy and subtle copper accents, no text, no logos, no luxury clichés.",
-    "publishedAt": "2026-10-15T11:55:42.334Z"
+    "publishedAt": "2026-10-15T11:55:42.334Z",
+    "updatedAt": "2026-11-21"
   }
 ]
